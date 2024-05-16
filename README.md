@@ -6,7 +6,7 @@ https://github.com/JavaGuru-Frontend/FE-2024-may
 
 
 ## Домашние работы 
-[01]()  
+[01](https://github.com/JavaGuru-Frontend/FE-2024-may/blob/main/Homeworks/01/homework.md)  
 
 ## Макеты
 [1](https://www.figma.com/design/2vADRKfUnTywc18RLUuR5Z/Template-%E2%84%961?node-id=0%3A1&t=fZ8vu5z5u3erzemy-1)   
