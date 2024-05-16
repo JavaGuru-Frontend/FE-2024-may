@@ -1,0 +1,28 @@
+body {
+    color: white;
+    background-color: black;
+}
+* {
+    border:solid 1px red!important;
+}
+
+/* 00100 */
+#aboutME {
+    font-size: 70px;
+}
+
+/* 00010 */
+.title {
+    color: blue;
+}
+
+/* 00010 */
+.test {
+    color: pink;
+    font-style: italic;
+}
+
+/* 10001 */
+h1 {
+    color: green!important;
+}
