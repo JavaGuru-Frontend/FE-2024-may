@@ -13,6 +13,6 @@
 ## Задание
 Создайте папку со своим именем в папке Students и поместите в неё файл html   
 В HTML Поместить H1 c текстом "Hello world"  
-после   
-git commit
+после     
+git commit  
 git push
