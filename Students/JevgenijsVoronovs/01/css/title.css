@@ -1,0 +1,20 @@
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 50px;
+    background-color: aliceblue;
+}
+
+.title_important {
+    background-color: red;
+}
+
+.title_warning {
+    background-color: yellow;
+}
+
+.title_success {
+    background-color: green;
+}
