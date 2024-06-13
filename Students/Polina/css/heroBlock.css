@@ -1,0 +1,40 @@
+.heroBlock {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;;
+}
+
+.heroBlock_reverse {
+    flex-direction: row-reverse;
+}
+
+.heroBlock__element {
+    width: 50%;
+    height: 700px;
+}
+
+.heroBlock__element_left {
+    display: flex;
+    background-color: var(--main-bg);;
+    padding-left: 6%;
+    flex-direction: column;
+    justify-content:center;
+
+}
+
+.heroBlock__element_right {
+    background-image: url(../img./bg1.png);
+    background-color: orange;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.heroBlock_reverse .heroBlock__element_right {
+    background-image: url(../img./bg2.png);
+    background-color: orange;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
