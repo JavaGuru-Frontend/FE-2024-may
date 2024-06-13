@@ -4,11 +4,11 @@
     justify-content: center;
     flex-direction: column;
     margin: 50px;
-    background-color: aliceblue;
+    background-attachment: aliceblue;
 }
 
 .title_important {
-    background-color: var(--main-bg);
+    background-color: crimson;
 }
 
 .title_warning {

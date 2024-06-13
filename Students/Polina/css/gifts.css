@@ -1,0 +1,26 @@
+.gifts {
+    display: flex;
+    padding-bottom: 300px;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--main-bg);
+}
+
+.gift {
+    background-color: rgb(100, 72, 151);
+    width: 25%;
+    margin: 10px;
+}
+.gift img {
+    width: 100%
+}
+
+.gift__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 120px;
+    padding: 10px;
+}

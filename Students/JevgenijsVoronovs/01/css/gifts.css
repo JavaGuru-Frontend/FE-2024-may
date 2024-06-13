@@ -1,0 +1,32 @@
+.gifts {
+    display: flex;
+    padding-bottom: 300px;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--main-bg);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gift {
+    background-color: #FAFAFA;
+    width: 25%;
+    margin: 10px;
+}
+
+.gift img {
+    width: 100%;
+}
+
+.gift__text {
+    display: flex;
+    padding: 10px;
+    height: 120px;
+
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.gift__text a{
+    font-size: .6em;
+}
