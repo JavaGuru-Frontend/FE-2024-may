@@ -8,7 +8,7 @@
 }
 
 .title_important {
-    background-color: red;
+    background-color: var(--main-bg);
 }
 
 .title_warning {
