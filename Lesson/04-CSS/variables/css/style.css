@@ -1,0 +1,14 @@
+:root {
+    --zeka: rgb(0, 255, 34);
+    --main-bg-color: #888181;
+    --main-padding: 10px;
+}
+
+div {
+    background-color: var(--main-bg-color);
+    padding: var(--main-padding);
+
+    color: orange;
+    color: var(--zeka);
+}
+
