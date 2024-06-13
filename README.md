@@ -17,4 +17,11 @@ https://github.com/JavaGuru-Frontend/FE-2024-may
 ## Выполнение работ
 | Student               | Github           | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 
 | :-------------------- | :--------------- |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:--:|
-| JevgenijsVoronovs     |                  |   |   |   |   |   |   |   |   |   |    | 
+| Leyla                 |                  |   |   |   |   |   |   |   |   |   |    |  
+| Natalija              |                  |   |   |   |   |   |   |   |   |   |    | 
+| Valerijs              |                  |   |   |   |   |   |   |   |   |   |    | 
+| Polina                |                  |   |   |   |   |   |   |   |   |   |    | 
+| Jelena                |                  |   |   |   |   |   |   |   |   |   |    | 
+| Aleksandra            |                  |   |   |   |   |   |   |   |   |   |    | 
+| Arturs                |                  |   |   |   |   |   |   |   |   |   |    | 
+| Dmytro                |                  |   |   |   |   |   |   |   |   |   |    | 
