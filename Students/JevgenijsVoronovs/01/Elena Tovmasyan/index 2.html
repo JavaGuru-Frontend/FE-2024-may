@@ -3,27 +3,24 @@
     <head>
         <meta charset="UTF-8">
         <title>Document</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <style>
             *{
-                border: 1px solid red !important;
-            }
-            a {
-                margin-left: 20 px;
-            }
+                border: solid 1px red !important
+            } 
         </style>
-        <img src="../img/logo.png">
-        <div>
-            <a href="#">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Services</a>
-            <a href="#">Blog</a>
-        </div>
-        <button>GIFT FINDER</button>
-        <h1>
-            Йоу-йоу!
-        </h1>
+        <header class="header">
+            <img src="../img/logo.png" class="header__img">
+            <nav>
+                <a href="#" class="header__link">Home</a>
+                <a href="#" class="header__link">About Us</a>
+                <a href="#" class="header__link">Services</a>
+                <a href="#" class="header__link">Blog</a>
+            </nav>
+        <button class="header__btn">GIFT FINDER</button>
+    </header>
+        
     </body>
 </html>
