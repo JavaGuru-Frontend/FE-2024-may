@@ -20,8 +20,8 @@ https://github.com/JavaGuru-Frontend/FE-2024-may
 | Leyla                 |                  |   |   |   |   |   |   |   |   |   |    |  
 | Natalija              |                  |   |   |   |   |   |   |   |   |   |    | 
 | Valerijs              |                  |   |   |   |   |   |   |   |   |   |    | 
-| Polina                |                  |   |   |   |   |   |   |   |   |   |    | 
-| Jelena                |                  |   |   |   |   |   |   |   |   |   |    | 
-| Aleksandra            |                  |   |   |   |   |   |   |   |   |   |    | 
-| Arturs                |                  |   |   |   |   |   |   |   |   |   |    | 
-| Dmytro                |                  |   |   |   |   |   |   |   |   |   |    | 
+| Polina                |                  | . |   |   |   |   |   |   |   |   |    | 
+| Jelena                |                  | . |   |   |   |   |   |   |   |   |    | 
+| Aleksandra            |                  | . |   |   |   |   |   |   |   |   |    | 
+| Arturs                |                  | . |   |   |   |   |   |   |   |   |    | 
+| Dmytro                |                  | . |   |   |   |   |   |   |   |   |    | 
