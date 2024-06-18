@@ -2,10 +2,14 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 25px 0px;
 }
-.header_img {}
+.header_img {
+} 
 .header__link {
-    padding: 10 px;
-    background-color: green;
+    display: inline-block;
+    padding: 0px 20px;
 }
-.header__btn {}
+.header__btn {
+    
+}

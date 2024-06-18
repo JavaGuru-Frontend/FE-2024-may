@@ -1,0 +1,19 @@
+.heroblock {
+display: flex;
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
+}
+.heroblock__reverse {
+    flex-direction: row-reverse;
+    }
+.heroblock__element {
+    width: 50%;
+    height: 300px;
+}
+.heroblock__element__left {
+    background-color: rgb(43, 148, 49);
+}
+.heroblock__element__right {
+    background-color: orange;
+}
