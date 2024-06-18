@@ -15,7 +15,6 @@
    margin-bottom: 100px;
 }
 
-.header-menu {}
 
 .header-menu-list {
    display: flex;
@@ -24,8 +23,6 @@
    justify-content: center;
 
 }
-
-.header-menu-item {}
 
 .header-menu-link {
    font-size: 14px;
@@ -48,10 +45,6 @@
    display: flex;
    column-gap: 25px;
 }
-
-.footer-social-item {}
-
-.footer-social-link {}
 
 .footer-extra-inner {
    display: flex;
