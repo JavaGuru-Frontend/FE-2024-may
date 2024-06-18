@@ -1,0 +1,29 @@
+.header {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   padding: 30px 0px;
+}
+
+.header__link {
+   padding: 0 20px;
+
+}
+
+.header__btn {
+   border: 1px solid rgb(247, 148, 30);
+   border-radius: 5px;
+   background: transparent;
+   color: rgb(247, 148, 30);
+   padding: 15px 20px;
+}
+
+.header__btn:hover {
+   background-color: rgb(250, 220, 185);
+   color: aliceblue;
+}
+
+.header__link:hover {
+   color: rgb(125, 133, 133);
+   transition-duration: var(--transition-duration);
+}

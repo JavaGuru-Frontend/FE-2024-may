@@ -1,0 +1,53 @@
+.heroBlock {
+   display: flex;
+   width: 100%;
+   max-width: 1200px;
+   margin: 0 auto;
+
+}
+
+.heroBlock__reverse {
+   flex-direction: row-reverse;
+}
+
+.heroBlock__element {
+   width: 50%;
+   height: 700px;
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+
+
+}
+
+.heroBlock__element_left {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: center;
+   padding: 6%;
+   background-color: var(--main-bg);
+
+
+}
+
+.heroBlock__element_right {
+   background-image: url(../img/bg1.png );
+
+}
+
+.heroBlock__reverse .heroBlock__element_right {
+   background-image: url(../img/bg2.png );
+
+}
+
+.heroBlock__element_left h1 {
+   font-size: 3.5em;
+   margin-bottom: 40px;
+}
+
+.heroBlock__element_left p {
+   font-size: 1.25em;
+   margin-bottom: 50px;
+}
+
