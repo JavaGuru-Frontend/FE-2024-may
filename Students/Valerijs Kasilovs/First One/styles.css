@@ -1,0 +1,76 @@
+@import url(/header.css);
+@import url(/heroBlock.css);
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: grey;
+  background: #fafafa;
+
+  padding: 30px;
+}
+
+.header_img {
+}
+.header_link {
+  padding: 0px 20px;
+}
+
+.header_btn {
+  background-color: #f7941e;
+}
+
+.heroBlock {
+  display: flex;
+  width: 100%;
+}
+
+.heroBlock__element {
+  width: 50%;
+  height: 300px;
+}
+
+.heroBlock__element_left {
+  background: #f2f2f2;
+}
+
+.heroBlock__element_right {
+  background-image: url(/RoundOne/img/background.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+  /* background-color: orange; */
+}
+.heroBlock_reverse {
+  flex-direction: row-reverse;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 50px;
+  background-color: aliceblue;
+}
+.cardBlock {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 300px;
+  align-items: center;
+  background-color: aquamarine;
+  max-width: 1200px;
+  margin: auto;
+}
+.card {
+  width: 25%;
+  /* height: 436px;
+  top: 247px; */
+  background-color: grey;
+  margin: 10px;
+}
+
+.card img{
+  width:100%;
+}
