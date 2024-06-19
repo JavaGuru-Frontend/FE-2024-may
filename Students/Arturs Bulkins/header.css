@@ -2,6 +2,8 @@
     display: flex; 
     justify-content: space-evenly;
     align-items: center;
+    padding: 30px 20px;
+    font-size: .6em;
 }
 
 .header__img {

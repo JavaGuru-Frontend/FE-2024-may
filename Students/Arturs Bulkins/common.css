@@ -1,0 +1,38 @@
+*
+
+{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Oswald" ,sans-serif; /*подключаймый шрифт с гугле сервиса в styles*/   
+    font-size: 36px; /* точка отсчета для всего текста(базавый разрмер шрифта)*/
+ }
+
+ h1 
+ 
+ {
+    font-size: 1.5em;
+
+ }
+
+ h2
+ 
+ {
+    font-size: 1em;
+
+ }
+
+ h3
+ 
+ {
+    font-size: 0.8em;
+ }
+
+ p 
+ 
+ {
+    font-size: 0.7em;
+ }
+
+ 

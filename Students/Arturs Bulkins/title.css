@@ -1,0 +1,13 @@
+.title
+{
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+     
+}
+
+.title_important 
+
+{
+    background-color: var(--main-bg);
+}
