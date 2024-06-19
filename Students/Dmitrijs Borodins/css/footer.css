@@ -58,3 +58,13 @@
 .footer-copyright a:first-child {
    margin-left: 20px;
 }
+
+.footer-copyright a:hover {
+   color: #5c5858;
+   transition-duration: var(--transition-duration);
+}
+
+.header-menu-item a:hover {
+   color: #5c5858;
+   transition-duration: var(--transition-duration);
+}
