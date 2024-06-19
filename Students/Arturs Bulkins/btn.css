@@ -14,6 +14,7 @@
 
 {
     background-color: var(--bt-main-orange);
+    border: 1px solid var(--bt-main-orange);
     color: white;
 }
 
@@ -21,6 +22,7 @@
 
 {
     background-color: var(--bt-main-red);
+    border: 1px solid var(--bt-main-red);
     color: rgb(255, 255, 255);
 }
 
@@ -35,4 +37,28 @@
 {
     font-size: .80em;
     padding: 30px;
+}
+
+.btn_ready1
+
+{
+    padding: 20px;
+    margin: -210px; 
+    background: var(--bt-main-black);
+    border: 1px solid var(--bt-main-black);
+    color: white;
+    font-size: .40em;
+}
+
+.btn_ready2
+
+{
+    padding: 20px;
+    margin: -160px;
+    background: var(--bt-main-orange);
+    border: 1px solid var(--bt-main-black);
+    color: black;
+    font-size: .40em;
+    
+    
 }
