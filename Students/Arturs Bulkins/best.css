@@ -1,0 +1,49 @@
+.best
+
+{
+    display: flex;
+    height: 350px;
+    max-width: 900px;
+    margin: 0px auto;
+    background-color: var(--main-bg);
+
+
+
+}
+
+.best__background
+
+{
+    display:flex;
+    width: 100%;
+    
+    background-size: cover;
+    
+}
+
+.best__common
+
+{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--bt-main-black);
+    color: var(--main-bg);
+}
+
+.best_commom_left
+
+{
+    background-image: url(../Arturs\ Bulkins/images/Media.png);
+    
+}
+
+.best_commom_right
+
+{
+    
+}

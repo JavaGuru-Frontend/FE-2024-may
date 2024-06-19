@@ -2,11 +2,11 @@
 
 {
     display: flex;
-    padding-bottom: 100px;
+    padding-bottom: 80px;
     max-width: 1200px;
     margin: 0 auto;
     justify-content: space-around;
-    background-color: var(--main-bg); /*var - в этом случае переменая цвета*/
+    background-color: var(--main-bg); /*var - в этом случае перемеyная цвета*/
 }
 
 .gift 
