@@ -1,0 +1,38 @@
+.blog {
+    display: grid;
+    background-color: paleturquoise;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50% 50%;
+    width: 100%;
+    height: 400px;
+    grid-gap: 30px;
+    grid-template-areas:
+    "big big"
+    "left right"
+}
+
+.item_big {
+    grid-area: big;
+    background-color: brown;
+}
+
+.item_small {
+    grid-area: left;
+    background-color: rgb(165, 122, 42);
+    
+}
+
+.item_small {
+    grid-area: right;
+    background-color: rgb(77, 165, 42);
+    
+}
+
+@media only screen and {max-width: 800px} {
+    .item_big {display: none;}
+    .blog{
+        grid-template-areas:
+        "big big"
+        "left right"
+    }
+}

@@ -12,3 +12,18 @@
     background-color: var(--main-orange);
     color: white;
 }
+
+.btn_danger {
+    background-color: var(--main-red);
+    color: white;
+}
+
+.btn_small {
+    padding: 20px;
+    font-size: .2em;
+}
+
+.btn_big {
+    padding: 30px;
+    font-size: .6em;
+}

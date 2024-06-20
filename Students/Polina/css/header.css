@@ -6,6 +6,10 @@
     padding: 30px 0px;
 }
 
+.header nav {
+    display: flex;
+}
+
 .header__img {
 
 }
@@ -17,3 +21,18 @@
 .header__btn {
 
 }
+
+body {
+    background-color: white;
+}
+
+@media only screen and (min-width :800px) {
+    .header,
+    .header nav {
+        flex-direction: column;
+    }
+    .header nav {
+        display: none;
+    }
+}
+
