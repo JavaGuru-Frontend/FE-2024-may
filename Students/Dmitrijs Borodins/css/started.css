@@ -1,0 +1,37 @@
+.started {
+   display: flex;
+   height: 240px;
+   width: 100%;
+   background-color: var(--main-orange);
+
+}
+
+.started__right {
+   display: flex;
+   width: 50%;
+   justify-content: center;
+   align-items: center;
+
+
+
+}
+
+.started__left {
+   display: flex;
+   width: 50%;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+
+
+}
+
+.started__left p {
+   font-size: 2em;
+   padding-block: 25px;
+}
+
+.started__left h2 {
+   font-size: 2em;
+}
+

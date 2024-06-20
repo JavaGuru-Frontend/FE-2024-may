@@ -1,0 +1,61 @@
+.best
+
+{
+    display: flex;
+    height: 250px;
+    max-width: 872px;
+    margin: 0px auto;
+    background-color: var(--bt-main-black);
+
+
+
+}
+
+.best__background
+
+{
+    display:flex;
+    width: 100%;
+    
+    background-size: cover;
+    
+}
+
+.best__common
+
+{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 10%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--bt-main-black);
+    color: var(--main-bg);
+}
+
+.best_commom_left
+
+{
+    background-image: url(../Arturs\ Bulkins/images/Media.png);
+    width: 31%;
+}
+
+.best_commom_right
+
+{
+  
+}
+
+.best_text2
+
+{
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-evenly;
+    padding-right: 17%;
+
+
+}

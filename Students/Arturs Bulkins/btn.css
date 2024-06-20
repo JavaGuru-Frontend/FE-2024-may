@@ -1,0 +1,72 @@
+.btn
+
+{
+    padding: 20px;
+    text-transform: uppercase;
+    border: 1px solid var(--bt-main-orange);
+    background: transparent;
+    color: var(--bt-main-orange);
+    font-size: .65em;
+    border-radius: 7px;
+}
+
+.btn__full
+
+{
+    background-color: var(--bt-main-orange);
+    border: 1px solid var(--bt-main-orange);
+    color: white;
+}
+
+.btn_danger
+
+{
+    background-color: var(--bt-main-red);
+    border: 1px solid var(--bt-main-red);
+    color: rgb(255, 255, 255);
+}
+
+.btn_small
+
+{
+    font-size: .45em;
+    padding: 10px;
+}
+.btn_big
+
+{
+    font-size: .80em;
+    padding: 30px;
+}
+
+.btn_ready1
+
+{
+    padding: 20px;
+    margin: -210px; 
+    background: var(--bt-main-black);
+    border: 1px solid var(--bt-main-black);
+    color: white;
+    font-size: .40em;
+}
+
+.btn_ready2
+
+{
+    padding: 20px;
+    margin: -160px;
+    background: var(--bt-main-orange);
+    border: 1px solid var(--bt-main-black);
+    color: black;
+    font-size: .40em;
+    
+    
+}
+
+.best_button
+
+{
+    background-color: var(--bt-main-black);
+    border: 1px solid var(--bt-main-black);
+    color: var(--main-bg);
+}

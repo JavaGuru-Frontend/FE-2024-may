@@ -1,0 +1,48 @@
+.btn {
+   color: var(--main-Fonts-color);
+   font-size: 18px;
+   text-align: center;
+   text-transform: uppercase;
+   border-radius: 5px;
+   background: var(--main-orange);
+   width: 200px;
+   height: 48px;
+}
+
+.btn-transparent {
+   color: var(--main-orange);
+   background-color: transparent;
+   border: 1px solid var(--main-orange);
+}
+
+.btn-black {
+   background-color: var(--color-dark);
+   color: #ffffff;
+   margin-right: 20px;
+}
+
+.btn-transparent-black {
+   color: var(--color-dark);
+   background-color: transparent;
+   border: 1px solid var(--color-dark);
+
+}
+
+.btn-link {
+   font-size: 14px;
+   width: 70px;
+   height: 20px;
+}
+
+.btn-link:hover {
+   color: #5c5858;
+   transition-duration: var(--transition-duration);
+}
+
+.header__btn {
+   border: 1px solid rgb(247, 148, 30);
+   border-radius: 5px;
+   background: transparent;
+   color: rgb(247, 148, 30);
+   padding: 15px 20px;
+}

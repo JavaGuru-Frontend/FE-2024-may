@@ -1,0 +1,77 @@
+.search-wife {
+   color: var(--main-Fonts-color)
+}
+
+.container{
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+.search-wife__header {
+   display: flex;
+   width: 100%;
+   height: 370px;
+   margin-bottom: 90px;
+}
+
+.search-wife__header-left {
+   width: 30%;
+   background-position: center;
+   background-size: contain;
+   background-repeat: no-repeat;
+
+
+}
+
+.search-wife__header-right {
+   display: flex;
+   justify-content: center;
+   width: 70%;
+   background-color: var(--color-dark);
+
+}
+
+
+
+.inner-header-right {
+   padding: 60px 0;
+}
+
+.inner-header-right a {
+   color: inherit;
+   font-size: 18px;
+}
+
+.inner-header-right h3 {
+   font-size: 3em;
+   padding: 60px 0 60px;
+
+}
+
+.search-wife__header-discription {
+   display: flex;
+}
+
+.discription-element {
+   display: flex;
+   color: var(--color-dark);
+   flex-direction: column;
+   width: 50%;
+   height: 290px;
+}
+
+.discription-element h3 {
+   padding: 50px 0 50px;
+   font-size: 24px;
+   font-weight: 700;
+
+}
+
+.discription-element p {
+   font-size: 18px;
+   padding: 25px 0 50px;
+
+}
+.discription-element div p{
+   width: 70%;
+}
