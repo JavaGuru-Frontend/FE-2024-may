@@ -1,0 +1,22 @@
+.heroBlock {
+   display: flex;
+   width: 100%;
+}
+.heroblock__reverse {
+flex-direction: row-reverse;
+}
+
+
+.heroBlock__element {
+    width: 50%;
+    height: 300px;
+    
+}
+.heroBlock__element_left {
+    background-color: red;
+    
+}
+.heroBlock__element_right {
+    background-color: blueviolet;
+    
+}
