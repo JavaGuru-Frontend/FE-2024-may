@@ -1,0 +1,32 @@
+.gifts {
+    background-color: var(--main-bg);
+    display: flex;
+    padding-bottom: 300px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gift {
+    background-color: bisque;
+    width: 25%;
+    margin: 10px;
+}
+
+.gift img {
+    width: 100%;
+}
+
+.gift__text {
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+.gift__text a {
+    font-size: 0.7em;
+}
