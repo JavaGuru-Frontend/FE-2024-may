@@ -62,3 +62,11 @@
     
     
 }
+
+.best_button
+
+{
+    background-color: var(--bt-main-black);
+    border: 1px solid var(--bt-main-black);
+    color: var(--main-bg);
+}
