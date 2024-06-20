@@ -9,11 +9,18 @@ margin: 0 auto;
     }
 .heroblock__element {
     width: 50%;
-    height: 300px;
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .heroblock__element__left {
     background-color: rgb(43, 148, 49);
 }
 .heroblock__element__right {
-    background-color: orange;
+    background-image: url(img/bg1.png);
 }
+.heroblock__reverse .heroblock__element__right {
+    background-image: url(img/bg2.png);
+}
+ 
