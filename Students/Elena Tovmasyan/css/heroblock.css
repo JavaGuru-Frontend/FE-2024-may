@@ -15,12 +15,17 @@ margin: 0 auto;
     background-repeat: no-repeat;
 }
 .heroblock__element__left {
-    background-color: rgb(43, 148, 49);
+    display: flex;
+    background-color: #F1F1F2;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 6%;
 }
 .heroblock__element__right {
-    background-image: url(img/bg1.png);
+    background-image: url(../img/bg1.png);
 }
 .heroblock__reverse .heroblock__element__right {
-    background-image: url(img/bg2.png);
+    background-image: url(../img/bg2.png);
 }
  

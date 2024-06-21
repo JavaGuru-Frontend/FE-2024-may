@@ -1,0 +1,9 @@
+.posts_blog {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.posts_blog_element_right {
+  background-image: url(../Img/projectOne_giftCard_three.jpeg);
+}

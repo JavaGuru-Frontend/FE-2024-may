@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--main-bg);
+  background: #fafafa;
+
+  padding: 30px;
+}
+
+.header_link {
+  padding: 0px 20px;
+}
+
+.header_btn {
+  background-color: #f7941e;
+}
+@media only screen and (max-width: 800px) {
+  .heroBlock {
+    flex-direction: column;
+  }
+  .heroBlock__element {
+    width: 100%;
+  }
+}

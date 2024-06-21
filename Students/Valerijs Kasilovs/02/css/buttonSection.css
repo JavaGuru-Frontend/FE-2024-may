@@ -1,0 +1,13 @@
+.button_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: orange;
+  width: 1440px;
+  height: 240px;
+}
+
+.buttons {
+  /* display: flex; */
+  justify-content: start;
+}
