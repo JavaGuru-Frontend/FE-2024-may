@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="StyleAB.css">
 </head>   
 <style>
 
 *{
 
-    border: solid 1px rgb(5, 5, 5) !important;
-    background-color: var(--main-bg)
+ /* border: solid 1px rgb(5, 5, 5) !important;*/
+    /*background-color: var(--main-bg);*/
+    
+    
 
 }
 </style>
-<body>
-    <header class="header">
+<header class="header">
         <img src="A.B.logo.png" class="header__img">
             <nav>
                 <a href="#" class="header__link">Home</a>
@@ -24,16 +26,17 @@
                 <a href="#" class="header__link">Blog</a>
             </nav>
             <button class="btn btn_full btn_small">GIFT FINDER</button>
-            <button class="btn btn_danger btn_big">GIFT FINDER</button>
-    </header>
+            <!--<button class="btn btn_danger btn_big">GIFT FINDER</button>-->
+ </header>
+<body>
     <main>
         <div class="heroblock">
             <div class="heroblock__common heroblock__common_left">
-                <h1>''Find a gift for your wife or girlfriend''</h1>
-                <p>''Struggling to find a gift for your wife or girlfriend?
+                <h1>Find a gift for<br> your wife or<br> girlfriend</h1>
+                <p>''Struggling to find a gift for your wife or<br> girlfriend?
                     No problem!''</p>
                 <button id="zeka" class="btn btn__full">find gift now<button><!-- id=zeka используем для JS-->
-                     <button class="btn btn_danger">find gift now</button>
+                     <!--<button class="btn btn_danger">find gift now</button>-->
                 </div>
                 <div class="heroblock__common heroblock__common_right">
                 <img src="">
@@ -45,9 +48,13 @@
 
         <div class="heroblock heroblock_reverse"><!--Двойной модифиатор-->
                 <div class="heroblock__common heroblock__common_left">
-                    <h1>''Find a gift for your wife or girlfriend''</h1>
-                    <p>''Struggling to find a gift for your wife or girlfriend?
-                        No problem!''</p>
+                    <h2>How we work</h2>
+                    <p>We’ve actually already asked hundreds of<br> 
+                        women what they want, and made a database<br>
+                         with the results. All you have to do is take our<br>
+                          short survey that only takes seconds, and our<br>
+                           proprietary algorithm will match you with a few<br>
+                            perfect gift options.</p>
                     <button class="btn">Read more<button>
                     </div>
                     <div class="heroblock__common heroblock__common_right"><!--Двойной модифиатор для изменения более конктретного элэмента и увеличивая приоритета 0.2.0-->
@@ -108,10 +115,30 @@
              </div>  
     <div class="grid-container">
         <img class="item1" src="images/Media.png" alt="">
-        <div class="item2">test2</div>
-        <div class="item3">test3</div>
-        <div class="item4">test4</div>
+        <div class="item2">
+            <h3>Mr.JohnDoe</h3>
+            <h6 class="item2_h6">The best way to wish<br> your wife</h6>
+            <nav>
+                <a class="item2_nav" href="">Read More</a>
+            </nav>
         </div>
+        <div class="item3">
+            <h3 class="item_bold">Database to find the gifts for your<br> girlfriend</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br> sed do eiusmod tempor incididunt ut labore et dolore...
+            </p>
+            <nav>
+                <a class="item2_nav item2_nav__black" href="">Read More</a>
+            </nav>
+        </div>
+        <div class="item3 item4">
+            <h3 class="item_bold">How Artificial Intelligence read your mind<br> to find the best gift</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br> sed do eiusmod tempor incididunt ut labore et dolore...
+            </p>
+            <nav>
+                <a class="item2_nav item2_nav__black" href="">Read More</a>
+            </nav>
+        </div>
+    </div>
      </section>        
     </main>
 </body>

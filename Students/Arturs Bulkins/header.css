@@ -4,6 +4,8 @@
     align-items: center;
     padding: 30px 20px;
     font-size: .6em;
+    top: 1px;
+    height: 116px;
 }
 
 .header__img {
@@ -14,7 +16,7 @@
 
     margin: 20px;
     padding: 10px;
-
+    text-decoration: none;
 }
 
 .header__btn {
