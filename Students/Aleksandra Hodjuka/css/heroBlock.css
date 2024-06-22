@@ -1,10 +1,13 @@
 .heroBlock {
    display: flex;
    width: 100%;
+   max-width: 1200px;
+   margin: 0 auto;
 }
-.heroblock__reverse {
-flex-direction: row-reverse;
+.heroBlock_reverse {
+    flex-direction: row-reverse;
 }
+
 
 
 .heroBlock__element {
