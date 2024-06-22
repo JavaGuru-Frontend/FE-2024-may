@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap'); /* сылка на шрифты из гугл сервиса fonts*/
+
 @import url(reset.css);
 @import url(common.css);
 @import url(variables.css);
@@ -10,5 +10,5 @@
 @import url(gifts.css);
 @import url(ready.css);
 @import url(best.css);
-@import url(js.js);
+@import url(blog.css);
 

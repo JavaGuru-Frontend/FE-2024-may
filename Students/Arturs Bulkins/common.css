@@ -1,6 +1,6 @@
-*
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
-{
+*{
     box-sizing: border-box;
 }
 
@@ -9,49 +9,16 @@ body{
     font-size: 36px; /* точка отсчета для всего текста(базавый разрмер шрифта)*/
  }
 
- h1 
- 
- {
-    font-size: 1.5em;
+ h1{ font-size: 1.5em;}
 
- }
+ h2{font-size: 1em;}
 
- h2
- 
- {
-    font-size: 1em;
+ h3{ font-size: 0.6em;}
 
- }
+ h4{font-size: 0.6em;}
 
- h3
- 
- {
-    font-size: 0.6em;
- }
+ h5{font-size: 0.4em;}
 
- h4
- 
- {
-   font-size: 0.6em;
- }
+ p {font-size: 0.7em;}
 
- h5
- 
- {
-   font-size: 0.4em;
- }
-
- p 
- 
- {
-    font-size: 0.7em;
- }
-
- .br
- 
- {
-   font: bold;
- }
- 
- 
  
