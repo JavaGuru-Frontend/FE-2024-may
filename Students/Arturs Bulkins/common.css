@@ -23,4 +23,13 @@ body{
 
  p {font-size: 0.75em;}
 
- a:hover{ color: #F7941E;}
+ a:hover{ 
+    color: #F7941E;
+}
+
+a
+
+{
+    color: black;
+    text-decoration: none;
+}

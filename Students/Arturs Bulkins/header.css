@@ -6,6 +6,7 @@
     font-size: .6em;
     top: 1px;
     height: 116px;
+    color: black;
 }
 
 .header__img {
@@ -16,7 +17,6 @@
 
     margin: 20px;
     padding: 10px;
-    text-decoration: none;
 }
 
 .header__btn {
