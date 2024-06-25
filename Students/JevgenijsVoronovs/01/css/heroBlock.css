@@ -26,9 +26,9 @@
 }
 
 .heroBlock__element_right {
-    background-image: url(../img/bg1.png);
+    background-image: url(images/background.png);
 }
 
 .heroBlock_reverse .heroBlock__element_right {
-    background-image: url(../img/bg2.png);
+    background-image: url(images/background2.png);
 }

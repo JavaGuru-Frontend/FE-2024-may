@@ -1,8 +1,8 @@
 .grid-container
 
 {
-    height: 860px;
-    max-width: 1440px;
+    height: 765px;
+    width: 1440px;
     margin: 0 auto;
     display: grid;
     grid-template-areas:
@@ -11,8 +11,8 @@
     gap: 0px;
     row-gap: 0px;
     position: relative;
-    bottom: 0px;
-    background-color: var(--main-bg);
+    bottom: 61px;
+    
       
 }
 

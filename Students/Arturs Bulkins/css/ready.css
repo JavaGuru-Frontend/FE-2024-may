@@ -11,16 +11,16 @@
     margin: 0px auto;
 }
 
-.ready_text
+.ready__text
 
 {
-    margin-left: -190px;
+   margin: 0px 0px;
     
     
 }
 
-.ready_buttons
+.ready__button
 
 {
-    display: flex;
+    
 }

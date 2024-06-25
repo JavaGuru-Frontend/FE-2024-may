@@ -1,0 +1,49 @@
+@media only screen and (max-width: 800px)
+
+{   
+    body{ min-width: 0px;}
+    .header {
+        
+        
+        width: 100%;
+        display: none;
+        flex-wrap: wrap;
+
+        }
+    
+   
+
+    .heroblock {
+        
+        min-width: 100%;
+        min-height: 100%;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content:center;
+    }
+    .heroblock__common_right
+    {
+        align-items: center;
+        min-width: 100%;}    
+    
+    h1{ font-size: 1px;}
+
+    .gifts 
+    
+    {
+        display: flex;
+        min-width: 480px;
+
+    }
+
+    .ready 
+    
+    {
+       
+    display: flex; 
+       flex-direction: column;
+       justify-content: space-evenly;
+       align-items: center;
+    
+    }
+}
