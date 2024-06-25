@@ -9,11 +9,6 @@
 }
 
 .btn__full {
-    padding: 20px;
-    text-transform: uppercase;
-    border: 1px solid var(--btn-main-color);
-    border-radius: 4px;
     background-color: var(--btn-main-color);
-    font-size: 1em;
     color: white;
 }
