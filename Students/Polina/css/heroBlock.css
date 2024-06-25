@@ -2,7 +2,7 @@
     display: flex;
     max-width: 1200px;
     width: 100%;
-    margin: 0 auto;;
+    margin: 0 auto;
 }
 
 .heroBlock_reverse {
@@ -12,29 +12,33 @@
 .heroBlock__element {
     width: 50%;
     height: 700px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.heroBlock__element_left {
+.heroBlock__element_left { 
     display: flex;
-    background-color: var(--main-bg);;
     padding-left: 6%;
     flex-direction: column;
-    justify-content:center;
+    justify-content: center;
+    align-items: flex-start;
 
 }
 
 .heroBlock__element_right {
-    background-image: url(../img./bg1.png);
-    background-color: orange;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url(../img/couple.jpg);
 }
 
 .heroBlock_reverse .heroBlock__element_right {
-    background-image: url(../img./bg2.png);
-    background-color: orange;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url(../img/thanks.jpg); 
+}
+
+@media only screen and (max-width :800px) {
+    .heroBlock {
+        flex-direction: column;
+    }
+    .heroBlock__element {
+        width: 100%;
+    }
 }

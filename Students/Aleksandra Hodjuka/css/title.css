@@ -1,20 +1,16 @@
-.title {
+.title{
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     margin: 50px;
-    background-attachment: aliceblue;
+    background-color: aliceblue;
 }
-
 .title_important {
-    background-color: var(--main-bg);
+    background-color: red;
 }
-
 .title_warning {
     background-color: yellow;
 }
-
 .title_success {
-    background-color: green;
+    background-color:green;
 }

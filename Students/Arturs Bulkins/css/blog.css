@@ -1,0 +1,40 @@
+.blog
+
+{
+    background-color:  red;
+    display: grid;
+    height: 1000px;
+    grid-template-columns: 50% 50%;
+ 
+    
+    grid-gap: 10px;
+    grid-template-areas: 
+    
+    
+    "form"  "header"
+    "left"  "right";
+    
+    border: solid 1px black;
+
+}
+
+.blog_photo
+
+{
+    position: relative;
+    top:0px;
+    left:0px;
+    
+
+}
+
+.whitetext
+
+{
+    background-color: black;
+    color: white;
+    position:relative;
+    position: relative;
+    top: 10%;
+    right: 15%;
+}

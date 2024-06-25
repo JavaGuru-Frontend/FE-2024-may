@@ -4,19 +4,15 @@
     align-items: center;
     padding: 30px 20px;
     font-size: .6em;
-}
-
-.header__img {
-
+    top: 1px;
+    height: 116px;
+    color: black;
 }
 
 .header__link {
 
     margin: 20px;
     padding: 10px;
-
 }
 
-.header__btn {
 
-}

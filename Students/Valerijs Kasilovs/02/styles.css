@@ -1,0 +1,92 @@
+@import url(./css/reset.css);
+@import url(./css/common.css);
+@import url(./css/variables.css);
+@import url(./css/header.css);
+@import url(./css/heroBlock.css);
+@import url(./css/cardBlock.css);
+@import url(./css/buttonSection.css);
+@import url(./css/posts_blog.css);
+@import url(.css/main.css);
+/* .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: grey;
+  background: #fafafa;
+
+  padding: 30px;
+}
+
+.header_link {
+  padding: 0px 20px;
+}
+
+.header_btn {
+  background-color: #f7941e;
+} */
+
+/* .heroBlock {
+  display: flex;
+  width: 100%;
+}
+
+.heroBlock__element {
+  width: 50%;
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.heroBlock__element_left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 6%;
+}
+.heroBlock__element_right {
+  background-image: url(./Img/projectOne_bodyPictureOne.jpeg);
+}
+.heroBlock_reverse .heroBlock__element_right {
+  background-image: url(./Img/projectOne_bodyPictureTwo.jpeg);
+}
+
+.heroBlock_reverse {
+  flex-direction: row-reverse;
+} */
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 50px;
+  background-color: aliceblue;
+}
+/* .cardBlock {
+  display: flex;
+
+  justify-content: space-around;
+  padding-bottom: 300px;
+  align-items: center;
+  background-color: aquamarine;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.card {
+  width: 25%;
+  background-color: var(--main-bg);
+  margin: 10px;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 120px;
+  padding: 10px;
+} */

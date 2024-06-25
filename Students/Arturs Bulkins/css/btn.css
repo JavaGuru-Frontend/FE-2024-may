@@ -42,24 +42,25 @@
 .btn_ready1
 
 {
-    padding: 20px;
-    margin: -210px; 
+   
+   
     background: var(--bt-main-black);
     border: 1px solid var(--bt-main-black);
     color: white;
     font-size: .40em;
+    width: 250px;
 }
 
 .btn_ready2
 
 {
-    padding: 20px;
-    margin: -160px;
+   
+   
     background: var(--bt-main-orange);
     border: 1px solid var(--bt-main-black);
     color: black;
     font-size: .40em;
-    
+    width: 250px;
     
 }
 

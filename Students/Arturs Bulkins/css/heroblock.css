@@ -3,9 +3,9 @@
 {
     display: flex;
     height: 700px;
-    max-width: 1200px;
+    max-width: 1440px;
     margin: 0px auto;
-    background-color: var(--main-bg);
+    background-color: rgba(241, 241, 242, 1);
 }
 
 .heroblock_reverse
@@ -19,7 +19,7 @@
 
 {
     width: 100%;
-    height: 700px;
+   
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -31,14 +31,32 @@
 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: flex-start;
-    padding-left: 5%;
+    
+   position: relative;
+    left: 10%;
+    top: 2%;
+    
 }
- 
+
+.heroblock__common .heroblock__common_left
+
+{
+   padding: 0px; 
+}
+
+
+.p
+ {  
+    text-align: justify;
+    padding-right: 36%;
+    font-size: 1.9rem;
+}
+
 .heroblock__common_right
 {
-    background-image: url(../Arturs\ Bulkins/images/background1.png);
+    background-image: url(../images/background1.png);
     
      
 }
@@ -46,5 +64,5 @@
 .heroblock_reverse .heroblock__common_right
 
 {
-    background-image: url(../Arturs\ Bulkins/images/background2.png);
+    background-image: url(../images/background2.png);
 }

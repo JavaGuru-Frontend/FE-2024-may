@@ -1,0 +1,32 @@
+.title
+{
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 260px;
+    padding: 2%;
+    
+}
+
+.title2
+
+{
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 260px;
+    padding: 2%;
+    padding-bottom: 1%;
+}
+
+.title__h3
+
+{
+    
+}
