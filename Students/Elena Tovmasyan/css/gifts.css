@@ -4,8 +4,6 @@
     padding-bottom: 300px;
     flex-direction: row;
     justify-content: space-evenly;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .gift {

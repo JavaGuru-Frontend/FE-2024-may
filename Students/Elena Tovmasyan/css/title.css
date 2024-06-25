@@ -1,7 +1,6 @@
 .title{
     display: flex;
-    display: flex;
     align-items: center;
     flex-direction: column;
-    margin: 50px;
+    padding: 100px;
 }
