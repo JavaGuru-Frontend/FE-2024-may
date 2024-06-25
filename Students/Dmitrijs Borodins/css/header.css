@@ -3,10 +3,12 @@
    justify-content: space-around;
    align-items: center;
    padding: 30px 0px;
+
 }
 
 .header__link {
    padding: 0 20px;
+   
 
 }
 
@@ -20,4 +22,16 @@
 .header__link:hover {
    color: rgb(125, 133, 133);
    transition-duration: var(--transition-duration);
+}
+
+@media (max-width: 767px) {
+   .header__link {
+      padding: 0 5px;
+   }
+
+   .header__btn {
+      padding: 10px 5px;
+   }
+
+  
 }
