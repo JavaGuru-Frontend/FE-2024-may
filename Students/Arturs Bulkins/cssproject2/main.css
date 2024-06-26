@@ -6,15 +6,11 @@
     align-items: center;
     max-width: 1440px;
     margin: 0 auto;
-
-    
-  
 }
 
 .title
 
 {
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,8 +24,6 @@
     margin-top: 180px;
     text-transform: uppercase;
     position:relative;
-    
-    
 }
 
 
