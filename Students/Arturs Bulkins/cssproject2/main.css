@@ -46,7 +46,7 @@
     font-size: 15px;
     font-weight: 600;
     position: relative;
-    top: 160px;
+    top: 130px;
     
 }
 
@@ -84,14 +84,7 @@
 
 @media only screen and (max-width: 850px)
 
-{
-    .main
-    
-        {
-            
-            
-        }
-        
+{    
     .title
         
         {
