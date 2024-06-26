@@ -1,8 +1,7 @@
 .heroBlock {
    display: flex;
    width: 100%;
-   max-width: 1200px;
-   margin: 0 auto;
+
 
 }
 
@@ -51,3 +50,19 @@
    margin-bottom: 50px;
 }
 
+
+@media (max-width: 767px) {
+   .heroBlock__element_left p {
+      font-size: 1em;
+   }
+
+   .heroBlock__element {
+      height: 500px;
+   }
+
+   .heroBlock__element_left h1 {
+      font-size: 2.7em;
+      margin-bottom: 15px;
+   }
+
+}
