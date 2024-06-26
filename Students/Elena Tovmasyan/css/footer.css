@@ -1,19 +1,15 @@
-.header {
+.footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 25px 0px;
 }
 
-.header_img {
+.footer_img {
 } 
 
-.header__link {
+.footer__link {
     display: inline-block;
     padding: 0px 20px;
     font-size: 1.3em;
-}
-
-.header__btn {
-    
 }

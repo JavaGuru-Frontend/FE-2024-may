@@ -12,3 +12,13 @@
     background-color: var(--btn-main-color);
     color: white;
 }
+
+.btn__black {
+    border: 1px solid black;
+    color: black;
+}
+
+.btn__black_full {
+    background-color: black;
+    color: white;
+}
