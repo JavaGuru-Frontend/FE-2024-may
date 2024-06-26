@@ -3,7 +3,8 @@
     box-sizing: border-box;
 }
 
-body{
+body
+{
     font-family: "Futura Std" ,sans-serif; /*подключаймый шрифт с гугле сервиса в styles*/   
     font-size: 50px; /* точка отсчета для всего текста(базавый разрмер шрифта)*/
  }
@@ -12,8 +13,10 @@ body{
 
  
 
- p {font-size: 0.45em;
-font-weight: 600;
+ p 
+    {
+        font-size: 0.45em;
+        font-weight: 600;
 }
 
 @media only screen and (max-width: 1200px)
@@ -30,7 +33,7 @@ font-weight: 600;
 {
     h1
     {
-        font-size:0.4em;
+        font-size:0.5em;
     }
     p
     

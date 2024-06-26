@@ -52,8 +52,8 @@
     .img 
     
     {
-        top: 56%;
-        left: 1%;
+        top: -20%;
+        left: 15%;
         width: 145px;
         height: 145px;
     }
@@ -61,6 +61,11 @@
     .img2
     
     {
-        display: none;
+        display: initial;
+        top: -20%;
+        left: 47%;
+        width: 145px;
+        height: 145px;
+        
     }
 }

@@ -101,9 +101,15 @@
     .title
         
         {
+            margin-top: 130px;
             display:flex;
             width: 88%;
             padding-left: 0%;
             padding-bottom: 14%;
+        }
+    .link
+
+        {
+            top: 180px;
         }
 }
