@@ -3,7 +3,7 @@
     padding-bottom: 300px;
     align-items: center;
     justify-content: space-around;
-    background-color: var(--main-bg);
+    background-color: transparent;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -29,4 +29,7 @@
 
 .gift__text a{
     font-size: .6em;
+}
+.gift__link{
+    font-size: medium;
 }

@@ -9,26 +9,40 @@
 }
 
 .heroBlock__element {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
     width: 50%;
     height: 700px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    
 }
 
 .heroBlock__element_left {
     display: flex;
-    background-color: var(--mai);
+    background-color: trasn;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding-left: 6%;
+    align-items: flex-start
+
+   
+}
+.heroBlock__element_top {
+    width: 2000px;
+    height: 370px;
+    background-image: url(../img/Blog-Card-Feature.png);
 }
 
 .heroBlock__element_right {
-    background-image: url(images/bg1.png);
+    background-image: url(../img/bg1.png);
 }
 
 .heroBlock_reverse .heroBlock__element_right {
-    background-image: url(images/bg2.png);
+    background-image: url(../img/bg2.png);
+}
+.heroBlock__link{
+    font-size: medium;
+
 }

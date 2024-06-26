@@ -11,6 +11,21 @@
     background-color: var(--main-orange);
     color: white;
 }
+.btn_full_blackFont {
+    background-color: var(--main-orange);
+    color: black;
+    border: 1px solid black;
+}
+.btn_black{
+    background-color: black;
+    color: white;
+}
+.button-container {
+    display: flex;
+    padding-left: 500px;
+    gap: 10px; 
+    margin-top: 10px; 
+}
 
 .btn_danger {
     background-color: var(--main-red);
