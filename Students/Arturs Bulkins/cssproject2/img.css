@@ -17,3 +17,50 @@
     top: 53%;
     right: 2%
 }
+
+
+@media only screen and (max-width: 1200px)
+
+{
+    .title
+    
+    {
+        max-width: 800px;
+        
+        height: 600px;
+    }
+
+    .img 
+    
+    {
+        top: -12%;
+        left: -3%;
+        width: 370px;
+        height: 370px;
+    }
+
+    .img2
+    
+    {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 850px)
+
+{
+    .img 
+    
+    {
+        top: 56%;
+        left: 1%;
+        width: 145px;
+        height: 145px;
+    }
+
+    .img2
+    
+    {
+        display: none;
+    }
+}

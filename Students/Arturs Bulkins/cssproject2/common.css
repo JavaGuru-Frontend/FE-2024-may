@@ -15,3 +15,26 @@ body{
  p {font-size: 0.45em;
 font-weight: 600;
 }
+
+@media only screen and (max-width: 1200px)
+
+{
+    h1
+    {
+        font-size:0.7em;
+    }
+}
+
+@media only screen and (max-width: 850px)
+
+{
+    h1
+    {
+        font-size:0.4em;
+    }
+    p
+    
+    {
+        font-size:0.3em;
+    }
+}
