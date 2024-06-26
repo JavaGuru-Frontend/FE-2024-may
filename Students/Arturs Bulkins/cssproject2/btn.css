@@ -29,3 +29,16 @@
         
     }
 }
+
+@media only screen and (max-width: 850px)
+
+{
+    .btn
+    
+    {
+        
+        width: 70%;
+        top: 66%;
+        left: 15%;
+    }
+}
