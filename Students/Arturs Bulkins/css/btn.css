@@ -54,14 +54,9 @@
 .btn_ready2
 
 {
-   
-   
     background: var(--bt-main-orange);
     border: 1px solid var(--bt-main-black);
     color: black;
-    font-size: .40em;
-    width: 250px;
-    
 }
 
 .best_button
@@ -70,4 +65,21 @@
     background-color: var(--bt-main-black);
     border: 1px solid var(--bt-main-black);
     color: var(--main-bg);
+}
+
+@media only screen and (max-width: 800px)
+
+
+{
+    .btn
+    
+    {
+        padding: 15px;
+    }
+
+    .btn_ready1
+    
+    {
+        width: 150px;
+    }
 }
