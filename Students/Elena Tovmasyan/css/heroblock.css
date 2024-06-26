@@ -27,3 +27,13 @@ width: 100%;
 .heroblock__reverse .heroblock__element_right {
     background-image: url(../img/bg2.png);
 }
+
+@media only screen and (max-width: 600px) {
+    
+    .heroblock {
+        flex-direction: column;
+    }
+    .heroblock__element {
+        width: 100%;
+    }
+}

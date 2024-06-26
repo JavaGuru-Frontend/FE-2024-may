@@ -1,7 +1,7 @@
 .orangeblock {
     display: flex;
     width: 100%;
-    height: 300px;
+    height: 200px;
     background-color: var(--btn-main-color);
     flex-direction: row;
     justify-content: space-evenly;
@@ -9,13 +9,15 @@
     }
 
     .orangeblock__element {
-     width: 50%;
+    
     }
 
     .orangeblock__element_left {
-        display: flex;
+        width: 40%;
+        
     }
         
-    .rangeblock__element_right {
-        display: flex;
+    .orangeblock__element_right {
+        width: 60%;
+        
     }
