@@ -1,0 +1,19 @@
+.img 
+
+{
+    position:absolute;
+    width: 268px;
+    height: 268px;
+    top: 53%;
+    left: 2%;
+}
+
+.img2 
+
+{
+    position:absolute;
+    width: 268px;
+    height: 268px;
+    top: 53%;
+    right: 2%
+}

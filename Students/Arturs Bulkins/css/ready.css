@@ -19,8 +19,15 @@
     
 }
 
-.ready__button
+@media only screen and (max-width: 800px)
+
 
 {
+    .ready
     
+    {
+        flex-direction: column;
+        justify-content: space-evenly;
+        min-width: 500px;
+    }
 }
