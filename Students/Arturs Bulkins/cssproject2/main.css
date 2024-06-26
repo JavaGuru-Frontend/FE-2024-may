@@ -27,6 +27,7 @@
     border-width: 0px;
     box-shadow: 0px 0px 15px 20px rgb(155, 100, 210);
     margin-top: 130px;
+    text-transform: uppercase;
     position:relative;
     
 }
@@ -34,14 +35,7 @@
 
 .title > p {
     position:relative;
-    top:40px;
-}
-
-.title__2 > h1
-    
-{
-    position:relative;
-    top:30px;
+    top:20px;
 }
 
 .link
@@ -53,9 +47,4 @@
     top: 120px;
 }
 
-.title__3 > h1
-
-{
-    position:relative;
-    top:30px;
-}
+.title__3{height: 240px;}
