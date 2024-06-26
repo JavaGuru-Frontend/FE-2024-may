@@ -1,7 +1,6 @@
 .gifts {
-    background-color: var(--main-bg);
     display: flex;
-    padding-bottom: 300px;
+    padding-bottom: 70px;
     flex-direction: row;
     justify-content: space-evenly;
 }
