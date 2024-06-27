@@ -20,7 +20,11 @@ width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 10px;
+    padding: 40px;
+
+    h1, p, btn {
+        padding-bottom: 30px;
+    }
 }
     
 .heroblock__element_right {

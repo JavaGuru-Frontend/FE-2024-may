@@ -1,0 +1,8 @@
+.blog {
+    display: grid;
+    background-color: lemonchiffon;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    width: 100%;
+    height: 400px;
+}

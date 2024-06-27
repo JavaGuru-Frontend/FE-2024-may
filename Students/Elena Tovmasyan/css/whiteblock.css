@@ -12,24 +12,20 @@
         justify-content: space-evenly;
         align-items: center;
         border: 1px solid black;
+
+        h2, p, a {
+            padding: 20px;
+            }
     }
 
     .whiteblock__element_left {
-        width: 45%
+        width: 47%
     }
 
     .whiteblock__element_right {
-        width: 45%
+        width: 47%
     }
 
     .whiteblock__link {
         font-size: 0.8em;
-    }
-
-    h2, p, a {
-        padding: 10px;
-    }
-
-    a {
-        margin-top: 20px;
     }
