@@ -1,0 +1,11 @@
+.icon {
+    background-image: url(../img/icons.svg);
+    width: 42px;
+    height: 42px;
+    background-repeat: no-repeat;
+}
+.icon_facebook {}
+.icon_twitter   {background-position: -64px 0;}
+.icon_instagram {background-position: -128px 0;}
+.icon_youtube   {background-position: -192px 0;}
+.icon_pintrest  {background-position: -256px 0;}
