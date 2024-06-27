@@ -4,13 +4,24 @@
     align-items: center;
     padding: 25px 0px;
 }
-.header_img {
-} 
+
+.header nav {
+    display: flex;
+}
+
 .header__link {
     display: inline-block;
     padding: 0px 20px;
     font-size: 1.3em;
 }
-.header__btn {
+
+@media only screen and (max-width: 600px) {
     
+    .header,
+    .header nav {
+        flex-direction: column;
+    }
+    .header nav {
+        display: none;
+    };
 }

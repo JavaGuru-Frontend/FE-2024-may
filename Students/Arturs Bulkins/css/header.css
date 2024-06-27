@@ -15,4 +15,18 @@
     padding: 10px;
 }
 
+@media only screen and (max-width: 800px)
 
+{
+    .header
+    {
+        justify-content: space-around;
+        display: flex;
+        height: 63px;
+    }
+    .header__link
+    
+    {
+        display: none;
+    }
+}

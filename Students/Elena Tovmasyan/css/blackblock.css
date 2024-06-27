@@ -1,0 +1,35 @@
+.blackblock {
+        display: flex;
+        height: 300px;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .blackblock__element {
+        height: 100%;
+        display: flex;
+    }
+
+    .blackblock__element_left {
+        width: 300px;
+      
+    }
+        
+    .blackblock__element_right {
+        display: flex;
+        width: 600px;
+        background-color: black;
+        color: white;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-left: 40px;
+    }
+
+    .blackblock__link {
+        font-size: 0.8em;
+    }
+
+    .blackblock img {
+        width: 100%;
+    }

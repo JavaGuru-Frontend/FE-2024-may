@@ -7,6 +7,13 @@ body {
     margin: 0 auto;
     font-family: "Montserrat", sans-serif;
     font-size: 24px;
+    background-color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+    background-color: var(--main-bg);
+    }
 }
 
 h1 {
@@ -22,5 +29,5 @@ h3 {
 }
 
 p {
-    font-size: 0.7em;
+    font-size: 0.8em;
 }

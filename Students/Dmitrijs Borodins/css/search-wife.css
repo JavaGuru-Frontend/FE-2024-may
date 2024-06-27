@@ -2,10 +2,7 @@
    color: var(--main-Fonts-color)
 }
 
-.container{
-   max-width: 1200px;
-   margin: 0 auto;
-}
+
 
 .search-wife__header {
    display: flex;
@@ -35,6 +32,8 @@
 
 .inner-header-right {
    padding: 60px 0;
+
+
 }
 
 .inner-header-right a {
@@ -58,20 +57,40 @@
    flex-direction: column;
    width: 50%;
    height: 290px;
+   margin-left: 70px;
+
+}
+
+.discription-element:first-child {
+   box-shadow: 10px 10px 10px rgba(223, 180, 180, 0.1);
 }
 
 .discription-element h3 {
    padding: 50px 0 50px;
-   font-size: 24px;
+   font-size: 1.8em;
    font-weight: 700;
 
 }
 
 .discription-element p {
-   font-size: 18px;
+   font-size: 1.125em;
    padding: 25px 0 50px;
 
 }
-.discription-element div p{
+
+
+.discription-element div p {
    width: 70%;
+}
+
+@media (max-width: 767px) {
+   .search-wife__header-left {
+      display: none;
+
+   }
+
+   .search-wife__header-right {
+      width: 100%;
+   }
+
 }

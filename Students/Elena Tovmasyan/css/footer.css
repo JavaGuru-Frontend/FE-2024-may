@@ -1,0 +1,18 @@
+.footer {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    flex-direction: row;
+   }
+
+.footer_img {
+    display: flex;
+    padding: 0px 30px;
+} 
+
+.footer__link {
+    padding: 0px 30px;
+    font-size: 1em;
+}

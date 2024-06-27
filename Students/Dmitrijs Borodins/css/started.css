@@ -4,6 +4,8 @@
    width: 100%;
    background-color: var(--main-orange);
 
+
+
 }
 
 .started__right {
@@ -35,3 +37,16 @@
    font-size: 2em;
 }
 
+
+@media (max-width:767px){
+   .started{
+      height: 140px;
+   }
+   .started__right{
+      display: block;
+
+   }
+   .btn-black{
+      margin-block: 15px;
+   }
+}

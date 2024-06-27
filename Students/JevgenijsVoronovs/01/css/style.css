@@ -2,9 +2,11 @@
 @import url(reset.css);
 @import url(common.css);
 @import url(btn.css);
+@import url(icon.css);
 
 @import url(variables.css);
 @import url(header.css);
 @import url(heroBlock.css);
 @import url(title.css);
 @import url(gifts.css);
+@import url(footer.css);

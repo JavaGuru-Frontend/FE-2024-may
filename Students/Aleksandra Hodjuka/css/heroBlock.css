@@ -1,7 +1,7 @@
 .heroBlock {
     display: flex;
     width: 100%;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
 }
 .heroBlock_reverse {
@@ -9,26 +9,43 @@
 }
 
 .heroBlock__element {
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    width: 100%;
     height: 700px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    
 }
 
 .heroBlock__element_left {
     display: flex;
-    background-color: var(--mai);
+    background-color: trasn;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding-left: 6%;
+    align-items: flex-start
+
+   
 }
 
 .heroBlock__element_right {
-    background-image: url(images/bg1.png);
+    background-image: url(../img/bg1.png);
 }
 
 .heroBlock_reverse .heroBlock__element_right {
-    background-image: url(images/bg2.png);
+    background-image: url(../img/bg2.png);
+}
+.heroBlock__link{
+    font-size: medium;
+
+}
+@media only screen and (max-width:800px){
+    .heroBlock {
+        display: flex;
+        flex-direction: column;
+        width:100%
+        
+    }
 }
