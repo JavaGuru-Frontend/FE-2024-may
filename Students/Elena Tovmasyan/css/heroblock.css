@@ -5,6 +5,7 @@ width: 100%;
 .heroblock__reverse {
     flex-direction: row-reverse;
     }
+
 .heroblock__element {
     width: 50%;
     height: 600px;
@@ -12,18 +13,31 @@ width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 .heroblock__element_left {
     display: flex;
     background-color: #F1F1F2;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding-left: 6%;
+    padding: 10px;
 }
     
 .heroblock__element_right {
     background-image: url(../img/bg1.png);
 }
+
 .heroblock__reverse .heroblock__element_right {
     background-image: url(../img/bg2.png);
 }
+
+@media only screen and (max-width: 600px) {
+    
+    .heroblock {
+        flex-direction: column;
+    }
+    .heroblock__element {
+        width: 100%;
+    }
+}
+

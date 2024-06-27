@@ -1,0 +1,10 @@
+.text-container {
+    margin-top: 50px;
+    padding-right: 500px;
+    display: flex;
+    flex: 1;
+    min-width: 200px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;}

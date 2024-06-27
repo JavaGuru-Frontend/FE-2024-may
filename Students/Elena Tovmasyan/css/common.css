@@ -13,7 +13,7 @@ body {
 @media only screen and (max-width: 600px) {
     body {
     background-color: var(--main-bg);
-    };
+    }
 }
 
 h1 {
@@ -29,5 +29,5 @@ h3 {
 }
 
 p {
-    font-size: 0.7em;
+    font-size: 0.8em;
 }
