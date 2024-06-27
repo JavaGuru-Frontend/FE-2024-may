@@ -96,7 +96,7 @@
     background-position: -257px -1px;
 }
 
-.footerh4
+.footerh5
 
 {
     display: flex;
@@ -108,9 +108,23 @@
 @media only screen and (max-width: 800px)
 
 {
+    .footer
+    
+    {
+        height: 144px;
+    }
 
     .footer__nav > img
     {
         display: none;
     }
+
+    .spriteflex
+    
+    {
+        padding-top: 12px;
+        display: flex;
+    }
+
+
 }
