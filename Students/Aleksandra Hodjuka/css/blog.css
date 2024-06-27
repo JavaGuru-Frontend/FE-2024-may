@@ -1,0 +1,35 @@
+.blog{
+    display: grid;
+    background-color: blueviolet;
+    grid-template-columns: repeat(2, 1fr) ;
+    grid-template-rows: 50% 50%;
+    width: 100%;
+    height: 400px;
+    grid-template-areas: 
+    "big     big "
+    "left    right "
+
+}
+.item_big{
+    grid-area: big;
+    background-color: red;
+
+}
+.item_left{
+    grid-area: left;
+    background-color: green;
+    
+}
+.item_right{
+    grid-area: right;
+    background-color: aqua;
+   
+}
+
+@media only screen and (max-width:800px){
+    .item_big
+    .blog
+    {grid-template-areas: 
+    "big     big "
+    }
+}
