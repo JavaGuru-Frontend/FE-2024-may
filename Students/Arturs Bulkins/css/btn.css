@@ -1,0 +1,85 @@
+.btn
+
+{
+    padding: 20px;
+    text-transform: uppercase;
+    border: 1px solid var(--bt-main-orange);
+    background: transparent;
+    color: var(--bt-main-orange);
+    font-size: .65em;
+    border-radius: 7px;
+}
+
+.btn__full
+
+{
+    background-color: var(--bt-main-orange);
+    border: 1px solid var(--bt-main-orange);
+    color: white;
+}
+
+.btn_danger
+
+{
+    background-color: var(--bt-main-red);
+    border: 1px solid var(--bt-main-red);
+    color: rgb(255, 255, 255);
+}
+
+.btn_small
+
+{
+    font-size: .45em;
+    padding: 10px;
+}
+.btn_big
+
+{
+    font-size: .80em;
+    padding: 30px;
+}
+
+.btn_ready1
+
+{
+   
+   
+    background: var(--bt-main-black);
+    border: 1px solid var(--bt-main-black);
+    color: white;
+    font-size: .40em;
+    width: 250px;
+}
+
+.btn_ready2
+
+{
+    background: var(--bt-main-orange);
+    border: 1px solid var(--bt-main-black);
+    color: black;
+}
+
+.best_button
+
+{
+    background-color: var(--bt-main-black);
+    border: 1px solid var(--bt-main-black);
+    color: var(--main-bg);
+}
+
+@media only screen and (max-width: 1200px)
+
+
+{
+    .btn
+    
+    {
+        padding: 15px;
+    }
+
+    .btn_ready1
+    
+    {
+        width: 150px;
+    }
+}

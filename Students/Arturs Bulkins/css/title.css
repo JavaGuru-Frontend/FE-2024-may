@@ -1,0 +1,29 @@
+.title
+{
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 165px;
+    padding: 2%;
+    
+}
+
+.title2
+
+{
+    
+}
+
+@media only screen and (max-width: 1200px)
+
+{
+    .title
+    
+    {
+        height: 100px;
+        min-width: 500px;
+    }
+}

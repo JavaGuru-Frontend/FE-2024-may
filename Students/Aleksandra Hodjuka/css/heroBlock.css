@@ -1,25 +1,51 @@
 .heroBlock {
-   display: flex;
-   width: 100%;
-   max-width: 1200px;
-   margin: 0 auto;
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
 }
 .heroBlock_reverse {
     flex-direction: row-reverse;
 }
 
-
-
 .heroBlock__element {
-    width: 50%;
-    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    width: 100%;
+    height: 700px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     
 }
+
 .heroBlock__element_left {
-    background-color: red;
-    
+    display: flex;
+    background-color: trasn;
+    flex-direction: column;
+    align-items: flex-start
+
+   
 }
+
 .heroBlock__element_right {
-    background-color: blueviolet;
-    
+    background-image: url(../img/bg1.png);
+}
+
+.heroBlock_reverse .heroBlock__element_right {
+    background-image: url(../img/bg2.png);
+}
+.heroBlock__link{
+    font-size: medium;
+
+}
+@media only screen and (max-width:800px){
+    .heroBlock {
+        display: flex;
+        flex-direction: column;
+        width:100%
+        
+    }
 }

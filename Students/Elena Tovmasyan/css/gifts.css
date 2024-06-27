@@ -1,11 +1,8 @@
 .gifts {
-    background-color: var(--main-bg);
     display: flex;
-    padding-bottom: 300px;
+    padding-bottom: 70px;
     flex-direction: row;
     justify-content: space-evenly;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .gift {
@@ -28,5 +25,5 @@
 }
 
 .gift__text a {
-    font-size: 0.7em;
+    font-size: 0.8em;
 }

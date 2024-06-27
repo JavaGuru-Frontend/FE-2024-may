@@ -1,0 +1,13 @@
+:root {
+   --bg-main: #4C3D74;
+   --main-color: #FFFFFF;
+   --bg-input-color: #A387C4;
+   
+
+
+
+   --input-height: 70px;
+   --border: 5px solid rgb(163, 135, 196);
+   --border-radius:30px;
+   --boder-box-shaodw:0px 0px 10px 3px rgb(163, 135, 196);
+}

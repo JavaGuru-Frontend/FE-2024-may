@@ -1,0 +1,33 @@
+.ready
+
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    top: 2219px;
+    height: 240px;
+    background-color: var(--bt-main-orange);
+    max-width: 1440px;
+    margin: 0px auto;
+}
+
+.ready__text
+
+{
+   margin: 0px 0px;
+    
+    
+}
+
+@media only screen and (max-width: 800px)
+
+
+{
+    .ready
+    
+    {
+        flex-direction: column;
+        justify-content: space-evenly;
+        min-width: 500px;
+    }
+}

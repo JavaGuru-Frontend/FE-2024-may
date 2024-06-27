@@ -1,0 +1,32 @@
+.header {
+    display: flex; 
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px 20px;
+    font-size: .6em;
+    top: 1px;
+    height: 116px;
+    color: black;
+}
+
+.header__link {
+
+    margin: 20px;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 800px)
+
+{
+    .header
+    {
+        justify-content: space-around;
+        display: flex;
+        height: 63px;
+    }
+    .header__link
+    
+    {
+        display: none;
+    }
+}
