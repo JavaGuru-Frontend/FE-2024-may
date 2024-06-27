@@ -32,4 +32,10 @@
 }
 .gift__link{
     font-size: medium;
+    
+}
+@media only screen and (max-width:800px){
+    .gifts {
+        flex-direction: column;
+    }
 }
