@@ -46,9 +46,11 @@
 @media only screen and(max-width:800px)
 
 {
-    .gifts
+    .gift
     {
+        display: initial;
         display: flex;
         flex-direction: column;
+        grid-template-columns: 1fr;
     }
 }
