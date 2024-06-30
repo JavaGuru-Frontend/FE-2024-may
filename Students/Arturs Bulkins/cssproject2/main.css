@@ -4,7 +4,7 @@
     display:flex;
     flex-direction: column;
     align-items: center;
-    max-width: 1440px;
+    width: 1440px;
     margin: 0 auto;
 }
 
@@ -13,7 +13,7 @@
 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     text-align: center;
     width: 1160px;
@@ -26,18 +26,11 @@
     position:relative;
 }
 
-
-.title > p 
-
-{
-    position:relative;
-    top:5px;
-}
-
-.title__1 > h1
+.title__1 
 
 {
-    margin-top:0px;
+    display: flex;
+    padding-bottom: 4%;
 }
 
 .link
@@ -46,7 +39,7 @@
     font-size: 15px;
     font-weight: 600;
     position: relative;
-    top: 130px;
+    top: 150px;
     
 }
 

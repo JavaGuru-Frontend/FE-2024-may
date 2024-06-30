@@ -1,19 +1,26 @@
-.btn
-
-{
+.btn {
     height: 70px;
     width: 400px;
     border-radius: 30px;
-    background-color: #A387C4;
+    background-color: var(--btn-bg);
     border: 0px;
     font-size: 25px;
-    font-weight: 550;
+    font-weight: 600;
     position: absolute;
     top: 90%;
     left: 33%;
-    
+}
+
+.btn:hover
+
+{
+    height: 110px;
+    transition: 2s;
+    animation: btn;
+    background-color: rgb(248, 130, 236);
     
 }
+
 
 @media only screen and (max-width: 1200px)
 

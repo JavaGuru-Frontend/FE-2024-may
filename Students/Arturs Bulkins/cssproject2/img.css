@@ -1,4 +1,4 @@
-.img 
+.img_left
 
 {
     position:absolute;
@@ -6,9 +6,11 @@
     height: 268px;
     top: 53%;
     left: 2%;
+    
+
 }
 
-.img2 
+.img_right
 
 {
     position:absolute;
@@ -18,19 +20,33 @@
     right: 2%
 }
 
+.img
+{animation: zeka 1s linear infinite; }
+
+@keyframes zeka
+    {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+    }
+
+.img2{ animation: zeka2 1s linear infinite;}
+    
+@keyframes zeka2
+    {
+    from {transform: translateX(100px);}
+    to {transform: translateX(-100px);}
+    }
 
 @media only screen and (max-width: 1200px)
 
 {
     .title
-    
     {
         max-width: 800px;
         
         height: 600px;
     }
-
-    .img 
+    .img_left
     
     {
         top: -12%;
@@ -39,7 +55,7 @@
         height: 370px;
     }
 
-    .img2
+    .img_right
     
     {
         display: none;
@@ -47,10 +63,8 @@
 }
 
 @media only screen and (max-width: 850px)
-
 {
-    .img 
-    
+    .img_left 
     {
         top: -20%;
         left: 15%;
@@ -58,14 +72,13 @@
         height: 145px;
     }
 
-    .img2
-    
+    .img_right
     {
         display: initial;
         top: -20%;
         left: 47%;
         width: 145px;
         height: 145px;
-        
     }
 }
+

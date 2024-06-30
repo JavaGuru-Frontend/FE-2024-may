@@ -1,5 +1,7 @@
 :root
 
 {
-    --main-bg1: #4C3D74(255, 255, 255, 1);
+    --main-bg1: rgba(76, 61, 116, 1);
+    --letters-color: #ffffff;
+    --btn-bg: rgba(163, 135, 196, 1);
 }

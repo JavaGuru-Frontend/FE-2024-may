@@ -43,14 +43,13 @@
     font-size: .6em;
 }
 
-@media only screen and(max-width:800px)
+@media only screen and(max-width:810px)
 
 {
-    .gift
+    .gifts
     {
         display: initial;
         display: flex;
-        flex-direction: column;
-        grid-template-columns: 1fr;
+        flex-wrap: wrap;
     }
 }
