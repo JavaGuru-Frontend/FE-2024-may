@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap');
 @import url(reset.css);
 @import url(common.css);
 @import url(variables.css);
@@ -8,3 +8,5 @@
 @import url(gifts.css);
 @import url(btn.css);
 @import url(blog.css);
+@import url(secondary.css);
+@import url(footer.css);

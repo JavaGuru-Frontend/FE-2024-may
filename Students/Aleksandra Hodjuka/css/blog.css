@@ -12,8 +12,12 @@
 }
 .item_big{
     grid-area: big;
-    background-color: red;
-
+    background-image: url(../img/Blog-Card-Feature.png);
+}
+.item_big img{
+    display: flex;
+    width: 1170px;
+    height: 370px;
 }
 .item_left{
     grid-area: left;
