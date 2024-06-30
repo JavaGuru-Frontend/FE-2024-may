@@ -21,7 +21,7 @@
 }
 
 .img
-{animation: zeka 1s linear infinite; }
+{animation: zeka 3s linear infinite; }
 
 @keyframes zeka
     {
@@ -29,12 +29,24 @@
     to {transform: rotate(360deg);}
     }
 
-.img2{ animation: zeka2 1s linear infinite;}
+.img2{ animation: zeka2 4s ease-in-out infinite;}
     
 @keyframes zeka2
     {
-    from {transform: translateX(100px);}
-    to {transform: translateX(-100px);}
+    from {transform: translateX(-600px);}
+    to   {transform: translateX(0px);}
+    0%   {transform: translateX(-50%);}
+    50%  {transform: translateX(50%);}
+    100% {transform: translateX(-50%);}
+    }
+
+    .img3:hover
+    {animation: zeka3 3s linear infinite; }
+    
+    @keyframes zeka3
+    {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
     }
 
 @media only screen and (max-width: 1200px)
