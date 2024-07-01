@@ -33,23 +33,16 @@
             margin: 0 auto;
             display: flex;
             align-items: center;
-            
-        }
-
-        .image:hover
-
-        {
-    
-        animation: zeka 3s linear infinite;
-        	
-   
+            animation: zeka 3s linear infinite;
+            width: clamp( 200px, 30%, 400px);
+            height: auto;
         }
 
         @keyframes zeka
 
         {
 
-        from {transform: rotate(0deg);}
+        from {transform: scale(2);}
         to {transform: rotate(360deg);}
 
         }

@@ -1,0 +1,90 @@
+.animation 
+
+{
+    display: flex;
+    margin: 35% 48%;
+    width: clamp( 50px, 5%, 800px);
+    height: auto;
+   
+  
+    
+    
+}
+
+.animation__loader
+
+{
+
+    display: flex;
+    margin: 0 auto;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--btn-bg);
+    border-color: var(--btn-bg);
+}
+
+.animation__loader_1
+
+{
+    animation: loader1 900ms linear infinite;
+       
+}
+
+@keyframes loader1
+
+{
+    0%
+    {    
+        transform: scale(1.5);
+        background-color: var(--btn-bg2);
+    }
+    50%{}
+    100%{}
+}
+
+.animation__loader_2
+
+{
+    
+    animation: loader2 900ms linear infinite;
+}
+@keyframes loader2
+
+{
+    0%{}
+    50%
+    {   transform: scale(1.5);
+        background-color: var(--btn-bg2);
+    }
+    100%{}
+}
+
+.animation__loader_3
+
+{
+    animation: loader3 900ms linear infinite;
+}
+@keyframes loader3
+
+{
+    0%{}
+    50%{}
+    100%
+    {   transform: scale(1.5);
+        background-color: var(--btn-bg2);
+    }
+    
+}
+@media only screen and(max-width: 800px)
+{
+    .animation__loader 
+    {   width: 5px;
+        height: 5px;
+    }
+    }
+
+:root
+{
+    --btn-bg: rgba(203, 199, 199, 0.651);
+    --btn-bg2: rgb(130, 127, 127);}
