@@ -1,0 +1,59 @@
+.animation {
+   height: 100vh;
+   width: 500px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   flex-wrap: wrap;
+}
+
+
+.animation__loader {
+   background-color: lightgrey;
+   width: 30px;
+   height: 30px;
+   margin: 20px;
+   border-radius: 50%;
+}
+
+
+.animation__loader_1 {
+   animation: loader .6s ease-in-out alternate infinite,
+      colors .5s ease-in-out alternate infinite;
+}
+
+.animation__loader_2 {
+   animation: loader .6s ease-in-out alternate .3s infinite,
+      colors .6s ease-in-out alternate .3s infinite;
+}
+
+.animation__loader_3 {
+   animation: loader .6s ease-in-out alternate .5s infinite,
+      colors .6s ease-in-out alternate .5s infinite;
+}
+
+/* 5s — продолжительность одного цикла анимации, равная 0.5 секундам.
+
+ease-in-out — функция временной кривой (тайминг-функция), которая определяет скорость анимации в разные моменты времени. В данном случае анимация будет начинаться и заканчиваться медленно, а в середине будет быстрее.
+
+alternate — направление анимации. При каждом повторении анимация будет меняться местами, то есть сначала будет идти в одном направлении, затем в обратном.
+
+infinite — бесконечное повторение анимации. */
+
+
+@keyframes loader {
+   100% {
+      transform: scale(1.6);
+   }
+}
+
+@keyframes colors {
+   0% {
+      background-color: rgb(226, 223, 223);
+   }
+
+   100% {
+      background-color: rgb(143, 141, 141);
+   }
+}
