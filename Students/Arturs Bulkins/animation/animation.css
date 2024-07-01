@@ -1,0 +1,77 @@
+.animation 
+
+{
+    display: flex;
+    align-items: center;
+    padding: 4% 15%;
+    margin: 24% 32%;
+    justify-content: space-evenly;
+    
+}
+
+.animation__loader
+
+{
+
+    display: flex;
+    margin: 0 auto;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(219, 216, 216);
+    border-color: rgb(219, 216, 216);
+    position: relative;
+}
+
+.animation__loader_1
+
+{
+    animation: loader1 900ms linear infinite;
+       
+}
+
+@keyframes loader1
+
+{
+    0%
+    {    
+        transform: scale(1.5);
+        background-color: rgb(147, 140, 140);
+    }
+    50%{}
+    100%{}
+}
+
+.animation__loader_2
+
+{
+    
+    animation: loader2 900ms linear infinite;
+}
+@keyframes loader2
+
+{
+    0%{}
+    50%
+    {   transform: scale(1.5);
+        background-color: rgb(147, 140, 140);
+    }
+    100%{}
+}
+
+.animation__loader_3
+
+{
+    animation: loader3 900ms linear infinite;
+}
+@keyframes loader3
+
+{
+    0%{}
+    50%{}
+    100%
+    {   transform: scale(1.5);
+        background-color: rgb(147, 140, 140);
+    }
+    
+}
