@@ -10,5 +10,6 @@
     display: flex;
     h3 {
         padding: 10px;
+        font-size: 0.8em;
     } 
 }

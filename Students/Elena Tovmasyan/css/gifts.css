@@ -8,7 +8,7 @@
 .gift {
     background-color: bisque;
     width: 25%;
-    margin: 10px;
+    margin: 12px;
 }
 
 .gift img {
@@ -19,7 +19,7 @@
     background-color: #fafafa;
     display: flex;
     flex-direction: column;
-    height: 120px;
+    height: 150px;
     padding: 10px;
     justify-content: space-around;
 }
