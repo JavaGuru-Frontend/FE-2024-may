@@ -7,9 +7,12 @@ body
 {
     font-family: "Futura Std" ,sans-serif; /*подключаймый шрифт с гугле сервиса в styles*/   
     font-size: 50px; /* точка отсчета для всего текста(базавый разрмер шрифта)*/
+    line-height: 1.3;
  }
 
- h1{ font-size: 1.0em;}
+ h1{ font-size: 1.0em;
+    font-weight: bold;
+    }
 
  
 

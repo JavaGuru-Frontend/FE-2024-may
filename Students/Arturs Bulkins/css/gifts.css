@@ -43,12 +43,13 @@
     font-size: .6em;
 }
 
-@media only screen and(max-width:800px)
+@media only screen and(max-width:810px)
 
 {
     .gifts
     {
+        display: initial;
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
     }
 }

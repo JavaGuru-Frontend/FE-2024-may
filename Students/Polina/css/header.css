@@ -26,8 +26,8 @@ body {
     background-color: white;
 }
 
-@media only screen and (min-width :800px) {
-    .header,
+@media only screen and (min-width: 800px) {
+    .header
     .header nav {
         flex-direction: column;
     }

@@ -12,6 +12,7 @@ https://github.com/JavaGuru-Frontend/FE-2024-may
 [02](https://github.com/JavaGuru-Frontend/FE-2024-may/blob/main/Homeworks/02/homework.md)  
 [03](https://github.com/JavaGuru-Frontend/FE-2024-may/blob/main/Homeworks/03/homework.md)  
 [04](https://github.com/JavaGuru-Frontend/FE-2024-may/blob/main/Homeworks/04/homework.md)  
+[05](https://github.com/JavaGuru-Frontend/FE-2024-may/blob/main/Homeworks/05/homework.md)  
 
 ## Макеты
 [1](https://www.figma.com/design/2vADRKfUnTywc18RLUuR5Z/Template-%E2%84%961?node-id=0%3A1&t=fZ8vu5z5u3erzemy-1)   

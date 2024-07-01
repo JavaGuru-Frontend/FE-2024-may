@@ -1,4 +1,4 @@
-.img 
+.img_left
 
 {
     position:absolute;
@@ -6,9 +6,11 @@
     height: 268px;
     top: 53%;
     left: 2%;
+    
+
 }
 
-.img2 
+.img_right
 
 {
     position:absolute;
@@ -18,19 +20,53 @@
     right: 2%
 }
 
+.img1
+    {
+        animation: zeka 3s linear infinite; 
+    
+    }
+
+    @keyframes zeka
+    {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+    }
+
+.img2
+    {   animation: zeka2 4s ease-in-out infinite;
+        top: 40%;
+        right: 0%
+    }
+    
+    @keyframes zeka2
+    {
+        from {transform: translateX(-600px);}
+        to   {transform: translateX(0px);}
+        0%   {transform: translateX(-50%);}
+        50%  {transform: translateX(50%);}
+        100% {transform: translateX(-50%);}
+    }
+
+    .img3:hover
+    {animation: zeka3 400ms linear infinite; }
+    
+    @keyframes zeka3
+    {
+        0%   {transform: rotate(0deg);}
+        25%  {transform: rotate(-20deg);}
+        50%  {transform: rotate(0deg);}
+        75%  {transform: rotate(20deg);}
+    }
 
 @media only screen and (max-width: 1200px)
 
 {
     .title
-    
     {
         max-width: 800px;
-        
         height: 600px;
     }
-
-    .img 
+    .img_left
     
     {
         top: -12%;
@@ -39,7 +75,52 @@
         height: 370px;
     }
 
-    .img2
+    .img1
+    {animation: zeka 2s ease-in-out infinite; 
+        top:-30%;
+        left:-18%;  
+        
+
+    }
+
+    @keyframes zeka
+    {
+        /*from {transform: rotate(0deg);}
+        to {transform: rotate(360deg);}*/
+        0%   {transform: translate(0px, 0px);}
+        25%  {transform: translate(200px, 0px);}
+        50%  {transform: translate(200px, 200px);}
+        75%  {transform: translate(0px, 200px);}
+        100% {transform: translate(0px, 0px);}
+        /*0%  {top: 0;
+            left: 0;
+        }
+        25%  {top: 0;
+            left: 100px;
+        }
+        50%  {top: 100px;
+            left: 100px;
+        }
+        75%  {top: 100px;
+            left: 0;
+        }
+        100%  {top: 0;
+            left: 0;
+        }*/
+    }
+
+    .img2{ animation: zeka2 1s ease-in-out infinite;}
+    
+    @keyframes zeka2
+    {
+        from {transform: translateX(-600px);}
+        to   {transform: translateX(0px);}
+        0%   {transform: translateX(-18%);}
+        50%  {transform: translateX(18%);}
+        100% {transform: translateX(-18%);}
+    }
+
+    .img_right
     
     {
         display: none;
@@ -47,10 +128,8 @@
 }
 
 @media only screen and (max-width: 850px)
-
 {
-    .img 
-    
+    .img_left 
     {
         top: -20%;
         left: 15%;
@@ -58,14 +137,31 @@
         height: 145px;
     }
 
-    .img2
-    
+    .img_right
     {
         display: initial;
         top: -20%;
         left: 47%;
         width: 145px;
         height: 145px;
+    }
+
+    .img1
+    {animation: zeka 4s linear infinite; 
+        top:-18%;
+        left:-18%;  
         
+
+    }
+
+    @keyframes zeka
+    {
+        /*from {transform: rotate(0deg);}
+        to {transform: rotate(360deg);}*/
+        0%   {transform: translate(0px, 0px);}
+        25%  {transform: translate(360px, 0px);}
+        50%  {transform: translate(360px, 360px);}
+        75%  {transform: translate(0px, 360px);}
+        100% {transform: translate(0px, 0px);}
     }
 }
