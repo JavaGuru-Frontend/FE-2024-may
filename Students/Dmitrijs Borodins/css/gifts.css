@@ -30,3 +30,24 @@
    padding: 10px;
    height: 120px;
 }
+
+@media (max-width: 767px) {
+   .gifts {
+      flex-wrap: wrap;
+      padding-bottom: 70px;
+   }
+
+   .gift {
+      width: 47%
+   }
+}
+
+@media (max-width: 319px) {
+   .gift {
+      width: 100%
+   }
+
+   .gift__text {
+      height: 90px;
+   }
+}

@@ -56,9 +56,16 @@
       font-size: 1em;
    }
 
-   .heroBlock__element {
-      height: 500px;
+   .heroBlock {
+      flex-direction: column;
    }
+
+   .heroBlock__element {
+      width: 100%;
+      height: 400px;
+      align-items: center;
+   }
+
 
    .heroBlock__element_left h1 {
       font-size: 2.7em;
