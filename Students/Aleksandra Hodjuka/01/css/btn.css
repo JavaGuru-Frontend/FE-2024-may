@@ -3,13 +3,17 @@
     text-transform: uppercase;
     border: 1px solid var(--main-orange);
     border-radius: 5px;
+    padding-right: 50px;
+    padding-left: 50px;
     background-color: transparent;
-    font-size: .4em;
+    font-size: large;
     color: var(--main-orange);
+    margin-top: 30px;
 }
 .btn_full {
     background-color: var(--main-orange);
     color: white;
+    margin-top: 40px;
 }
 .btn_full_blackFont {
     background-color: var(--main-orange);

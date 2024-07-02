@@ -1,12 +1,12 @@
 .btn {
    color: var(--main-Fonts-color);
-   font-size: 18px;
+   font-size: 1.125em;
    text-align: center;
    text-transform: uppercase;
    border-radius: 5px;
    background: var(--main-orange);
-   max-width: 200px;
-   height: 48px;
+   padding: 10px 25px;
+
 }
 
 .btn-transparent {
@@ -39,10 +39,14 @@
    transition-duration: var(--transition-duration);
 }
 
-.header__btn {
-   border: 1px solid rgb(247, 148, 30);
-   border-radius: 5px;
-   background: transparent;
-   color: rgb(247, 148, 30);
-   padding: 15px 20px;
+
+
+@media (max-width: 319px) {
+   .btn {
+      font-size: 1rem;
+      text-align: center;
+      text-transform: uppercase;
+      border-radius: 5px;
+      padding: 10px;
+   }
 }

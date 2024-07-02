@@ -1,15 +1,17 @@
 .footer {
-    height: 100px;
+    height: 150px;
     width: 100%;
     display: flex;
     align-items: center; 
     justify-content: center;
     flex-direction: row;
+    border-bottom: 1px solid black;
    }
 
 .footer_img {
     display: flex;
     padding: 0px 30px;
+    color: var(--btn-main-color);
 } 
 
 .footer__link {

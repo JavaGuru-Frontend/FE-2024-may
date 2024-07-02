@@ -1,6 +1,6 @@
 .blackblock {
         display: flex;
-        height: 300px;
+        height: 370px;
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
@@ -12,13 +12,13 @@
     }
 
     .blackblock__element_left {
-        width: 300px;
+        width: 400px;
       
     }
         
     .blackblock__element_right {
         display: flex;
-        width: 600px;
+        width: 800px;
         background-color: black;
         color: white;
         flex-direction: column;

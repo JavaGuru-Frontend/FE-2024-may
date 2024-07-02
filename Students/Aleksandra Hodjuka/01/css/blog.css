@@ -1,0 +1,61 @@
+.blog{
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) ;
+    grid-template-rows: 50% 50%;
+    width: 1440px;
+    height: 860px;
+    margin-top: 80px;
+    margin-left: 100px;
+    flex-wrap: wrap;
+    grid-template-areas: 
+    "big     big "
+    "left    right "
+
+}
+.item_big{
+    display: flex;
+    grid-area: big;
+    background-image: url(../img/Blog-Card-Feature.png);
+    background-size: cover;
+    height: auto;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    background-repeat: no-repeat;
+    
+}
+.item_big img{
+    display: flex;
+    width: 1440px;
+    height:860px;
+}
+.item_left{
+    grid-area: left;
+    width: 100%;
+    height:auto;
+    margin-left: 0;
+    margin-right: 0;
+}
+.item_right{
+    grid-area: right;
+    width: 100%;
+    height:auto;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+@media only screen and (max-width: 800px) {
+    .blog {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "big"
+            "left"
+            "right";
+        width: 100%; /* Устанавливаем ширину контейнера на 100% */
+        margin-left: 0; /* Убираем отступы */
+    }
+}
+
+
+    

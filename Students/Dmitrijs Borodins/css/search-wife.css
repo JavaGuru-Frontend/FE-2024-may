@@ -56,7 +56,6 @@
    color: var(--color-dark);
    flex-direction: column;
    width: 50%;
-   height: 290px;
    margin-left: 70px;
 
 }
@@ -80,17 +79,35 @@
 
 
 .discription-element div p {
-   width: 70%;
+   width: 100%;
 }
 
 @media (max-width: 767px) {
    .search-wife__header-left {
       display: none;
-
    }
 
    .search-wife__header-right {
       width: 100%;
+   }
+
+   .search-wife__header-discription {
+      flex-wrap: wrap;
+
+   }
+
+   .discription-element {
+      width: 100%;
+      margin-bottom: 15px;
+      margin-left: 0;
+   }
+
+   .discription-element h3 {
+      padding-block: 25px;
+   }
+
+   .discription-element p {
+      padding-block: 25px;
    }
 
 }
