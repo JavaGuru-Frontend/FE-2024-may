@@ -4,8 +4,8 @@
     position:absolute;
     width: 268px;
     height: 268px;
-    top: 53%;
-    left: 2%;
+    top: 34%;
+    left: -2%;
     
 
 }
@@ -16,8 +16,8 @@
     position:absolute;
     width: 268px;
     height: 268px;
-    top: 53%;
-    right: 2%
+    top: 34%;
+    right: -2%
 }
 
 .img1
@@ -61,26 +61,19 @@
 @media only screen and (max-width: 1200px)
 
 {
-    .title
-    {
-        max-width: 800px;
-        height: 600px;
-    }
     .img_left
-    
     {
-        top: -12%;
-        left: -3%;
-        width: 370px;
-        height: 370px;
+        top: -22%;
+        left: 2%;
+        width: 300px;
+        height: 300px;
     }
 
     .img1
-    {animation: zeka 2s ease-in-out infinite; 
-        top:-30%;
+    {
+        animation: zeka 2s ease-in-out infinite; 
+        top:-40%;
         left:-18%;  
-        
-
     }
 
     @keyframes zeka
@@ -88,8 +81,8 @@
         /*from {transform: rotate(0deg);}
         to {transform: rotate(360deg);}*/
         0%   {transform: translate(0px, 0px);}
-        25%  {transform: translate(200px, 0px);}
-        50%  {transform: translate(200px, 200px);}
+        25%  {transform: translate(220px, 0px);}
+        50%  {transform: translate(220px, 200px);}
         75%  {transform: translate(0px, 200px);}
         100% {transform: translate(0px, 0px);}
         /*0%  {top: 0;
@@ -109,7 +102,12 @@
         }*/
     }
 
-    .img2{ animation: zeka2 1s ease-in-out infinite;}
+    .img2
+    { 
+        top:-19%;
+        left:2%;
+        animation: zeka2 1s ease-in-out infinite;
+    }
     
     @keyframes zeka2
     {
@@ -131,8 +129,8 @@
 {
     .img_left 
     {
-        top: -20%;
-        left: 15%;
+        top: -25%;
+        left: 0%;
         width: 145px;
         height: 145px;
     }
@@ -140,15 +138,15 @@
     .img_right
     {
         display: initial;
-        top: -20%;
-        left: 47%;
+        top: -25%;
+        left: 70%;
         width: 145px;
         height: 145px;
     }
 
     .img1
     {animation: zeka 4s linear infinite; 
-        top:-18%;
+        top:-30%;
         left:-18%;  
         
 
@@ -159,9 +157,9 @@
         /*from {transform: rotate(0deg);}
         to {transform: rotate(360deg);}*/
         0%   {transform: translate(0px, 0px);}
-        25%  {transform: translate(360px, 0px);}
-        50%  {transform: translate(360px, 360px);}
-        75%  {transform: translate(0px, 360px);}
+        25%  {transform: translate(430px, 0px);}
+        50%  {transform: translate(430px, 330px);}
+        75%  {transform: translate(0px, 330px);}
         100% {transform: translate(0px, 0px);}
     }
 }
