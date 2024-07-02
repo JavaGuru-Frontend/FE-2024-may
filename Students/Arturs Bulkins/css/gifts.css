@@ -43,13 +43,17 @@
     font-size: .6em;
 }
 
-@media only screen and(max-width:810px)
+@media only screen and (max-width: 800px)
 
 {
     .gifts
     {
-        display: initial;
-        display: flex;
         flex-wrap: wrap;
+    }
+
+    .gift
+    {
+        width: 39%;
+        margin: 3%;
     }
 }

@@ -2,9 +2,9 @@
 
 {
     display: flex;
-    margin: 35% 48%;
-    width: clamp( 50px, 5%, 800px);
-    height: auto;
+    margin: 25% 50%;
+    width: clamp( 5px, 30%, 70px);
+    height: 10px;
    
   
     
@@ -22,13 +22,14 @@
     border-radius: 50%;
     background-color: var(--btn-bg);
     border-color: var(--btn-bg);
+    
 }
 
 .animation__loader_1
 
 {
     animation: loader1 900ms linear infinite;
-       
+   
 }
 
 @keyframes loader1
@@ -76,13 +77,6 @@
     }
     
 }
-@media only screen and(max-width: 800px)
-{
-    .animation__loader 
-    {   width: 5px;
-        height: 5px;
-    }
-    }
 
 :root
 {
