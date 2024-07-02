@@ -24,7 +24,7 @@
 }
 
 .btn:hover
-{;
+{
     transition: 1s;
     background-color: rgb(248, 130, 236);
     animation: btn 500ms linear infinite;
