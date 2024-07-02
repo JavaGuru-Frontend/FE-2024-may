@@ -1,1 +1,9 @@
-body { background-color:var --main-bg ;}
+body { background-color:var (--main-bg );
+}
+main {
+    width: 1160px;
+    height: 50px ;
+    margin: 0 auto;
+  
+    
+}

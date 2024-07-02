@@ -1,0 +1,30 @@
+.card{
+border: 5px solid var(--main-colour);
+border-radius: 30px ;
+position: relative;
+height: 324px;
+text-align: center;
+color: white;
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: center;
+margin-top: 150px;
+
+
+
+
+}
+
+.card__output{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top: 170px;
+
+
+
+
+}
