@@ -129,7 +129,7 @@
 
 @media only screen and (max-width: 1119px) {
 
-  .block h1 {
+  .block_title_h2 {
     line-height: 2;
   }
 }
@@ -167,7 +167,7 @@
 
   }
 
-  .block h1 {
+  .block_title_h1 {
     line-height: 1;
     margin-top: 20px;
   }
