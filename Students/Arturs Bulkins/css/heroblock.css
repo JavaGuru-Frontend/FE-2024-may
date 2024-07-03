@@ -77,7 +77,7 @@ p { text-align: justify;}
     .heroblock
     {
         flex-direction: column;
-        min-width: 500px;
+        min-width: 630px;
         
     }
     .heroblock__common
