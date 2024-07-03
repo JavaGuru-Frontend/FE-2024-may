@@ -1,41 +1,32 @@
 .icon{
+   background-image: url(../img/icons.png);
+   background-repeat: no-repeat;
    width: 268px;
    height: 268px;
-   background-image: url(../img/icons.png);
-
+   
+  
+animation: rotation 5s infinite alternate ease-in-out;
 }
-.icon_1 {
-    width: 268px;
-    height: 268px;
-    background-position: -5px -5px;
-}
+.icon_1 {background-position: -5px -5px;}
+.icon_2 { background-position: -283px -5px;}
+.icon_3 {background-position: -5px -284px;}
+.icon_4 { background-position: -295px -284px;}
+.icon_5 { background-position: -581px -5px;}
+.icon_6 {background-position: -581px -288px;}
 
-.icon_2 {
-    width: 269px;
-    height: 269px;
-    background-position: -283px -5px;
+.icon:hover {
+   background-position: -581px -288px;
 }
-
-.icon_3 {
-    width: 280px;
-    height: 281px;
-    background-position: -5px -284px;
+.icon:hover{
+   animation: paused;
 }
 
-.icon_4 {
-    width: 276px;
-    height: 276px;
-    background-position: -295px -284px;
+@keyframes rotation{
+   0%{width: 10px;}
+   100%{width: 300px;}
 }
-
-.icon_5 {
-    width: 273px;
-    height: 273px;
-    background-position: -581px -5px;
-}
-
-.icon_6 {
-    width: 292px;
-    height: 292px;
-    background-position: -581px -288px;
-}
+@media only screen and (max-width:800px){
+      .icon{
+       display: none;
+   }
+   }
