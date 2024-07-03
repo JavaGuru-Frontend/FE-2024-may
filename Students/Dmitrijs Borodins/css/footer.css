@@ -79,6 +79,13 @@
    justify-content: center;
 }
 
+.link:hover,
+.logo-footer img:hover {
+   transform: scale(1.2);
+}
+
+
+
 .sprite {
    background-image: url(../img/icons/spritesheet.png);
    background-repeat: no-repeat;
@@ -140,7 +147,8 @@
 
    @media (max-width: 319px) {
       .footer__main {
-         margin-top:60px;
+         margin-top: 20px;
+         height: 200px;
       }
    }
 

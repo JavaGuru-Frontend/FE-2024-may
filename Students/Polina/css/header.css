@@ -16,6 +16,7 @@
 
 .header__link {
     padding: 0px 20px;
+    text-decoration: none;
 }
 
 .header__btn {
@@ -25,14 +26,14 @@
 body {
     background-color: white;
 }
-
-@media only screen and (min-width: 800px) {
-    .header
+@media only screen and (max-width: 800px) {
     .header nav {
         flex-direction: column;
-    }
-    .header nav {
-        display: none;
-    }
+        
 }
+    .header__link {
+        flex-direction: column;
+}
+}
+
 
