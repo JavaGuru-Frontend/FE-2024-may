@@ -9,7 +9,7 @@
 }
 
 .gift {
-    background-color: #FAFAFA;
+    background-color: rgb(241, 241, 241);
     width: 25%;
     margin: 10px;
 }
@@ -26,4 +26,5 @@
 }
 .gift__text a{
     font-size: .6em;
+    text-decoration: none;
 }

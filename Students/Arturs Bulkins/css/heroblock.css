@@ -77,7 +77,7 @@ p { text-align: justify;}
     .heroblock
     {
         flex-direction: column;
-        min-width: 500px;
+        min-width: 630px;
         
     }
     .heroblock__common
@@ -85,9 +85,17 @@ p { text-align: justify;}
     {
         width: 100%;
         display: flex;
-        
+        left: 0px;
+        align-items: center;
     }
     
+    .heroblock__common_left > p
+
+{
+    text-align: justify;
+    padding-right: 0%;
+    font-size: 1.6rem;
+}
     .p
     
     {
