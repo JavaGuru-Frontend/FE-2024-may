@@ -13,6 +13,7 @@
 
 .gift img {
     width: 100%;
+    display: block;
 }
 
 .gift__text {

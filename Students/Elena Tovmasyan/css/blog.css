@@ -3,18 +3,16 @@
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 50% 50%;
     height: 740px;
-    width: 1200px;
+    width: 80%;
     margin: 0 auto;
     grid-template-areas:
     "img img black1 black1 black1 black1"
     "white1 white1 white1 white2 white2 white2"
 }
 
-
 .blog__black_1 {
     grid-area: img;
     display: flex;
-    width: 400px;
 }
 
 .blog__black_2 {

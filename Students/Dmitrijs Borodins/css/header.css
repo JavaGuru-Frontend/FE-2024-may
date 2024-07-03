@@ -23,9 +23,8 @@
 
 
 
-.header__btn:hover {
-   background-color: rgb(250, 220, 185);
-   color: aliceblue;
+.header__btn:active {
+   transform: scale(1.2);
 }
 
 .header__link:hover {

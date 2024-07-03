@@ -11,6 +11,7 @@
 .btn_full {
     background-color: var(--main-orange);
     color: white;
+
 }
 
 .btn_danger {
@@ -19,8 +20,13 @@
 }
 
 .btn_small {
-    padding: 20px;
-    font-size: .2em;
+   padding: 20px;
+   text-transform: uppercase;
+   border: 1px solid var(--main-orange);
+   border-radius: 5px;
+   background-color: transparent;
+   font-size: .5em;
+   color: var(--main-orange);
 }
 
 .btn_big {

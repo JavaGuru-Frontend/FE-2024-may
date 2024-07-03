@@ -39,6 +39,10 @@
    transition-duration: var(--transition-duration);
 }
 
+.btn:active {
+   transform: scale(1.2);
+ }
+
 
 
 @media (max-width: 319px) {
