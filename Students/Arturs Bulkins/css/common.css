@@ -34,7 +34,7 @@ a
     text-decoration: none;
 }
 
-@media only screen and (max-width:  820px)
+@media only screen and (max-width:  800px)
 {
     *{
         font-size: 22px;
@@ -44,7 +44,11 @@ a
     p {font-size: 1.3rem;}
 
     h4{font-size: 0.8em;}
-
+    .br
+    
+    {
+        display: none;
+    }
 
 }
 
@@ -57,4 +61,5 @@ a
     {
         min-width: 430px;
     }
+    
 }

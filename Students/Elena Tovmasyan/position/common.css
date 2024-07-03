@@ -1,0 +1,10 @@
+body {
+    background-color: var(--main-bg);
+}
+
+.container {
+    width: 1160px;
+    height: 1000px;
+    margin: 0 auto;
+    background-color: var(--main-bg);
+}
