@@ -8,15 +8,23 @@
 
 .header__link {
    padding: 0 20px;
-   
 
+
+}
+
+.header__btn {
+   border: 1px solid rgb(247, 148, 30);
+   border-radius: 5px;
+   background: transparent;
+   font-size: 1.125em;
+   color: rgb(247, 148, 30);
+   padding: 10px 25px;
 }
 
 
 
-.header__btn:hover {
-   background-color: rgb(250, 220, 185);
-   color: aliceblue;
+.header__btn:active {
+   transform: scale(1.2);
 }
 
 .header__link:hover {
@@ -33,5 +41,15 @@
       padding: 10px 5px;
    }
 
-  
+   @media (max-width: 319px) {
+      .header__nav {
+         display: none;
+      }
+
+      .header {
+         justify-content: center;
+      }
+   }
+
+
 }

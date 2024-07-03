@@ -30,7 +30,7 @@
 
 .started__left p {
    font-size: 2em;
-   padding-block: 25px;
+   padding-top: 25px;
 }
 
 .started__left h2 {
@@ -38,15 +38,30 @@
 }
 
 
-@media (max-width:767px){
-   .started{
+@media (max-width:767px) {
+   .started {
       height: 140px;
    }
-   .started__right{
+
+   .started__right {
       display: block;
 
    }
-   .btn-black{
+
+   .btn-black {
       margin-block: 15px;
    }
+}
+
+@media (max-width: 319px) {
+   .started__left h2 {
+      font-size: 1.5em;
+   }
+
+   .started__left p {
+      font-size: 1.2em;
+      padding-top: 15px;
+   }
+
+
 }

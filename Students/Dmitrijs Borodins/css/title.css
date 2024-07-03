@@ -12,3 +12,10 @@
 .title p {
    font-size: 18px;
 }
+
+@media (max-width: 319px){
+   .title{
+      font-size: 1.5em;
+      margin: 50px
+   }  
+}

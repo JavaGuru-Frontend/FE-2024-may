@@ -1,12 +1,11 @@
 .whiteblock {
     margin: 0 auto;
-    width: 900px;
-    height: 300px;
+    width: 80%;
+    height: 370px;
     }
 
     .whiteblock__element {
         height: 100%;
-        width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
@@ -14,8 +13,11 @@
         border: 1px solid black;
 
         h2, p, a {
-            padding: 20px;
+            padding: 20px 40px;
             }
+        a {
+            display: block;
+        }
     }
 
     .whiteblock__element_left {
