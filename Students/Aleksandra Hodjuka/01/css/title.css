@@ -11,6 +11,9 @@
     margin-bottom: 50px;
     display: flex;
     background-color: transparent;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .title_warning {
@@ -22,11 +25,32 @@
     align-items: center;
     width: 100%;
     height: 240px;
-  
-    
-    
 }
 
-.title_success {
-    background-color: green;
+@media only screen and (max-width: 800px) {
+    .title {
+        width: 100%;
+        text-align: center;
+    }
+
+    .title_important {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .title_warning {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .title_warning div {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .title_warning div:last-child {
+        margin-bottom: 0;
+    }
 }

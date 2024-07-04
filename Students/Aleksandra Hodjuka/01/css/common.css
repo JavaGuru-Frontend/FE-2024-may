@@ -5,9 +5,16 @@
 body{font-family: "Questrial", sans-serif;
     font-size: 24px;
 }
+.container{
+    max-width: 1440px;
+    margin: 0  auto;
+}
 h1{
     font-size: 2rem;
+    line-height: 48.6px;
     margin-bottom: 20px;
+
+
 }
 h2{
     font-size: 1rem;
@@ -19,4 +26,5 @@ h3{
 }
 p{
     font-size: .8em;
+    line-height: 30.6px;
 }
