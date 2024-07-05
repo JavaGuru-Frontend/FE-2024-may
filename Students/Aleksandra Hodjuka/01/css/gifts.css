@@ -33,6 +33,7 @@
 }
 .gift__link{
     font-size: medium;
+    text-decoration: dashed;
     
 }
 @media only screen and (max-width:800px){

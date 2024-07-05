@@ -35,9 +35,15 @@
     text-decoration: none;
 }
 .footer__link1{
+    display: flex;
     text-decoration: none;
+    padding-left: 35%;
+   
+   
+}   
+.footer__link1_link2{
+    padding-right: 55%;
 }
-
 @media only screen and (max-width: 800px) {
     .footer__link,
     .footer__icons,
