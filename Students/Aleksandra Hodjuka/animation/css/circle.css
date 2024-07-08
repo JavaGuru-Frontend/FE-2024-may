@@ -1,0 +1,26 @@
+.circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 45%;
+    background-color: turquoise;
+}
+.circle {
+    animation: grow 1.5s infinite;
+}
+
+.circle:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.circle:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes grow {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+}
