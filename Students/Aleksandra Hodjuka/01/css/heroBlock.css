@@ -1,8 +1,9 @@
 .heroBlock {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
+    
 }
 .heroBlock_reverse {
     flex-direction: row-reverse;
@@ -11,9 +12,10 @@
 .heroBlock__element {
     display: flex;
     flex-direction: column;
-    align-items: baseline;
     justify-content: center;
-    width: 100%;
+    text-align: justify;
+    align-items: center;
+    width: 50%;
     height: 700px;
     background-position: center;
     background-size: cover;
@@ -23,10 +25,10 @@
 
 .heroBlock__element_left {
     display: flex;
-    padding-left: 100px;
     background-color: trasn;
     flex-direction: column;
-    align-items: flex-start
+    padding-left: 10%;
+    align-items: baseline
     
     
 
@@ -46,9 +48,23 @@
 }
 @media only screen and (max-width:800px){
     .heroBlock {
-        display: flex;
         flex-direction: column;
+        align-items: center;
         width:100%
         
+    }
+    .heroBlock__element {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .heroBlock__element_left {
+        align-items: center;
+        text-align: center;
+    }
+
+    .heroBlock__element_right {
+        background-size: contain;
     }
 }

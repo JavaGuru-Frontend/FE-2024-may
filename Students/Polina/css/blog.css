@@ -22,7 +22,7 @@
 
 .item_small {
     grid-area: left;
-    box-shadow: 2px 2px 20px rgb(168, 168, 168);
+    box-shadow: 10px 10px 8px rgb(218, 218, 218);
     height: 200px;
     width: 550px;
     margin-top: 20px;
@@ -35,10 +35,11 @@
 }
 
 @media only screen and {max-width: 800px} {
-    .item item_big {display: none;}
     .blog{
         grid-template-areas:
-        "big big"
-        "left right"
+        "big"
+        "small small_right"
+        flex-direction: column;
+        width: 100%;
     }
 }

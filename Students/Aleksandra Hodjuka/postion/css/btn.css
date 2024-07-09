@@ -21,3 +21,10 @@ transition: 2s;
 @keyframes movement{
     100%{transform: rotateZ(20deg);}
 }
+@media (max-width: 480px) {
+    
+    .btn {
+        width: 100%;
+        padding: 20px 50px;
+    }
+}
