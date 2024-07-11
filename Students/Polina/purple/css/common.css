@@ -1,0 +1,9 @@
+body {
+  background-color: var(--main-bg);
+}
+
+main {
+  width: 1160px;
+  /* background-color: beige; */
+  margin: 0 auto;
+}

@@ -2,7 +2,9 @@
     background-image: url(../img/spritesheet.png);
     background-repeat: no-repeat;
     display: inline-block;
-    margin-inline: 20px;
+    margin-inline: 12px;
+    margin-bottom: 40px;
+    margin-top: 40px;
 }
 
 .sprite-facebook {

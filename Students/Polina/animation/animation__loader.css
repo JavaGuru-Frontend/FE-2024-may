@@ -1,0 +1,47 @@
+.animation {
+    display: flex;
+    margin: 850px;
+}
+
+.animation__loader {
+    display: flex;
+    margin: 0 auto;
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--main-bg);
+    animation-name: circle;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.animation__loader_1 {
+
+    transition-delay: 1s;
+}
+
+.animation__loader_2 {
+    
+    transition-delay: 1.5s;
+}
+
+.animation__loader_3 {
+
+    transition-delay: 2s;
+}
+
+
+
+@keyframes circle {
+ 50% {
+    background-color: var(--main-color);
+    transform: scale(1.5);
+ }
+
+ 100% {
+    background-color: var(--main-bg);
+    transform: scale(1.5);
+ }
+}
