@@ -5,18 +5,20 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    h2 {
+        font-weight: 600;
+        font-size: 1.2em;
     }
-
-    .orangeblock__element {
+    }
     
+    .orangeblock__element {
+
     }
 
     .orangeblock__element_left {
         width: 40%;
-        
     }
         
     .orangeblock__element_right {
         width: 60%;
-        
     }

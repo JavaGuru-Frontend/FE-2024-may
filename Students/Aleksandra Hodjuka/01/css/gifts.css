@@ -5,13 +5,13 @@
     flex-wrap: wrap;
     justify-content: space-around;
     background-color: transparent;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
+    padding: 20px;
 }
 
 .gift {
     background-color: #FAFAFA;
-    width: 25%;
+    width: 20%;
     margin: 10px;
 }
 
@@ -33,6 +33,7 @@
 }
 .gift__link{
     font-size: medium;
+    text-decoration: dashed;
     
 }
 @media only screen and (max-width:800px){
