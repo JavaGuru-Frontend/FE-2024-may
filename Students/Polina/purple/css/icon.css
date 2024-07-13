@@ -1,0 +1,41 @@
+.icon {
+    width: 268px;
+    height: 268px;
+    background-image: url(../img/spriteicons.png);
+}
+
+.icon_2 {
+    background-position: -268px 0px;
+}
+.icon_3 {
+    background-position: -574px 0px;
+}
+.icon_4 {
+    background-position: 0px -298px;
+}
+.icon_5 {
+    background-position: 0px -275px;
+}
+.icon_6 {
+    background-position: -560px -275px;
+}
+
+.icon:hover {
+    animation: ani;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+
+}
+
+@keyframes ani {
+    0% {
+        transform: rotateZ(-20deg);
+    }
+    50% {
+        transform: rotateZ(20deg);
+    }
+    100% {
+        transform: rotateZ(-20deg);
+    }
+}

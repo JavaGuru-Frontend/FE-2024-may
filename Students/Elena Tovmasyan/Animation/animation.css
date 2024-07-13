@@ -1,0 +1,41 @@
+.animation {
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.animation__loader {
+
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border-color: lightgray;
+    background-color: lightgray;
+    margin: 5px;
+    animation-name: scaleUp;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+ 
+@keyframes scaleUp {
+    0% {}
+    100% {
+        transform: scale(1.5)
+    }
+}
+
+.animation__loader_1r {
+
+}
+
+.animation__loader_2 {
+    animation-delay: 0.5s;
+}
+
+.animation__loader_3 {
+    animation-delay: 1s;
+}

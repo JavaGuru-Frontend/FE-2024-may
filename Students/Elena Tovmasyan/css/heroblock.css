@@ -22,9 +22,11 @@ width: 100%;
     align-items: flex-start;
     padding: 40px;
 
-    h1, p, btn {
+    h1, h2, p, btn {
         padding-bottom: 30px;
     }
+
+    h1 {margin-right: 200px;}
 }
     
 .heroblock__element_right {

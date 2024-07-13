@@ -12,12 +12,13 @@
         align-items: center;
         border: 1px solid black;
 
-        h2, p, a {
-            padding: 20px 40px;
+        h3, p, a {
+            padding: 20px 30px;
             }
         a {
             display: block;
         }
+        h3 {font-weight: 500;}
     }
 
     .whiteblock__element_left {

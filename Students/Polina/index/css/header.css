@@ -4,23 +4,23 @@
     justify-content: space-evenly;
     align-items: center;
     padding: 30px 0px;
+
+}
+
+a {
+    text-decoration: none;
+    color: #000 !important;
 }
 
 .header nav {
     display: flex;
 }
 
-.header__img {
-
-}
-
 .header__link {
     padding: 0px 20px;
     text-decoration: none;
-}
-
-.header__btn {
-
+    font-size: 18px;
+    
 }
 
 body {
@@ -33,6 +33,7 @@ body {
 }
     .header__link {
         flex-direction: column;
+        
 }
 }
 

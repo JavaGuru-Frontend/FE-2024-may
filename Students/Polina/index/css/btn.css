@@ -4,8 +4,9 @@
    border: 1px solid var(--main-orange);
    border-radius: 5px;
    background-color: transparent;
-   font-size: .4em;
+   font-size: .6em;
    color: var(--main-orange);
+   
 }
 
 .btn_full {

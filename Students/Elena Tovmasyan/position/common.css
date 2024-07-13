@@ -1,0 +1,13 @@
+body {
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1440;
+    height: 1550px;
+    background-color: var(--main-bg);
+    margin: 0 auto;
+}
