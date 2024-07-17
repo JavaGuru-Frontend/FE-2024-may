@@ -62,7 +62,7 @@ box-shadow: 0px 0px 10px var(--main-colour)
         padding-bottom: 70px;
         
         height: 100%;
-        flex-direction: column;
+        flex-direction: column-reverse;
         
     }
     @media (max-width: 480px) {
