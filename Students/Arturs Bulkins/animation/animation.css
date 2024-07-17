@@ -22,35 +22,15 @@
     border-radius: 50%;
     background-color: var(--btn-bg);
     border-color: var(--btn-bg);
+    animation: loader 1s linear infinite;
     
 }
 
-.animation__loader_1
+.animation__loader_1{   }
+.animation__loader_2{animation-delay: 0.25s;}
+.animation__loader_3{animation-delay: 0.5s;}
 
-{
-    animation: loader1 900ms linear infinite;
-   
-}
-
-@keyframes loader1
-
-{
-    0%
-    {    
-        transform: scale(1.5);
-        background-color: var(--btn-bg2);
-    }
-    50%{}
-    100%{}
-}
-
-.animation__loader_2
-
-{
-    
-    animation: loader2 900ms linear infinite;
-}
-@keyframes loader2
+@keyframes loader
 
 {
     0%{}
@@ -59,23 +39,6 @@
         background-color: var(--btn-bg2);
     }
     100%{}
-}
-
-.animation__loader_3
-
-{
-    animation: loader3 900ms linear infinite;
-}
-@keyframes loader3
-
-{
-    0%{}
-    50%{}
-    100%
-    {   transform: scale(1.5);
-        background-color: var(--btn-bg2);
-    }
-    
 }
 
 :root

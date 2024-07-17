@@ -1,78 +1,111 @@
-<!DOCTYPE HTML>
-<HTML lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/StyleAB.css">
-    
-</head>   
-<style>
+let data = {
+    navigation: {
+            links: [
+            {
+                title: 'Home',
+                url: 'https://220.lv/lv/'
+            },
+            {
+                name: 'about us',
+                url: 'linkurl'
+            },
+            {
+                name: 'Contacts',
+                url: 'linkurl'
+            },
+            {
+                name: 'Blog',
+                url: 'linkurl'
+            }
+        ]
+    },
+    main: {
+        /* heroblocklinks:[
+            {
+                name: 'Birthday',
+                url: 'linkurl'
+            },
+            {
+                name: 'Anniversary',
+                url: 'linkurl'
+            }
+        ], */
+        giftlinks: [
+                {
+                    name: 'Birthday',
+                    url: 'linkurl'
+                },
+                {
+                    name: 'Anniversary',
+                    url: 'linkurl'
+                },
+                {
+                    name: 'Valentines Day',
+                    url: 'linkurl'
+                }, 
+                {
+                    name: 'Chrismas',
+                    url: 'linkurl'
+                }
+        ],
+        gridcontainer: [
+            {
+                name: 'ARTURS ARTURS ARTURS',
+                url: 'linkurl'
+            },
+            {
+                name: 'Read More',
+                url: 'linkurl'
+            },
+            {
+                name: 'Read More',
+                url: 'linkurl'
+            }
+        ]
 
-   
-    *{
-       /* border: solid 1px rgb(5, 5, 5) !important; */
+    },
+    footer: {
+            links: [
+            {
+                name: 'facebook',
+                url: 'https://www.youtube.com/'
+            },
+            {
+                name: 'twitter',
+                url: 'linkUrl'
+            },
+            {
+                name: 'instagram',
+                url: 'linkUrl'
+            },
+            {
+                name: 'youtube',
+                url: 'linkUrl'
+            },
+            {
+                name: 'printerest',
+                url: 'linkUrl'
+            }
+        ]
     }
-    
-body 
+}
 
-    {
-
-    background-color: var(--main-bg);
-    }
-
-footer
-    
-    {
-        background-color: var(--add-bg);
-    }    
-
-</style>
-<header id="header" class="header">
+let header = document.getElementById ('header');
+header.innerHTML = `
+     <header id="header" class="header">
             <img src="images/A.B.logo.png" class="header__img">
             <nav>
-                <a href="#" class="header__link">Home</a>
+                <a href="${data.navigation.links[0].url}" class="header__link">${data.navigation.links[0].title}</a>
                 <a href="#" class="header__link">About us</a>
                 <a href="#" class="header__link">Contacts</a>
                 <a href="#" class="header__link">Blog</a>
             </nav>
             <button class="btn btn_full btn_small">GIFT FINDER</button>
-            <!--<button class="btn btn_danger btn_big">GIFT FINDER</button>-->
- </header>
-<body>
-    <main>
-        <div class="heroblock">
-            <div class="heroblock__common heroblock__common_left">
-                <h1>Find a gift for<br class="br"> your wife or<br class="br"> girlfriend</h1>
-                <p>''Struggling to find a gift for your wife or<br class="br"> girlfriend?
-                    No problem!''</p>
-                <button id="zeka" class="btn btn__full">find gift now</button><!-- id=zeka используем для JS-->
-                     <!--<button class="btn btn_danger">find gift now</button>-->
-                </div>
-                <div class="heroblock__common heroblock__common_right">
-                <img src="">
-            </div>
-        </div>
-        <div class="heroblock heroblock_reverse">
-                <div class="heroblock__common heroblock__common_left">
-                    <h2>How we work</h2>
-                    <p class="">We've actually already asked hundreds of
-                        women what they want, and made a database
-                         with the results. All you have to do is take our
-                          short survey that only takes seconds, and our
-                           proprietary algorithm will match you with a few
-                            perfect gift options.</p>
-                    <button class="btn">Read more</button>
-                </div>
-                <div class="heroblock__common heroblock__common_right">
-                    <img src="">
-                </div>
-        </div>
-        <div class="title">
-                <h2>Gifts for all Occcasions</h2>
-                <h4>"Try our app to find the best gifts for all occasions"</h4>
-        </div>
-        <section id="gifts" class="gifts">
+    </header> 
+`
+let gifts = document.getElementById ('gifts');
+gifts.innerHTML = `
+     <section id="gifts" class="gifts">
             <div class="gift">
                 <img src="images/happybirthday.png">
                 <div class="gift__text">
@@ -102,28 +135,17 @@ footer
                 </div>
             </div>
         </section>
-            <div class="ready">
-                <div class="ready__text">
-                    <h2>Ready to get started?</h2><!--как убрать белый фон-->
-                    <p>Sing up or contact us</p><!--проблема с кнопкой-->
-                </div>
-                <div class="ready__button">
-                <button class="btn btn_ready1">Find gift now</button>
-                <button class="btn btn_ready1 btn_ready2">How it works</button>
-                </div>
-            </div>   
-            <div class="title title2">
-                <h2>Our Best Blogs Ever<h2>
-                <h4>“Try our blog to find the best tips and tricks to select your gift”</h4>
-            </div> 
+`
 
-        <div id="gridcontainer" class="grid-container">
+let gridcontainer = document.getElementById('gridcontainer');
+gridcontainer.innerHTML =`
+ <div id="gridcontainer" class="grid-container">
             <img class="item1" src="images/Media.png" alt="">
             <div class="item2">
                 <h3>Mr.JohnDoe</h3>
-                <h6 class="item2_h6">The best way to wish<br class="br"> your wife</h6>
+                <h6 class="item2_h6">The best way to wish<br <br class="br"> your wife</h6>
                 <nav>
-                <a class="item2_nav" href="">Read More</a>
+                <a class="item2_nav" href="">${data.main.gridcontainer[0].name}</a>
                 </nav>
             </div>
             <div class="item3">
@@ -147,8 +169,11 @@ footer
             </nav>
             </div> 
         </div>
-    </main>
-    <footer id="footer" class="footer">
+`
+
+let footer = document.getElementById ('footer');
+footer.innerHTML =`
+ <footer id="footer" class="footer">
         <nav class="footer__nav">
             <a href="#" class="footer__link">Home</a>
             <a href="#" class="footer__link">About</a>
@@ -171,6 +196,13 @@ footer
         </div>
 
     </footer>
-</body>
-<script src="data.js"></script>
-</HTML>
+`
+
+
+console.log(header);
+console.log(gifts);
+console.log(footer);
+console.log(gridcontainer);
+
+
+/* let btn = document.getElementById ('btn'); */
