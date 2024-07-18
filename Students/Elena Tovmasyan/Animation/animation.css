@@ -20,17 +20,8 @@
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
- 
-@keyframes scaleUp {
-    0% {}
-    100% {
-        transform: scale(1.5)
-    }
-}
 
-.animation__loader_1r {
-
-}
+.animation__loader_1 { }
 
 .animation__loader_2 {
     animation-delay: 0.5s;
@@ -38,4 +29,11 @@
 
 .animation__loader_3 {
     animation-delay: 1s;
+}
+ 
+@keyframes scaleUp {
+    0% { }
+    100% {
+        transform: scale(1.5)
+    }
 }
