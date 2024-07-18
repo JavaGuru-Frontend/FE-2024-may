@@ -1,9 +1,9 @@
 body { background-color: var (--main-bg );
 }
 main {
-    width: 100%;
+    
     max-width: 1160px;
-    height: 50px ;
+    
     margin: 0 auto; 
     
 }
@@ -34,6 +34,12 @@ h2{
 
 
 }
+@media only screen and (max-width:600px){
+    h1 {font-size: 1.5em;}
+
+    h2{font-size: 1.5em;}
+    
+}
 
 @media only screen and (max-width:  430px)
 
@@ -44,4 +50,8 @@ h2{
     {
         min-width: 430px;
     }
+    h1 {font-size: 1em;}
+
+    h2{font-size: 1em;}
+
 }
