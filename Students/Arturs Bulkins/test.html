@@ -12,54 +12,131 @@
 
         *{
         
-            border: solid 1px black;
-            color: var(--letters-color);  
+           /*  border: solid 1px black; */
+           /*  color: black;   */
         }
 
         body
         {
-           /*background-color: var(--main-bg1);*/
+           background-color: black;
+           background-image: url(images/spacestars.jpg);
+           background-size: 80%;
         }
 
-        .test
 
-        {
-            
-        }
-
-        .image
+    .body 
+    {
+      /*   height: 100vh; */
         
-        {
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            width: clamp( 1px, 20%, 800px);
-            height: auto;
-        }
+    }
+    .container 
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        /* border: solid 1px aquamarine; */
+        border-radius: 20px;
+        border-color: aquamarine;
+        width: 110px;
+        margin: 0 auto;
+        margin-top: 40px;
+        padding: 8px;
+        box-shadow: 0px 0px 3px 3px aquamarine,
+        inset 0px 0px 3px 3px aquamarine ;
+        border-width: solid 0px;
+        position: relative;
+    }
 
-        .image:hover
+    .inputmain
+    {
+       height: 20px;
+       margin: 10px;
+       width: 80px;
+       min-width: 50px;
+       font-size: large;
+       font-weight: 700;
+       font-family: 'Times New Roman', Times, serif;
+       text-transform: uppercase;
+       border-color: #19c58f;
+       border-width: 0px;
+       border-radius: 5px;
+       box-shadow: 0px 0px 5px 5px aquamarine;
+       background-color: aquamarine;
+      
+
+    }
+
+    .button
+    
+    {
+        background-color: transparent;
+        border-radius: 4px;
+        color: aquamarine;
+        animation: rotateShadow 3s linear infinite;
         
-        {
-            animation: zeka 3s linear infinite;
-        }
+    }
+
+    .rotating_box_shadow
+    
+    {
+        /* width: 50px;
+        height: 16px;
+        position: absolute;
+        /* bottom: 50.5px; */
+       /*  bottom: 10px;
+        z-index: -1;
+        border-radius: 4px;
+        background-color: transparent;
+        animation: rotateShadow 3s linear infinite; */
+    }
+
+@keyframes rotateShadow
+    {
+        0%   {box-shadow: 10px 0px 16px aquamarine,
+                    inset -3px 0px 10px aquamarine}
+
+        25%  {box-shadow: 0px 10px 16px aquamarine,
+                    inset 0px -3px 10px aquamarine}
+
+        50%  {box-shadow: -10px 0px 16px aquamarine,
+                    inset 3px 0px 10px aquamarine}
+
+        75%  {box-shadow: 0px -10px 16px aquamarine,
+                    inset 0px 3px 10px aquamarine}
+
+        100% {box-shadow: 10px 0px 16px aquamarine,
+                    inset -3px 0px 10px aquamarine}
+    }
+
+    .result
+    
+    {
+        min-width: 80px;
+        min-height: 20px;
+        background-color: aquamarine;
+        box-shadow: 0px 0px 6px 6px aquamarine;
+        border-radius: 5px;
+        border-width: 0px;
+        margin: 10px 0px;
+        margin-top: 0 auto;
         
-        @keyframes zeka
+        
+    }
 
-        {
-
-        from {transform: scale(2);}
-        to {transform: rotate(360deg);}
-
-        }
-
+    
     </style>
     
-    <body>
-        <main class="main">
-        <section>
-            <img class="image" src="images/1 1112.png" alt="">
+    <body class="body">
+        <section class="container">
+            <input class="inputmain" id="input_a" type="">
+            <input class="inputmain" id="input_b" type="">
+            <button class="button" onclick="calculateAndDisplay()">Submit</button>
+            <div class="result"  id="result"></div>
+            <div class="rotating_box_shadow"></div>
         </section>
-        </main>
     </body>
+<script  src="test.js"></script>
 
 </html>
