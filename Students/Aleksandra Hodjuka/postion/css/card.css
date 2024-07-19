@@ -37,16 +37,18 @@ box-shadow: 0px 0px 10px var(--main-colour)
 }
    
 @media only screen and (max-width:800px){
+    .card__output   
+    {top: 70px;}
     .card,
     .card__output,
     .card__link {
         display: flex;
-        width:50%;
+        
         height: 100%;
         flex-direction: column;
         
     }
-   
+
 }
 
 @media only screen and (max-width:600px){
