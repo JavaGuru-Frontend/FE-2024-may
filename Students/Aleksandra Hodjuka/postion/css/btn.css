@@ -28,4 +28,8 @@ transition: 2s;
         padding: 20px 50px;
         
     }
+    .btn:hover{
+        animation: none;
+        width: 200px;
+    }
 }
