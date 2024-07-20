@@ -26,25 +26,29 @@
 
 .calculator_grid {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 4px;
     margin: 0 auto;
     width: 100%;
 }
 
 .btn {
-    height: 23px;
+    /* height: 23px; */
     text-size-adjust: 2px;
     color: white;
-    background-color: rgb(119, 119, 122) ;
-    border-radius: 3px;
+    height: 20px;
+    background-color: rgb(77, 77, 78) ;
+    border-radius: 0px;
     border: none;
 
 }
 
+.btn:hover {
+    opacity: 70%;
+}
+
 .equal {
-    grid-column-start: ;
-    grid-column-end: ;
-    grid-row-start: ;
-    grid-row-end: ;
+    grid-area: 6 / 5 / 2 / 4;
+    height: auto;
+    background-color: rgb(24, 24, 24);
 }

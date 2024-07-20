@@ -1,0 +1,11 @@
+.grid_container {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 4px;
+}
+
+.test {
+    
+    grid-area: 1/4/2/2;
+       
+}
