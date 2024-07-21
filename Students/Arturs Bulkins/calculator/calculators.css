@@ -4,6 +4,12 @@
     gap: 4px;
 }
 
+.display {
+    border: solid 1px black;
+    
+    grid-area: 1/1/1/1;
+
+}
 .test {
     
     grid-area: 1/4/2/2;

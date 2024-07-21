@@ -27,6 +27,8 @@
     .body 
     {
       /*   height: 100vh; */
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
         
     }
     .container 
@@ -36,8 +38,8 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        /* border: solid 1px aquamarine; */
-        /*  border-radius: 20px;*/
+        border: solid 1px aquamarine; 
+        border-radius: 20px;
         border-color: aquamarine;
         width: 110px;
         margin: 0 auto;
@@ -78,6 +80,9 @@
         
     }
 
+    .Answer {
+        background-color: white;
+    }
     .rotating_box_shadow
     
     {
@@ -129,14 +134,41 @@
     </style>
     
     <body class="body">
-        <section class="container">
+        <div class="container">
             <input class="inputmain" id="input_a" type="">
             <input class="inputmain" id="input_b" type="">
             <button class="button" onclick="calculateAndDisplay()">Submit</button>
             <div class="result"  id="result"></div>
             <div class="rotating_box_shadow"></div>
-        </section>
+        </div>
+        <div class="container">
+            <input class="inputmain" id="input_a" type="">
+            <input class="inputmain" id="input_b" type="">
+            <button class="button" onclick="calculateAndDisplay()">Submit</button>
+            <div class="result"  id="result"></div>
+            <div class="rotating_box_shadow"></div>
+        </div>
+        <div class="container">
+            <input class="inputmain" id="input_a" type="">
+            <input class="inputmain" id="input_b" type="">
+            <button class="button" onclick="calculateAndDisplay()">Submit</button>
+            <div class="result"  id="result"></div>
+            <div class="rotating_box_shadow"></div>
+        </div>
+        <div class="container">
+            <input class="inputmain" id="input_a" type="">
+            <input class="inputmain" id="input_b" type="">
+            <button class="button" onclick="calculateAndDisplay()">Submit</button>
+            <div class="result"  id="result"></div>
+            <div class="rotating_box_shadow"></div>
+        </div>
+        <div>
+            <input id="inputQuestion" type="text">
+            <button class="button" onclick="giveMeAsnwer()">Submit</button>
+            <div class="Answer" id="result1">Answer</div>
+        </div>
     </body>
+    
 <script  src="test.js"></script>
 
 </html>
@@ -145,7 +177,7 @@
 
 
 
-<div class="calculator">
+<!-- <div class="calculator">
     <div id="output" onclick="printvalue(1)"></div>
     
-</div>
+</div> -->

@@ -1,7 +1,7 @@
 /* console.log(Math.floor(Math.random()*100));
- */
 
-/* let n1 = window.prompt("Value 1?");
+
+let n1 = window.prompt("Value 1?");
 let n2 = window.prompt("value 2?");
 
 n1 = Number(n1);
@@ -231,6 +231,47 @@ console.log("dog breed:",dog.breed);
 variable = "breed";
 console.log("dog breed:", dog[variable]); // если изменить значение переменной то мы получим доступ и указываем новое значание переменной через [] скобки
 
+
+let randomNumber = Math.floor(Math.random()*7)
+let answer = "Something went wrong";
+let question = prompt("Ask me");
+
+
+switch(randomNumber) {
+    case keyword(what):
+        answer = "it will work out!";
+        break;
+    case 1:
+        answer = "Maybe, maybe not";
+        break;
+    case 2:
+        answer = "Probably not";
+        break;
+    case 3:
+        answer = "Highly likly";
+        break;
+    case 4:
+        answer = "I dont know about it";
+        break;
+    case 5:
+        answer = "Look behind";
+        break;
+    case 6:
+        answer = "Yes";
+        break;
+ /*    default:
+        console.log("More than 6");
+        break;
+ */
+}
+
+
+let output = "You ask me: " + question + ".I think that " + answer;
+console.log(output);
+
+/* console.log(randomNumber); */
+
+/* alert(randomNumber); */
 
 
 

@@ -1,6 +1,7 @@
 @import url(reset.css);
 
 
+
 .calculator {
     margin-top: 20px;
     display: flex;
@@ -17,13 +18,6 @@
     border: none;
 }
 
-.input {
-    border: solid 1px black;
-    margin-bottom: 8px;
-    height: 15px;
-    border: none;
-}
-
 .calculator_grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -32,13 +26,26 @@
     width: 100%;
 }
 
+.input {
+    border: none;
+    background-color: antiquewhite;
+    grid-area: 1 / 5 / 2 / 1;
+    height: 15px;  
+    display: grid;  
+    justify-content: end;
+    align-content: space-around;
+    font-size: 60%;
+    margin-bottom: 5px;
+
+}
+
 .btn {
-    /* height: 23px; */
+    font-size: 35%;
     text-size-adjust: 2px;
     color: white;
     height: 20px;
     background-color: rgb(77, 77, 78) ;
-    border-radius: 0px;
+    border-radius: 0%;
     border: none;
 
 }
@@ -48,7 +55,7 @@
 }
 
 .equal {
-    grid-area: 6 / 5 / 2 / 4;
+    grid-area: 7 / 5 / 3 / 4;
     height: auto;
     background-color: rgb(24, 24, 24);
 }
