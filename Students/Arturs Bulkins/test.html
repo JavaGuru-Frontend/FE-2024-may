@@ -27,6 +27,8 @@
     .body 
     {
       /*   height: 100vh; */
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
         
     }
     .container 
@@ -36,7 +38,7 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        /* border: solid 1px aquamarine; */
+        border: solid 1px aquamarine; 
         border-radius: 20px;
         border-color: aquamarine;
         width: 110px;
@@ -74,10 +76,13 @@
         background-color: transparent;
         border-radius: 4px;
         color: aquamarine;
-        animation: rotateShadow 3s linear infinite;
+        animation: rotateShadow 5s linear infinite;
         
     }
 
+    .Answer {
+        background-color: white;
+    }
     .rotating_box_shadow
     
     {
@@ -129,14 +134,24 @@
     </style>
     
     <body class="body">
-        <section class="container">
+        <div class="container">
             <input class="inputmain" id="input_a" type="">
             <input class="inputmain" id="input_b" type="">
             <button class="button" onclick="calculateAndDisplay()">Submit</button>
             <div class="result"  id="result"></div>
             <div class="rotating_box_shadow"></div>
-        </section>
+        </div>
     </body>
+    
 <script  src="test.js"></script>
 
 </html>
+
+
+
+
+
+<!-- <div class="calculator">
+    <div id="output" onclick="printvalue(1)"></div>
+    
+</div> -->
