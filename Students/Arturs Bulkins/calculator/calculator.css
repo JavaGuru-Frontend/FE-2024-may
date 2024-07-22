@@ -14,10 +14,18 @@
     padding: 5px;
     margin: 0 auto;
     margin-block: 10%;
-    background-color: rgb(182, 180, 180);
+    background-color: rgb(39, 49, 58);
     border: none;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px 5px rgb(137, 138, 138);
+    animation: calculatorShadow 3s linear infinite;
+    /* box-shadow: 0px 0px 5px 7px rgb(34, 40, 40); */
+}
+
+@keyframes calculatorShadow{
+    0%{box-shadow: 0px 0px 20px rgb(59, 132, 204);}
+    50%{box-shadow: 0px 0px 0px rgb(59, 132, 204);}
+    100%{box-shadow: 0px 0px 20px rgb(59, 132, 204);}
+
 }
 
 .calculator_grid {
@@ -30,7 +38,7 @@
 
 .output {
     border: none;
-    background-color: antiquewhite;
+    background-color: rgb(20, 18, 15);
     grid-area: 1 / 5 / 2 / 1;
     height: 15px;  
     display: grid;  
@@ -38,6 +46,8 @@
     align-content: space-around;
     font-size: 60%;
     margin-bottom: 5px;
+    color: white;
+   
 
 }
 
@@ -54,6 +64,8 @@
 
 .btn:hover {
     opacity: 70%;
+    box-shadow: 0px 0px 2px 1px rgb(59, 132, 204),
+    inset 0px 0px 2px 1px rgb(59, 132, 204);
 }
 
 .equal {

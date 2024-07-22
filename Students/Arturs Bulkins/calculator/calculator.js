@@ -9,10 +9,11 @@ function clearOutput(){
     display.value = "";
 };
 
+
 function calculate () {
-    display.value = eval(display.value).toFixed(3);
+    display.value = eval(display.value);
     switch(display.value) {
-        case "0":
+        case "Infinity":
             display.value = "ERROR"
             break;
     }
