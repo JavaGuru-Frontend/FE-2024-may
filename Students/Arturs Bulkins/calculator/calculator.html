@@ -21,26 +21,26 @@
     
     <div class="calculator">
         <div class="calculator_grid">
-            <div class="input" type="number">123456</div>
-            <button class="btn " >+</button>
-            <button class="btn " >-</button>
-            <button class="btn " >x</button>
-            <button class="btn " >%</button>
-            <button class="btn " >7</button>
-            <button class="btn " >8</button>
-            <button class="btn " >9</button>
-            <button class="btn equal" >=</button>
-            <button class="btn " >4</button>
-            <button class="btn " >5</button>
-            <button class="btn " >6</button>
-            <button class="btn " >1</button>
-            <button class="btn " >2</button>
-            <button class="btn " >3</button>
-            <button class="btn " >C</button>
-            <button class="btn " >0</button>
-            <button class="btn " >.</button>
+            <input class="output" id="output">
+            <button class="btn" onclick="printValue('+')" >+</button>
+            <button class="btn" onclick="printValue('-')" >-</button>
+            <button class="btn" onclick="printValue('*')" >x</button>
+            <button class="btn" onclick="printValue('/')" >/</button>
+            <button class="btn" onclick="printValue(7)" >7</button>
+            <button class="btn" onclick="printValue(8)" >8</button>
+            <button class="btn" onclick="printValue(9)" >9</button>
+            <button class="btn equal" onclick="calculate()" >=</button>
+            <button class="btn" onclick="printValue(4)" >4</button>
+            <button class="btn" onclick="printValue(5)" >5</button>
+            <button class="btn" onclick="printValue(6)" >6</button>
+            <button class="btn" onclick="printValue(1)" >1</button>
+            <button class="btn" onclick="printValue(2)" >2</button>
+            <button class="btn" onclick="printValue(3)" >3</button>
+            <button class="btn" onclick="clearOutput()" >C</button>
+            <button class="btn" onclick="printValue(0)" >0</button>
+            <button class="btn" onclick="printValue('.')" >.</button>
         </div>
     </div>
-        
+        <script src="calculator.js"></script>
 </body>
 </HTML>
