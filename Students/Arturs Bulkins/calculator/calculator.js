@@ -13,7 +13,7 @@ function calculate () {
     display.value = eval(display.value);
     switch(display.value) {
         case "0":
-            display.value =  "ERROR"
+            display.value = "ERROR"
             break;
     }
 };
