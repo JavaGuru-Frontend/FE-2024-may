@@ -10,7 +10,7 @@ function clearOutput(){
 };
 
 function calculate () {
-    display.value = eval(display.value);
+    display.value = eval(display.value).toFixed(3);
     switch(display.value) {
         case "0":
             display.value = "ERROR"
