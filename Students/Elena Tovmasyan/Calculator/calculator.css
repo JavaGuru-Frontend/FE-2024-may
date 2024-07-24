@@ -1,0 +1,120 @@
+.calculator {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: repeat(6, 1fr);
+    height: 400px;
+    width: 300px;
+    grid-template-areas:
+    "IN    IN     IN        IN"
+    "plus  minus  multiply  divide"
+    "num7  num8   num9      equal"
+    "num4  num5   num6      equal"
+    "num1  num2   num3      equal"
+    "C     num0   fraction  equal"
+
+}
+
+* {
+    margin: 4px;
+    border-radius: 5px;
+    font-size: 20px;
+    border-color: transparent;
+}
+
+.IN {
+    grid-area: IN;
+    background-color: rgb(253, 213, 230)
+}
+
+.plus {
+    grid-area: plus;
+    background-color: rgb(190, 32, 239)
+}
+
+.minus {
+    grid-area: minus;
+    background-color: rgb(190, 32, 239)
+}
+
+.multiply {
+    grid-area: multiply;
+    background-color: rgb(190, 32, 239)
+}
+
+.divide {
+    grid-area: divide;
+    background-color: rgb(190, 32, 239)
+}
+
+.equal {
+    grid-area: equal;
+    background-color: rgb(148, 14, 148)
+}
+
+.fraction {
+    grid-area: fraction;
+    background-color: violet
+}
+
+.C {
+    grid-area: C;
+    background-color: rgb(243, 31, 102)
+}
+
+.num1 {
+    grid-area: num1;
+    background-color: violet
+}
+
+.num2 {
+    grid-area: num2;
+    background-color: violet
+}
+
+.num3 {
+    grid-area: num3;
+    background-color: violet
+}
+
+.num4 {
+    grid-area: num4;
+    background-color: violet
+}
+
+.num5 {
+    grid-area: num5;
+    background-color: violet
+}
+
+.num6 {
+    grid-area: num6;
+    background-color: violet
+}
+
+.num7 {
+    grid-area: num7;
+    background-color: violet
+}
+
+.num8 {
+    grid-area: num8;
+    background-color: violet
+}
+
+.num9 {
+    grid-area: num9;
+    background-color: violet
+}
+
+.num0 {
+    grid-area: num0;
+    background-color: violet
+}
+
+
+
+
+
+btn {
+    background-color: violet
+}
