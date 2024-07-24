@@ -23,7 +23,8 @@
 
 .IN {
     grid-area: IN;
-    background-color: rgb(253, 213, 230)
+    background-color: rgb(253, 213, 230);
+    padding: 0 10px
 }
 
 .plus {
@@ -108,13 +109,5 @@
 
 .num0 {
     grid-area: num0;
-    background-color: violet
-}
-
-
-
-
-
-btn {
     background-color: violet
 }
