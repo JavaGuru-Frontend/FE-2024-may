@@ -1,0 +1,35 @@
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    width: 100%;
+    max-width: 400px;
+    height: 860px;
+    margin: 0 auto;
+    gap: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    grid-template-areas: 
+        "display display display display"
+        "plus minus multiply divide"
+        "seven eight nine equals"
+        "four five six equals"
+        "one two three equals"
+        "clear zero dot equals";
+}
+.display {
+    grid-area: display;
+    background-color: #222;
+    color: #fff;
+    font-size: 2rem;
+    text-align: right;
+    padding: 20px;
+    border-radius: 10px;
+}
+.button__operator_plus{
+    grid-area: plus;
+}
+

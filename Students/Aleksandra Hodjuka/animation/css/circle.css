@@ -1,19 +1,20 @@
 .circle {
+ 
     width: 45px;
     height: 45px;
     border-radius: 45%;
     background-color: turquoise;
-}
-.circle {
-    animation: grow 1.5s infinite;
-}
-
-.circle:nth-child(2) {
-    animation-delay: 0.5s;
+    display: flex;
+    animation: grow 3s infinite;
+    
 }
 
-.circle:nth-child(3) {
+.circle_2 {
     animation-delay: 1s;
+}
+
+.circle_3 {
+    animation-delay: 2s;
 }
 
 @keyframes grow {

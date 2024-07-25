@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Calculator</title>
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<div class="calculator">
+   <div id="output" class="output"></div>
+
+   <div class="buttons">
+      <div class="btn" onclick="PrintValue(`+`)">&plus;</div>
+      <div class="btn" onclick="PrintValue(`-`)">&minus;</div>
+      <div class="btn" onclick="PrintValue(`*`)">&times;</div>
+      <div class="btn" onclick="PrintValue(`/`)">&divide;</div>
+      <div class="btn" onclick="PrintValue(7)">7</div>
+      <div class=" btn" onclick="PrintValue(8)">8</div>
+      <div class="btn" onclick="PrintValue(9)">9</div>
+      <div id="equal" class="btn" onclick="equal()">=</div>
+      <div class="btn" onclick="PrintValue(4)">4</div>
+      <div class="btn" onclick="PrintValue(5)">5</div>
+      <div class="btn" onclick="PrintValue(6)">6</div>
+      <div class="btn" onclick="PrintValue(1)">1</div>
+      <div class="btn" onclick="PrintValue(2)">2</div>
+      <div class="btn" onclick="PrintValue(3)">3</div>
+      <div class="btn" onclick="ClearOutput()">C</div>
+      <div class="btn" onclick="PrintValue(0)">0</div>
+      <div class="btn" onclick="PrintValue(`.`)">.</div>
+   </div>
+
+
+
+
+</div>
+
+<body>
+   <script src="script.js"></script>
+</body>
+
+</html>

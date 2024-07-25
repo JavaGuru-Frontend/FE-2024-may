@@ -1,0 +1,70 @@
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   margin: 0 auto;
+   background-color: #f5f5f5;
+   font-weight: bold;
+}
+
+
+.calculator {
+   width: 320px;
+
+
+}
+
+.output {
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   padding: 20px;
+   background-color: #fff;
+   color: #222;
+   font-size: 2rem;
+   margin-bottom: 10px;
+}
+
+.buttons {
+   display: grid;
+   grid-template-areas:
+      "plus minus multiply divide"
+      "seven eight nine equals"
+      "four five six equals"
+      "one two three equals"
+      "clear zero dot equals";
+   gap: 10px;
+   cursor: pointer;
+
+}
+
+
+.btn {
+
+   display: flex;
+   justify-content: center;
+   color: #fff;
+   border: solid 1px transparent;
+   border-radius: 3px;
+   background-color: rgb(94, 91, 91);
+   gap: 10px;
+   padding: 15px;
+
+}
+
+.btn:hover {
+   background-color: rgb(120, 120, 120);
+
+}
+
+#equal {
+   display: grid;
+   grid-area: equals;
+   align-items: center;
+   background-color: rgb(8, 8, 8);
+}
+
+#equal:hover{
+   background-color: rgb(50, 50, 50);
+}

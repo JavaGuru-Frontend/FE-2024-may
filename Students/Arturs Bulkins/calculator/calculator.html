@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<HTML lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A.B.Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculator.css">
+
+    <style>
+        *{
+            border: solid 0px black;
+        }
+
+        body {background-color: rgba(17, 17, 17, 0.969);}
+       
+
+    </style>        
+</head>
+
+<body>
+    
+    <div class="calculator">
+        <div class="calculator_grid">
+            <div class="output" id="output" ></div>
+            <button class="btn" onclick="printValue('+')" >+</button>
+            <button class="btn" onclick="printValue('-')" >-</button>
+            <button class="btn" onclick="printValue('*')" >x</button>
+            <button class="btn" onclick="printValue('/')" >/</button>
+            <button class="btn" onclick="printValue(7)" >7</button>
+            <button class="btn" onclick="printValue(8)" >8</button>
+            <button class="btn" onclick="printValue(9)" >9</button>
+            <button class="btn equal" onclick="calculate()" >=</button>
+            <button class="btn" onclick="printValue(4)" >4</button>
+            <button class="btn" onclick="printValue(5)" >5</button>
+            <button class="btn" onclick="printValue(6)" >6</button>
+            <button class="btn" onclick="printValue(1)" >1</button>
+            <button class="btn" onclick="printValue(2)" >2</button>
+            <button class="btn" onclick="printValue(3)" >3</button>
+            <button class="btn" onclick="clearOutput()" >C</button>
+            <button class="btn" onclick="printValue(0)" >0</button>
+            <button class="btn" onclick="printValue('.')" >.</button>
+        </div>
+    </div>
+        <script src="calculator.js"></script>
+</body>
+</HTML>
