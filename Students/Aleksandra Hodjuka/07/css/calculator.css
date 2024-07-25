@@ -1,3 +1,13 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
 .calculator {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -20,16 +30,3 @@
         "one two three equals"
         "clear zero dot equals";
 }
-.display {
-    grid-area: display;
-    background-color: #222;
-    color: #fff;
-    font-size: 2rem;
-    text-align: right;
-    padding: 20px;
-    border-radius: 10px;
-}
-.button__operator_plus{
-    grid-area: plus;
-}
-

@@ -1,0 +1,50 @@
+.button {
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.button:hover {
+    background-color: #e1e1e1;
+}
+
+.button:active {
+    background-color: #d1d1d1;
+}
+
+.button__operator_plus {
+    grid-area: plus;
+}
+
+.button__operator_minus {
+    grid-area: minus;
+}
+
+.button__operator_multiply {
+    grid-area: multiply;
+}
+
+.button__operator_divide {
+    grid-area: divide;
+}
+
+.button__operator_equals {
+    grid-area: equals;
+}
+
+.button__function_clear {
+    grid-area: clear;
+}
+
+.button__number#zero {
+    grid-area: zero;
+}
+
+.button__function_dot {
+    grid-area: dot;
+}
