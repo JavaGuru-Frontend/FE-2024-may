@@ -1,21 +1,22 @@
 let display = document.getElementById("output");
 
 
-printValue = (input) => {
-    display.value += input};
-    let result = [display.value];
+let printValue = (input) => {
+    display.innerHTML += `${input}`;
+}
+   
 
 
 clearOutput = () => {
-    display.value = "";
+    display.innerHTML = "";
 }
 
 
 calculate = () => {
-    display.value = eval(display.value).toFixed(3);
-    switch (display.value) { 
+    display.innerHTML = eval(display.innerHTML).toFixed(3);
+    switch (display.innerHTML) { 
         case "Infinity":
-            display.value = "ERROR"
+            display.innerHTML = "ERROR"
             break; 
         }}
 
