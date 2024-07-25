@@ -36,7 +36,7 @@ let data = {
         gift4: {
             img: 'link',
             a: 'link'
-        },
+        }
     },
 
     orange: {
@@ -49,7 +49,7 @@ let data = {
     },
 
     grid: {
-        blog: [
+        blog: {
             blog2: {
                 img: 'link',
                 text: 'Mr.JohnDoe'
@@ -64,12 +64,25 @@ let data = {
                 text: 'How Artificial',
                 btn: 'Read More'
             },
-        ],
-    }
+        }
+    },
 
     footer: {
-        navigation: ['link', 'link', 'link', 'link'],
+        navigation: [
+            {a: 'link',
+               text: Home},
+
+            {a: 'link',
+                text: Aboutus},
+
+            {a: 'link',
+                text: Services}, 
+
+            {a: 'link',
+                text: Blog}
+        ],
+
         logo: 'link',
         sprite: 'link'
-    },
+    }
 }

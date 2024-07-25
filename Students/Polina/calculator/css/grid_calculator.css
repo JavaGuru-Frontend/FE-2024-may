@@ -1,0 +1,62 @@
+.grid_calculator {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    gap: 20px;
+    width: 700px;
+    height: 900px;
+    margin: 0 auto;
+    grid-template-areas:
+    'white white white white'
+    'b   c   d   e'
+    'l   m   n   black'
+    'i   j   k   black'
+    'f   g   h   black'
+    'q   o   p   black';
+    font-family: sans-serif;
+}
+
+.white {
+    grid-area: white;
+    width: 650px;
+    height: 110px;
+    background-color: white;
+    text-align: end;
+    align-content: center;
+    font-size: 40px;
+}
+
+.black {
+    grid-area: black;
+    width: 110px;
+    height: 500px;
+    background-color: rgb(16, 12, 46);
+    color: white;
+    border-radius: 7px;
+    text-align: center;
+    align-content: center;
+    font-size: 40px;
+    cursor: pointer;
+    decoration: none
+    
+    
+
+}
+
+.b, .c, .d, .e, .f, .g, .h, .i, .j, .k, .l, .m, .n, .o, .p, .q{
+    background-color: var(--main-color);
+    height: 80px;
+    width: 110px;
+    border-radius: 7px;
+    align-content: center;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+
+} 
+
+
+
+
+
