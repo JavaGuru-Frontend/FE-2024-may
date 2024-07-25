@@ -1,0 +1,12 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100vh;
+    height: 100vb;
+    margin: 0 auto;
+    
+}
+
+
