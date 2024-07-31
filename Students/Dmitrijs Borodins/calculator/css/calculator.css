@@ -24,6 +24,7 @@ body {
    color: #222;
    font-size: 2rem;
    margin-bottom: 10px;
+   overflow: auto;
 }
 
 .buttons {
@@ -45,10 +46,9 @@ body {
    display: flex;
    justify-content: center;
    color: #fff;
-   border: solid 1px transparent;
+   border: transparent;
    border-radius: 3px;
    background-color: rgb(94, 91, 91);
-   gap: 10px;
    padding: 15px;
 
 }
@@ -59,12 +59,11 @@ body {
 }
 
 #equal {
-   display: grid;
    grid-area: equals;
    align-items: center;
    background-color: rgb(8, 8, 8);
 }
 
-#equal:hover{
+#equal:hover {
    background-color: rgb(50, 50, 50);
 }
