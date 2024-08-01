@@ -13,16 +13,27 @@ let handleError = () => {
 }
 let equal = () => {
     let result = eval(output.innerHTML);
+
+    saveHistory(`${output.innerHTML} = ${result}`)
     clearInput();
-    printValue(result);
+    printValue(result);    
+    printHistory();
 }
 
 let saveHistory = (text) => {
-    localStorage.setItem('zeka', text);
+    let historyData = JSON.parse(localStorage.getItem('history')) || []
+
+    
+    historyData.push(text);
+    localStorage.setItem('history', JSON.stringify(historyData));
 }
 
 let printHistory = () => {
-    history.innerHTML = localStorage.getItem('zeka');
+    let printHistory = JSON.parse(localStorage.getItem('history'));
+    debugger;
+    printHistory.forEach((historyRecord) => {
+        history.innerHTML += `<li>${historyRecord}</li>`
+    })
 }
 
 
