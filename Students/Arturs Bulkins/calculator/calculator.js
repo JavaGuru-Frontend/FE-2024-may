@@ -68,12 +68,19 @@ document.addEventListener('keydown', (event) => {
                btnArray[i].click();
             }
         }
-    } else {
-        equal();
+        } else {
+            equal();
     }
-    });   
+});   
 
-    
+document.addEventListener('keydown',(clear) => {
+    if (clear.keyCode === 8 ) {
+        clearInput();}
+})    
+
+document.addEventListener('keydown', (show) => {
+    console.log(show);
+})
 
  
 
