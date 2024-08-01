@@ -22,25 +22,51 @@
     <div class="calculator">
         <div class="calculator_grid">
             <div class="output" id="output" ></div>
-            <button class="btn" onclick="printValue('+')" >+</button>
-            <button class="btn" onclick="printValue('-')" >-</button>
-            <button class="btn" onclick="printValue('*')" >x</button>
-            <button class="btn" onclick="printValue('/')" >/</button>
-            <button class="btn" onclick="printValue(7)" >7</button>
-            <button class="btn" onclick="printValue(8)" >8</button>
-            <button class="btn" onclick="printValue(9)" >9</button>
-            <button class="btn equal" onclick="calculate()" >=</button>
-            <button class="btn" onclick="printValue(4)" >4</button>
-            <button class="btn" onclick="printValue(5)" >5</button>
-            <button class="btn" onclick="printValue(6)" >6</button>
-            <button class="btn" onclick="printValue(1)" >1</button>
-            <button class="btn" onclick="printValue(2)" >2</button>
-            <button class="btn" onclick="printValue(3)" >3</button>
-            <button class="btn" onclick="clearOutput()" >C</button>
-            <button class="btn" onclick="printValue(0)" >0</button>
-            <button class="btn" onclick="printValue('.')" >.</button>
+            <button class="btn" data-type="operator" data-id="+" >+</button>
+            <button class="btn" data-type="operator" data-id="-" >-</button>
+            <button class="btn" data-type="operator" data-id="*" >x</button>
+            <button class="btn" data-type="operator" data-id="/" >/</button>
+            <button class="btn" data-type="number"   data-id="7" >7</button>
+            <button class="btn" data-type="number"   data-id="8" >8</button>
+            <button class="btn" data-type="number"   data-id="9" >9</button>
+            <button class="btn equal" data-type="equal" id="equal" data-id="=">=</button>
+            <button class="btn" data-type="number"   data-id="4">4</button>
+            <button class="btn" data-type="number"   data-id="5">5</button>
+            <button class="btn" data-type="number"   data-id="6">6</button>
+            <button class="btn" data-type="number"   data-id="1">1</button>
+            <button class="btn" data-type="number"   data-id="2">2</button>
+            <button class="btn" data-type="number"   data-id="3">3</button>
+            <button class="btn" data-type="clear"    data-id="C">C</button>
+            <button class="btn" data-type="number"   data-id="0">0</button>
+            <button class="btn" data-type="symbol"   data-id=".">.</button>
         </div>
     </div>
         <script src="calculator.js"></script>
 </body>
 </HTML>
+
+
+
+
+<!-- <div class="calculator">
+    <div class="calculator_grid">
+        <div class="output" id="output" ></div>
+        <button class="btn" data-type="operator" data-id="+" onclick="printValue('+')">+</button>
+        <button class="btn" data-type="operator" data-id="-" onclick="printValue('-')">-</button>
+        <button class="btn" data-type="operator" data-id="*" onclick="printValue('*')">x</button>
+        <button class="btn" data-type="operator" data-id="/" onclick="printValue('/')">/</button>
+        <button class="btn" data-type="number"   data-id="7" onclick="printValue(7)">7</button>
+        <button class="btn" data-type="number"   data-id="8" onclick="printValue(8)">8</button>
+        <button class="btn" data-type="number"   data-id="9" onclick="printValue(9)">9</button>
+        <button class="btn equal" data-type="equal" id="equal "    data-id="=" onclick="calculate()" >=</button>
+        <button class="btn" data-type="number"   data-id="4" onclick="printValue(4)" >4</button>
+        <button class="btn" data-type="number"   data-id="+" onclick="printValue(5)" >5</button>
+        <button class="btn" data-type="number"   data-id="6" onclick="printValue(6)">6</button>
+        <button class="btn" data-type="number"   data-id="1" onclick="printValue(1)">1</button>
+        <button class="btn" data-type="number"   data-id="2" onclick="printValue(2)">2</button>
+        <button class="btn" data-type="number"   data-id="3" onclick="printValue(3)">3</button>
+        <button class="btn" data-type="clear"    data-id="C" onclick="clearOutput()">C</button>
+        <button class="btn" data-type="number"   data-id="0" onclick="printValue(0)" 0</button>
+        <button class="btn" data-type="symbol"   data-id="." onclick="printValue('.')">.</button>
+    </div>
+</div> -->

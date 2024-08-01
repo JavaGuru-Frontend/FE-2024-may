@@ -1,45 +1,102 @@
-// let allBtn = document.getElementsByClassName(`btn`);
+let btnArray = document.getElementsByClassName(`btn`);
+console.log(btnArray);
 
-// let array = [1, 2, 3, 4, 5];
+let history = document.getElementById(`history`);
 
-// for (let i = 0; i < array.length; i++) {
-//     console.log(array[i]);
-// }
-
-
-// allBtn.forEach(btn => {
-//    btn.addEventListener = (`click`, () => {
-//       console.log(`in`);
-//    })
-// });
-
-
-let outputElement = document.getElementById(`output`);
-let PrintValue = (printNumber) => {
-   outputElement.innerHTML += `${printNumber}`;
-}
-
-ClearOutput = () => {
-   outputElement.innerHTML = "";
-};
 
 
 let equal = () => {
    outputElement.innerHTML = eval(outputElement.innerHTML);
 }
+let outputElement = document.getElementById(`output`);
+let PrintValue = (printNumber) => {
+   outputElement.innerHTML += `${printNumber}`;
+}
 
-// let divideNumbers = (outputElement) => {
-//    if (outputElement === 0) {
-//       return "ERROR: DIVISSION BY ZERO ID NOT ALLOWED.";
-//    }
-//    else {
-//       return equal();
-//    }
+let handleError = () => {
+   console.error('Ops')
+}
 
+let = saveHistory = (text) => {
+   localStorage.setItem(`output`, text);
+}
+
+
+let = printHistory = () => {
+   history.innerHTML = localStorage.getItem(`name`);
+}
+
+
+
+
+// for (let i = 0; i < btnArray.length; i++) {
+//    btnArray[i].addEventListener(`click`, () => {
+//       console.log(`PROVERKA`);
+//    })
 // }
 
 
-// let dmytro = () => {
-//    console.log(`in`);
+Array.from(btnArray).forEach((element) => {  //Рассказать еще рас про FORM??//
+   element.addEventListener(`click`, () => {
+      let type = element.getAttribute(`data-type`);
+      let id = element.getAttribute(`data-id`);
+
+      switch (type) {
+         case `equal`:
+            equal();
+            break;
+
+         case `operator`:
+            PrintValue(id);
+            break;
+
+         case `number`:
+            PrintValue(id);
+            break;
+
+         case `clear`:
+            ClearOutput();
+            break;
+
+
+         case `symbol`:
+            PrintValue(id);
+            break;
+
+         default:
+            break;
+      }
+
+   })
+})
+
+
+addEventListener(`click`, () => { })
+ClearOutput = () => {
+   outputElement.innerHTML = "";
+};
+
+
+document.addEventListener(`keydown`, (event) => {
+   if (event.keyCode === 13) {
+      equal();
+   }
+   for (let i = 0; i < btnArray.length; i++) {
+      let id = btnArray[i].getAttribute(`data-id`)
+      if (id === event.key) {
+         btnArray[i].click();
+      }
+   }
+
+});
+
+printHistory();
+
+
+// let PrintValue = (printNumber) => {
+//    outputElement.innerHTML += `${printNumber}`;
 // }
-// document.addEventListener(`click`, dmytro)
+
+
+
+
