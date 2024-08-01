@@ -20,4 +20,3 @@ calculate = () => {
             break; 
         }}
 
-/*         display.innerHTML = `<div class="output" id="output" >${result[0]}</div>`; */
