@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -48,6 +48,57 @@
    </section>
 
 
+</body>
+
+</html> -->
+
+
+Для создания списка задач (to-do list) из одного ввода в JavaScript, можно использовать метод split() для преобразования
+строки в массив. Вот пример, как это сделать с использованием текстового поля (input) для ввода и кнопки для создания
+массива:
+
+html
+Копировать код
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>To-Do List</title>
+</head>
+
+<body>
+   <h1>Список задач</h1>
+   <input id="inputField" rows="4" cols="50" placeholder="Введите ваши задачи, разделенные запятыми"></input>
+   <br>
+   <button onclick="createToDoList()">Создать список задач</button>
+
+   <h2>Ваш список задач:</h2>
+   <ul id="toDoList"></ul>
+
+   <script>
+      function createToDoList() {
+         // Получаем значение из текстового поля
+         let inputData = document.getElementById('inputField').value;
+
+         // Создаем массив задач, разделяя строку по запятым
+         let toDoList = inputData.split(", ");
+
+         // Находим элемент списка задач в HTML
+         let toDoListElement = document.getElementById('toDoList');
+
+         // // Очищаем предыдущий список задач
+         // toDoListElement.innerHTML = '';
+
+         // Добавляем каждую задачу в список задач в HTML
+         toDoList.forEach(function (task) {
+            let listItem = document.createElement('li');
+            listItem.textContent = task;
+            toDoListElement.appendChild(listItem);
+         });
+      }
+   </script>
 </body>
 
 </html>

@@ -14,7 +14,7 @@
 }
 
 
-div, button {
+.IN, .btn {
     margin: 4px;
     border-radius: 5px;
     font-size: 20px;
@@ -29,94 +29,94 @@ div, button {
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    padding: 0 10px
-}
-
-.IN_input {
     
 }
 
-.plus {
+.IN_input {
+    padding: 0 10px
+}
+
+.btn__plus {
     grid-area: plus;
     background-color: rgb(190, 32, 239)
 }
 
-.minus {
+.btn__minus {
     grid-area: minus;
     background-color: rgb(190, 32, 239)
 }
 
-.multiply {
+.btn__multiply {
     grid-area: multiply;
     background-color: rgb(190, 32, 239)
 }
 
-.divide {
+.btn__divide {
     grid-area: divide;
     background-color: rgb(190, 32, 239)
 }
 
-.equal {
+.btn__equal {
     grid-area: equal;
     background-color: rgb(148, 14, 148)
 }
 
-.fraction {
+.btn__fraction {
     grid-area: fraction;
     background-color: violet
 }
 
-.C {
+.btn__C {
     grid-area: C;
     background-color: rgb(243, 31, 102)
 }
 
-.num1 {
+.btn__num1 {
     grid-area: num1;
     background-color: violet
 }
 
-.num2 {
+.btn__num2 {
     grid-area: num2;
     background-color: violet
 }
 
-.num3 {
+.btn__num3 {
     grid-area: num3;
     background-color: violet
 }
 
-.num4 {
+.btn__num4 {
     grid-area: num4;
     background-color: violet
 }
 
-.num5 {
+.btn__num5 {
     grid-area: num5;
     background-color: violet
 }
 
-.num6 {
+.btn__num6 {
     grid-area: num6;
     background-color: violet
 }
 
-.num7 {
+.btn__num7 {
     grid-area: num7;
     background-color: violet
 }
 
-.num8 {
+.btn__num8 {
     grid-area: num8;
     background-color: violet
 }
 
-.num9 {
+.btn__num9 {
     grid-area: num9;
     background-color: violet
 }
 
-.num0 {
+.btn__num0 {
     grid-area: num0;
     background-color: violet
 }
