@@ -10,7 +10,9 @@ let equal = () => {
 
 let clearElement = document.getElementById('clear');
 
-let Clear = () => {
+let сlear = () => {
     
     whiteElement.innerHTML = '';
 }
+
+ 
