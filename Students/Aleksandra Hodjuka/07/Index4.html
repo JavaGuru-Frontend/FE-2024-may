@@ -3,29 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/calculator.css">
+    <link rel="stylesheet" href="styles/display.css">
+    <link rel="stylesheet" href="styles/buttons.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Calculator</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="calculator">
-        <div class="calculator__display" >0</div>
-        <button class="button__operator_plus" >+</button>
-        <button class="button operator" style="grid-area: minus;">-</button>
-        <button class="button operator" style="grid-area: multiply;">*</button>
-        <button class="button operator" style="grid-area: divide;">/</button>
-        <button class="button" style="grid-area: seven;">7</button>
-        <button class="button" style="grid-area: eight;">8</button>
-        <button class="button" style="grid-area: nine;">9</button>
-        <button class="button__operator_equals" style="grid-area: equals;">=</button>
-        <button class="button" style="grid-area: four;">4</button>
-        <button class="button" style="grid-area: five;">5</button>
-        <button class="button" style="grid-area: six;">6</button>
-        <button class="button" style="grid-area: one;">1</button>
-        <button class="button" style="grid-area: two;">2</button>
-        <button class="button" style="grid-area: three;">3</button>
-        <button class="button" style="grid-area: clear;">C</button>
-        <button class="button" style="grid-area: zero;">0</button>
-        <button class="button" style="grid-area: dot;">.</button>
+        <div class="display" id="display">0</div>
+        <button class="button button__operator button__operator_plus">+</button>
+        <button class="button button__operator button__operator_minus">-</button>
+        <button class="button button__operator button__operator_multiply">*</button>
+        <button class="button button__operator button__operator_divide">/</button>
+        <button class="button button__number" id="seven">7</button>
+        <button class="button button__number" id="eight">8</button>
+        <button class="button button__number" id="nine">9</button>
+        <button class="button button__operator button__operator_equals">=</button>
+        <button class="button button__number" id="four">4</button>
+        <button class="button button__number" id="five">5</button>
+        <button class="button button__number" id="six">6</button>
+        <button class="button button__number" id="one">1</button>
+        <button class="button button__number" id="two">2</button>
+        <button class="button button__number" id="three">3</button>
+        <button class="button button__function button__function_clear">C</button>
+        <button class="button button__number" id="zero">0</button>
+        <button class="button button__function button__function_dot">.</button>
     </div>
+    <script src="JS/script.js"></script>
 </body>
 </html>
