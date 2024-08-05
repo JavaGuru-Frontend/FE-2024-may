@@ -1,42 +1,51 @@
+// document.addEventListener('DOMContentLoaded');
 let btnArray = document.getElementsByClassName(`btn`);
-console.log(btnArray);
-
 let history = document.getElementById(`history`);
 
 
 
-let equal = () => {
-   outputElement.innerHTML = eval(outputElement.innerHTML);
-}
-let outputElement = document.getElementById(`output`);
+
+
+
+let outputElement = document.getElementById(`output`);//Получить данные из Output//
 let PrintValue = (printNumber) => {
-   outputElement.innerHTML += `${printNumber}`;
+   outputElement.innerHTML += `${printNumber}`
+}
+let clearInput = () => {
+   output.innerHTML = '';
+}
+let equal = () => {
+
+   let result = eval(output.innerHTML);
+
+   saveHistory(`${output.innerHTML}=${result}`);
+   // saveHistory(`${output.innerHTML} = ${result}`);
+   clearInput();
+   PrintValue(result);
+   printHistory();
 }
 
 let handleError = () => {
    console.error('Ops')
-}
+}//LocalStorage
+
 
 let = saveHistory = (text) => {
-   localStorage.setItem(`output`, text);
+   historyData.push(text);
+   localStorage.setItem('history', JSON.stringify(historyData));
 }
+
 
 
 let = printHistory = () => {
-   history.innerHTML = localStorage.getItem(`name`);
-}
+   history.innerHTML = '';
+   let historyData = JSON.parse(localStorage.getItem(`history`))
+   historyData.forEach((historyRecord) => {
+      history.innerHTML += `<li>${historyRecord}</li>`
+   })
+}//Вывеcти данные из LocalStorage//
 
-
-
-
-// for (let i = 0; i < btnArray.length; i++) {
-//    btnArray[i].addEventListener(`click`, () => {
-//       console.log(`PROVERKA`);
-//    })
-// }
-
-
-Array.from(btnArray).forEach((element) => {  //Рассказать еще рас про FORM??//
+Array.from(btnArray).forEach((element) => {
    element.addEventListener(`click`, () => {
       let type = element.getAttribute(`data-type`);
       let id = element.getAttribute(`data-id`);
@@ -55,7 +64,7 @@ Array.from(btnArray).forEach((element) => {  //Рассказать еще ра�
             break;
 
          case `clear`:
-            ClearOutput();
+            clearOutput();
             break;
 
 
@@ -71,16 +80,7 @@ Array.from(btnArray).forEach((element) => {  //Рассказать еще ра�
 })
 
 
-addEventListener(`click`, () => { })
-ClearOutput = () => {
-   outputElement.innerHTML = "";
-};
-
-
-document.addEventListener(`keydown`, (event) => {
-   if (event.keyCode === 13) {
-      equal();
-   }
+let CheckNumbers = () => {
    for (let i = 0; i < btnArray.length; i++) {
       let id = btnArray[i].getAttribute(`data-id`)
       if (id === event.key) {
@@ -88,14 +88,63 @@ document.addEventListener(`keydown`, (event) => {
       }
    }
 
+};
+
+
+document.addEventListener(`keydown`, (event) => {
+   let key = event.keyCode;
+   switch (key) {
+      case 13:
+         equal();
+         break;
+      case 67:
+         clearOutput();
+         break;
+      case 8:
+         clearOutput();
+         break;
+
+      case 46:
+         clearOutput();
+         break;
+
+      default:
+         CheckNumbers();
+         break;
+   }
 });
+//  ZEKA/// Если одинаковые Case Можно писать в одну строку через `,`?     
+clearOutput = () => {
+   output.innerHTML = output.innerHTML.slice(0, -1);
+};
+
+addEventListener(`click`, () => { })
+
+
+
+// document.addEventListener(`keydown`, (event) => {
+//    if (event.keyCode === 13) {
+//       equal();
+//    }
+
+//    if (event.keyCode === 67) {
+//       ClearOutput();
+//    }
+//    for (let i = 0; i < btnArray.length; i++) {
+//       let id = btnArray[i].getAttribute(`data-id`)
+//       if (id === event.key) {
+//          btnArray[i].click();
+//       }
+//    }
+// });
+
+// let PrintValue = (printNumber) => {
+//    document.getElementById(`output`).innerHTML += `${printNumber}`
+// }
 
 printHistory();
 
 
-// let PrintValue = (printNumber) => {
-//    outputElement.innerHTML += `${printNumber}`;
-// }
 
 
 
