@@ -1,11 +1,13 @@
 let btnArray = document.getElementsByClassName("btn");
 let output = document.getElementById('output');
+let history = document.getElementById('history');
+
 
 /* for (let i = 0; i < btnArray.length; i++) {
     btnArray[i].addEventListener('click', () => {
         console.log('test')
     })
-} */
+} */ 
 let printValue = (input, clearInput) => {
     output.innerHTML += `${input}`; 
 }
@@ -19,17 +21,24 @@ let handleError = () => {
 }
 
 let equal = () => { 
-    output.innerHTML = eval(output.innerHTML).toFixed(3);
-    switch (output.innerHTML) {
-        case "Infinity":
-        output.innerHTML = 'ERROR'
-        break;
-    }
-   /*  clearInput (); */
+    let result = eval(output.innerHTML);
+    saveHistory (`${output.innerHTML}=${result}`);
+    clearInput ();
+    printValue (result); 
+    printHistory (); 
+}
+let saveHistory = (text) => {
+    let historyData = JSON.parse(localStorage.getItem('history')) || [];
+    historyData.push(text);
+    localStorage.setItem('history', JSON.stringify(historyData)); //  перевести в текс 
 }
 
-
-
+let printHistory = () => {
+    let printHistory = JSON.parse(localStorage.getItem('history')) || [];
+    printHistory.forEach((historyRecord) => {
+        history.innerHTML += `<li>${historyRecord}</li>>`
+    })
+}
 
 Array.from(btnArray).forEach((element) => {
     element.addEventListener('click', () =>{
@@ -73,7 +82,7 @@ document.addEventListener('keydown', (event,clear) => {
         }
     }  else {
         equal ();
-    }
+    } 
     /* if (clear.keyCode === 8 ) {
         clearInput();
     } */
@@ -84,9 +93,7 @@ document.addEventListener('keydown',(clear) => {
     if (clear.keyCode === 8 ) {
         output.innerHTML = output.innerHTML.slice(0, -1);
         }} 
-    );
-
-    
+    ); 
 
 
 
@@ -101,10 +108,13 @@ document.addEventListener('keydown',(clear) => {
 
 
 
-document.addEventListener('keydown', (show) => {
+
+
+
+/* document.addEventListener('keydown', (show) => {
     console.log(show);
 })
-
+ */
  
 
 
