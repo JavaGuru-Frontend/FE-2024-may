@@ -19,10 +19,13 @@ let handleError = () => {
 }
 
 let equal = () => { 
-    let result = eval(output.innerHTML);
-    clearInput ();
-    printValue (result);
-   
+    output.innerHTML = eval(output.innerHTML);
+    switch (output.innerHTML) {
+        case "Infinity":
+        output.innerHTML = 'ERROR'
+        break;
+    }
+   /*  clearInput (); */
 }
 
 
@@ -52,7 +55,7 @@ Array.from(btnArray).forEach((element) => {
 
             case 'clear':
                 clearInput();
-                break;        
+                break;  
 
             default:
                 break;
@@ -81,7 +84,7 @@ document.addEventListener('keydown',(clear) => {
     if (clear.keyCode === 8 ) {
         output.innerHTML = output.innerHTML.slice(0, -1);
         }} 
-    )
+    );
 
     
 
