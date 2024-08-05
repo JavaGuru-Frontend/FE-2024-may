@@ -19,7 +19,7 @@ let handleError = () => {
 }
 
 let equal = () => { 
-    output.innerHTML = eval(output.innerHTML);
+    output.innerHTML = eval(output.innerHTML).toFixed(3);
     switch (output.innerHTML) {
         case "Infinity":
         output.innerHTML = 'ERROR'
