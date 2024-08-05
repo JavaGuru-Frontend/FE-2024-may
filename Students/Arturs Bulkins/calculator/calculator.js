@@ -60,7 +60,7 @@ Array.from(btnArray).forEach((element) => {
     })
 })
 
-document.addEventListener('keydown', (event) => {
+document.addEventListener('keydown', (event,clear) => {
     if (event.keyCode !== 13) {
         for(let i = 0; i < btnArray.length; i++) {
             let id = btnArray[i].getAttribute('data-id');
@@ -68,15 +68,35 @@ document.addEventListener('keydown', (event) => {
                btnArray[i].click();
             }
         }
-        } else {
-            equal();
+    }  else {
+        equal ();
     }
+    /* if (clear.keyCode === 8 ) {
+        clearInput();
+    } */
 });   
+
 
 document.addEventListener('keydown',(clear) => {
     if (clear.keyCode === 8 ) {
-        clearInput();}
-})    
+        output.innerHTML = output.innerHTML.slice(0, -1);
+        }} 
+    )
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 document.addEventListener('keydown', (show) => {
     console.log(show);
