@@ -87,8 +87,9 @@ let clearOutput = () => {
 /* Вариант кода 5 (другие привязки в Html): */
 
 let btnArray = document.getElementsByClassName(`btn`);
+let output = document.getElementById(`IN`);
 
-let output = document.getElementById(`IN`)
+let history = document.getElementById(`history`);
 
 
 /* for (let i = 0; i < btnArray.length; i++) {
@@ -111,6 +112,20 @@ let equal = () => {
         clearInput();
     printValue(`${result}`);
 }
+
+
+let safeHistory = (text) => {
+    localStorage.setItem(`zeka`, text);
+}
+
+let printHistory = () => {
+    history.innerHTML = localStorage.getItem(`zeka`);
+}
+
+printHistory();
+
+
+
 
 Array.from(btnArray).forEach((element) => {
     element.addEventListener(`click`, () => {
@@ -135,7 +150,7 @@ Array.from(btnArray).forEach((element) => {
             break;
 
             case(`clear`):
-            printValue(id);
+            clearInput( );
             break;
 
             default:
@@ -153,13 +168,26 @@ Array.from(btnArray).forEach((element) => {
 document.addEventListener(`click`, handleError); */
 
 
+/* Как подключить управление калькулятором с клавиатуры: */
+
+
 document.addEventListener(`keydown`, (event) => {
     console.log(event);
-    if(event.keyCode === 187) {
-        console.log(`enter clicked`)
+    if(event.keyCode === 13) {
+        equal();
     };
+
+    for (let i = 0; i < btnArray.length; i++) {
+        let id = btnArray[i].getAttribute(`data-id`);
+        if (id === event.key) {
+            btnArray[i].click();
+        }
+    }
 });
 
-
+/* некорректное умножение - если равно с клавиатуры */
 
 /* Как нажать С, чтобы один раз - О, второй - выключить? */
+
+/* Как сохранить сессию (local storage)? */
+
