@@ -34,6 +34,7 @@ let saveHistory = (text) => {
 }
 
 let printHistory = () => {
+    history.innerHTML = '';
     let printHistory = JSON.parse(localStorage.getItem('history')) || [];
     printHistory.forEach((historyRecord) => {
         history.innerHTML += `<li>${historyRecord}</li>>`
