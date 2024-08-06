@@ -114,19 +114,6 @@ let equal = () => {
 }
 
 
-let safeHistory = (text) => {
-    localStorage.setItem(`zeka`, text);
-}
-
-let printHistory = () => {
-    history.innerHTML = localStorage.getItem(`zeka`);
-}
-
-printHistory();
-
-
-
-
 Array.from(btnArray).forEach((element) => {
     element.addEventListener(`click`, () => {
         let type = element.getAttribute (`data-type`);
@@ -155,27 +142,25 @@ Array.from(btnArray).forEach((element) => {
 
             default:
             break;
-
-
         }
 })
 })
 
-/* let handleError = () => {
+let handleError = () => {
     console.error(`Ops`);
 }
 
-document.addEventListener(`click`, handleError); */
+document.addEventListener(`click`, handleError);
 
 
 /* Как подключить управление калькулятором с клавиатуры: */
 
 
-document.addEventListener(`keydown`, (event) => {
+/* document.addEventListener(`keydown`, (event) => {
     console.log(event);
     if(event.keyCode === 13) {
         equal();
-    };
+    }
 
     for (let i = 0; i < btnArray.length; i++) {
         let id = btnArray[i].getAttribute(`data-id`);
@@ -183,11 +168,72 @@ document.addEventListener(`keydown`, (event) => {
             btnArray[i].click();
         }
     }
-});
+}); */
 
-/* некорректное умножение - если равно с клавиатуры */
+document.addEventListener('keydown', (event) => {
+    if (event.keyCode !== 13) {
+        for(let i = 0; i < btnArray.length; i++) {
+            let id = btnArray[i].getAttribute('data-id');
+            if(id === event.key) {
+               btnArray[i].click();}
+        }
+    }
+        else if (event.keyCode === 8) {
+            clearInput();
+    }
+        else {
+            equal();
+    }
+});   
 
-/* Как нажать С, чтобы один раз - О, второй - выключить? */
+   
+/* Array.from(btnArray).forEach((element) => {
+    element.addEventListener(`click`, () => {
+        let type = element.getAttribute (`data-type`);
+        let id = element.getAttribute (`data-id`);
+        
+        switch (type) {
+            case(`equal`):
+            equal(id);
+            break;
 
-/* Как сохранить сессию (local storage)? */
+            case(`number`):
+            printValue(id);
+            break;
 
+            case(`operator`):
+            printValue(id);
+            break;
+
+            case(`symbol`):
+            printValue(id);
+            break;
+
+            case(`clear`):
+            clearInput( );
+            break;
+
+            default:
+            break;
+        }
+})
+})
+ */
+
+/* document.addEventListener('keydown', (show) => {
+    console.log(show);
+})
+ */
+
+
+/* 
+let safeHistory = (text) => {
+    localStorage.setItem(`zeka`, text);
+} */
+
+/* let printHistory = () => {
+    history.innerHTML = localStorage.getItem(`zeka`);
+}
+
+printHistory();
+ */
