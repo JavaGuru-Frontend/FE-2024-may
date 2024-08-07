@@ -12,8 +12,8 @@ let addValue = () => {
 
 let toggleDone = (event) => {
 
-   let clickedElement = event.target
-   if (clickedElement.classList.contains(`todo_done`)) {
+   let clickedElement = event.target //это свойство объекта события в JavaScript, которое указывает на элемент, на котором событие произошло
+   if (clickedElement.classList.contains(`todo_done`)) { // Метод contains проверяет, есть ли в списке классов указанный класс. Он возвращает true, если класс присутствует, и false, если нет.//
       clickedElement.classList.remove(`todo_done`)
    }
    else {
