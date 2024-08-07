@@ -88,15 +88,9 @@ let clearOutput = () => {
 
 let btnArray = document.getElementsByClassName(`btn`);
 let output = document.getElementById(`IN`);
+let history = document.getElementById('history');
 
-let history = document.getElementById(`history`);
-
-
-/* for (let i = 0; i < btnArray.length; i++) {
-    btnArray[i].addEventListener(`click`, () => {
-        console.log(`test`);
-    })
-} */
+let historyData = JSON.parse(localStorage.getItem('history')) || [];
 
 
 let printValue = (zna4enie) => {
@@ -107,25 +101,33 @@ let clearInput = () => {
     output.innerHTML = ` `;
 }
 
+let handleError = () => {
+    console.error(`Ops`);
+}
+
+// Что это?
+
 let equal = () => {
-        let result = eval(output.innerHTML);
-        clearInput();
-    printValue(`${result}`);
+    let result = eval(output.innerHTML);
+    saveHistory(`${output.innerHTML} = ${result}`);
+    clearInput();
+    printValue(result);
+    // printHistory();
 }
 
 
-let safeHistory = (text) => {
-    localStorage.setItem(`zeka`, text);
+let saveHistory = (text) => {
+    let historyData = JSON.parse(localStorage.getItem('history')) || [];
+    historyData.push(text);
+    localStorage.setItem('history', JSON.stringify(historyData));
 }
 
 let printHistory = () => {
-    history.innerHTML = localStorage.getItem(`zeka`);
+    let printHistory = JSON.parse(localStorage.getItem('history'));
+    printHistory.forEach((historyRecord) => {
+    history.innerHTML += `<li>${historyRecord}</li>`
+    })
 }
-
-printHistory();
-
-
-
 
 Array.from(btnArray).forEach((element) => {
     element.addEventListener(`click`, () => {
@@ -155,39 +157,75 @@ Array.from(btnArray).forEach((element) => {
 
             default:
             break;
-
-
         }
 })
 })
 
-/* let handleError = () => {
-    console.error(`Ops`);
-}
-
-document.addEventListener(`click`, handleError); */
 
 
-/* Как подключить управление калькулятором с клавиатуры: */
-
-
-document.addEventListener(`keydown`, (event) => {
-    console.log(event);
-    if(event.keyCode === 13) {
-        equal();
-    };
-
-    for (let i = 0; i < btnArray.length; i++) {
-        let id = btnArray[i].getAttribute(`data-id`);
-        if (id === event.key) {
-            btnArray[i].click();
+document.addEventListener('keydown', (event) => {
+    if (event.keyCode !== 13) {
+        for(let i = 0; i < btnArray.length; i++) {
+            let id = btnArray[i].getAttribute('data-id');
+            if(id === event.key) {
+               btnArray[i].click();}
         }
     }
-});
+        else if (event.keyCode === 8) {
+            clearInput();
+    }
+        else {
+            equal();
+    }
+});   
 
-/* некорректное умножение - если равно с клавиатуры */
+   
+/* Array.from(btnArray).forEach((element) => {
+    element.addEventListener(`click`, () => {
+        let type = element.getAttribute (`data-type`);
+        let id = element.getAttribute (`data-id`);
+        
+        switch (type) {
+            case(`equal`):
+            equal(id);
+            break;
 
-/* Как нажать С, чтобы один раз - О, второй - выключить? */
+            case(`number`):
+            printValue(id);
+            break;
 
-/* Как сохранить сессию (local storage)? */
+            case(`operator`):
+            printValue(id);
+            break;
 
+            case(`symbol`):
+            printValue(id);
+            break;
+
+            case(`clear`):
+            clearInput( );
+            break;
+
+            default:
+            break;
+        }
+})
+})
+ */
+
+
+
+/* Проблемы:
+
+Умножаю 4х5 нажимаю равно через Enter - получаю 205, вычитаю из -4 - 5 - получаю 15
+
+И не стирает с помощью Enter
+
+Он то стирает, то добавляет предыдущую цифру к числу.
+
+И надо иметь возможность удалять лишний символы при ошибке.
+
+2х2 Enter - получаем 42
+
+!!! Не сохраняются данные в local.storage
+ */

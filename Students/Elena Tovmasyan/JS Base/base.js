@@ -144,4 +144,16 @@ let skills = [`HTML`, `CSS`, `JS`]
 
 skills.forEach((element) => {
     cycle.innerHTML += `${element} `;
-})     
+}) */
+
+
+    let newMessage = `Hello!`;
+
+
+
+let name = `John`;
+let admin;
+
+admin = name;
+
+alert(admin)

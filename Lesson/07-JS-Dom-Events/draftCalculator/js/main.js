@@ -2,6 +2,7 @@ let btnArray = document.getElementsByClassName('btn');
 let output = document.getElementById('output');
 let history = document.getElementById('history');
 
+
 let printValue = (zna4enie) => {
     output.innerHTML += `${zna4enie}`
 }
