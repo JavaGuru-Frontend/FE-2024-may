@@ -76,7 +76,8 @@
 
 .history {
     grid-area: 7/5/7/1;
-    
+    height: auto;
+   
 }
 
 :root {
