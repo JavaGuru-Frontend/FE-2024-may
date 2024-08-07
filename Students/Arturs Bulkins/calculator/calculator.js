@@ -25,19 +25,19 @@ let equal = () => {
     saveHistory (`${output.innerHTML}=${result}`);
     clearInput ();
     printValue (result); 
-    /* printHistory (); */ 
+    printHistory (); 
 }
 let saveHistory = (text) => {
-    let historyData = JSON.parse(localStorage.getItem('history')) || []; // почему не работает без или оператора
+    let historyData = JSON.parse(localStorage.getItem(history)) || [];
     historyData.push(text);
-    localStorage.setItem('history', JSON.stringify(historyData)); //  перевести в текс 
+    localStorage.setItem(history, JSON.stringify(historyData)); //  перевести в текс 
 }
 
 let printHistory = () => {
     history.innerHTML = '';
-    let printHistory = JSON.parse(localStorage.getItem('history')) || [];
+    let printHistory = JSON.parse(localStorage.getItem(history)) || [];
     printHistory.forEach((historyRecord) => {
-        history.innerHTML += `<li>${historyRecord}</li>>`
+        history.innerHTML += `<div>${historyRecord}</div>`
     })
 }
 
