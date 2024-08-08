@@ -1,13 +1,11 @@
 let btnArray = document.getElementsByClassName('btn');
 let white = document.getElementById('white');
 let symbol = document.getElementsByClassName('btn btn_15');
-
-
+let history = document.getElementById('history');
 
 let printValue = (printNumber, clear) => {
     white.innerHTML += `${printNumber}`;
 }
-
 
 let clearInput =() => {
     white.innerHTML = '';
@@ -19,10 +17,20 @@ let handleError = () => {
 
 let equal = () => {
     let result = eval(white.innerHTML);
+
+    saveHistory(`${white.innerHTML} = ${result}`)
     clearInput();
     printValue(result);
+    printHistory()
 }
 
+ let saveHistory = (text) => {
+    localStorage.setItem('history', text);
+ }
+
+ let printHistory = (text) => {
+    history.innerHTML = localStorage.getItem('history');
+ }
 
 
 Array.from(btnArray).forEach((element) => {
