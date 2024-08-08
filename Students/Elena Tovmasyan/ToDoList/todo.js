@@ -22,7 +22,7 @@ let toggleDone = (event) => {
 let saveToLocalStorage = (historyRecord) => {
     const task = {
         'done': false,
-        'taskText': historyRecord                                      /* Почему 'done' и 'taskText' не работают скошенные кавычки? */
+        'taskText': `historyRecord `                                     /* Почему 'done' и 'taskText' не работают скошенные кавычки? */
         };
     let toDoData = JSON.parse(localStorage.getItem(`ToDoList`)) || [];
     toDoData.push(task);

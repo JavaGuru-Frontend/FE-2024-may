@@ -17,13 +17,10 @@ let toggleDone = (event) => {
 }
 
 let saveToLocalStorage = (historyRecord) => {
-
     const task = {
         'done': false,
         'taskText': historyRecord
     }
-
-
     let todoData = JSON.parse(localStorage.getItem('toDoList')) || [] ;
     todoData.push(task);
     localStorage.setItem('toDoList', JSON.stringify(todoData))
