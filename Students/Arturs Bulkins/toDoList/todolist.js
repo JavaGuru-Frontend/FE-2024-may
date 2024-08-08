@@ -15,29 +15,30 @@ let toggleDone = (event) => {
         clickedElement.classList.remove('todo_done')
 
     } else {
-        clickedElement.classList.remove('todo_done')
+        clickedElement.classList.add('todo_done')
     }
-    clickedElement.classList.remove('todo_done')
+    
 }
 
 let saveToLocalStorage = (historyRecord) => {
     const task = {
-        'done': done,
+        'done': false,
         'taskText': historyRecord
     }
     
-    let toDoData = JSON.parse(localStorage.getItem('toDoList'))|| [];
+    let toDoData = JSON.parse(localStorage.getItem('toDoList')) || [];
     toDoData.push(task);
     localStorage.setItem('toDoList', JSON.stringify(toDoData));
 }
 
 let loadfromLocalStorage = () => {
     outputElement.innerHTML = '';
-    let toDoData = JSON.parse(localStorage.getItem('toDoList'))|| [];
-    toDoData.forEach(toDo => {
+    let toDoData = JSON.parse(localStorage.getItem('toDoList')) || [];
+    toDoData.forEach((toDo, i) => {
 
         outputElement.innerHTML += `
-        <li class="todo ${ toDo.done ? 'todo_done' : ''}" 
+        <li 
+            class="todo ${ toDo.done ? 'todo_done' : ''} todo_${i}" 
             onclick="toggleDone(event)"
         >
             ${toDo.taskText}
@@ -46,7 +47,7 @@ let loadfromLocalStorage = () => {
             >
             Remove</button>
         </li>`;
-    })
+    });
 }
 
 addBtnElement.addEventListener('click', addValue); 
