@@ -8,7 +8,7 @@ let history = document.getElementById('history');
         console.log('test')
     })
 } */ 
-let printValue = (input, clearInput) => {
+let printValue = (input) => {
     output.innerHTML += `${input}`; 
 }
 
@@ -28,16 +28,16 @@ let equal = () => {
     printHistory (); 
 }
 let saveHistory = (text) => {
-    let historyData = JSON.parse(localStorage.getItem('history')) || [];
+    let historyData = JSON.parse(localStorage.getItem(history)) || [];
     historyData.push(text);
-    localStorage.setItem('history', JSON.stringify(historyData)); //  перевести в текс 
+    localStorage.setItem(history, JSON.stringify(historyData)); //  перевести в текс 
 }
 
 let printHistory = () => {
     history.innerHTML = '';
-    let printHistory = JSON.parse(localStorage.getItem('history')) || [];
+    let printHistory = JSON.parse(localStorage.getItem(history)) || [];
     printHistory.forEach((historyRecord) => {
-        history.innerHTML += `<li>${historyRecord}</li>>`
+        history.innerHTML += `<div>${historyRecord}</div>`
     })
 }
 
@@ -73,28 +73,51 @@ Array.from(btnArray).forEach((element) => {
     })
 })
 
-document.addEventListener('keydown', (event,clear) => {
-    if (event.keyCode !== 13) {
+/* document.addEventListener('keydown', (event) => {
+    if (event.keyCode === 13) {
+        equal();
+    } else if (event.keyCode === 8) {
+        output.innerHTML = output.innerHTML.slice(0, -1);
+    } else {
         for(let i = 0; i < btnArray.length; i++) {
             let id = btnArray[i].getAttribute('data-id');
             if(id === event.key) {
                btnArray[i].click();
-            }
-        }
-    }  else {
-        equal ();
-    } 
-    /* if (clear.keyCode === 8 ) {
-        clearInput();
-    } */
-});   
+            }};
+    }   
+}); */   
 
 
+document.addEventListener('keydown',(event) => {
+    switch(event.keyCode){
+        case 13:
+            equal()
+            break;
+
+        case 8:
+            output.innerHTML = output.innerHTML.slice(0, -1);
+            break;
+
+        default:
+            for(let i = 0; i < btnArray.length; i++) {
+                let id = btnArray[i].getAttribute('data-id');
+                if(id === event.key) {
+                   btnArray[i].click();
+                }}
+            break;        
+    }
+})
+
+
+
+
+
+/* 
 document.addEventListener('keydown',(clear) => {
     if (clear.keyCode === 8 ) {
         output.innerHTML = output.innerHTML.slice(0, -1);
         }} 
-    ); 
+    );  */
 
 
 

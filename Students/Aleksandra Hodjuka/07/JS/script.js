@@ -3,6 +3,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const buttons = document.querySelectorAll(".calculator button");
     let clearDisplayOnNextInput = false;
 
+    
+    const savedDisplay = localStorage.getItem("calculatorDisplay");
+    if (savedDisplay) {
+        display.textContent = savedDisplay;
+    } else {
+        display.textContent = "0";
+    }
+
     buttons.forEach(button => {
         button.addEventListener("click", () => {
             const buttonText = button.textContent;
@@ -18,25 +26,26 @@ document.addEventListener("DOMContentLoaded", () => {
             if (equalsButton) {
                 handleButtonClick("=", equalsButton.classList);
             }
+            event.preventDefault();
         } else if (isNumericKey(key) || isOperatorKey(key)) {
             handleButtonClick(key, getButtonClassList(key));
         }
     });
 
-    function isNumericKey(key) {
+    let isNumericKey = (key) => {
         return /\d/.test(key);
-    }
+    };
 
-    function isOperatorKey(key) {
+    let isOperatorKey = (key) => {
         return ["+", "-", "*", "/"].includes(key);
-    }
+    };
 
-    function getButtonClassList(key) {
+    let getButtonClassList = (key) => {
         const button = Array.from(buttons).find(button => button.textContent === key);
         return button ? button.classList : null;
-    }
+    };
 
-    function handleButtonClick(buttonText, buttonClasses) {
+    let handleButtonClick = (buttonText, buttonClasses) => {
         if (!buttonClasses) return;
 
         switch (true) {
@@ -67,5 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
                 break;
         }
-    }
+       
+        localStorage.setItem("calculatorDisplay", display.textContent);
+    };
 });
