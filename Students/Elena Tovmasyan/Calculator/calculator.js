@@ -87,15 +87,10 @@ let clearOutput = () => {
 /* Вариант кода 5 (другие привязки в Html): */
 
 let btnArray = document.getElementsByClassName(`btn`);
+let output = document.getElementById(`IN`);
+let history = document.getElementById('history');
 
-let output = document.getElementById(`IN`)
-
-
-/* for (let i = 0; i < btnArray.length; i++) {
-    btnArray[i].addEventListener(`click`, () => {
-        console.log(`test`);
-    })
-} */
+let historyData = JSON.parse(localStorage.getItem('history')) || [];
 
 
 let printValue = (zna4enie) => {
@@ -106,11 +101,36 @@ let clearInput = () => {
     output.innerHTML = ` `;
 }
 
-let equal = () => {
-        let result = eval(output.innerHTML);
-        clearInput();
-    printValue(`${result}`);
+/* let handleError = () => {
+    console.error(`Ops`);
 }
+это если нужно отловить ошибку, как работает - не проходили */
+
+
+
+
+let equal = () => {
+    let result = eval(output.innerHTML);
+    saveHistory(`${output.innerHTML} = ${result}`);
+    clearInput();
+    printValue(result);
+    // printHistory();
+}
+
+// Код для записи в localStorage и вывода этих данных на страницу html:
+
+let saveHistory = (text) => {
+    let historyData = JSON.parse(localStorage.getItem('history')) || [];
+    historyData.push(text);
+    localStorage.setItem('history', JSON.stringify(historyData));
+}
+
+/* let printHistory = () => {
+    let printHistory = JSON.parse(localStorage.getItem('history'));
+    printHistory.forEach((historyRecord) => {
+    history.innerHTML += `<li>${historyRecord}</li>`
+    })
+} */
 
 Array.from(btnArray).forEach((element) => {
     element.addEventListener(`click`, () => {
@@ -135,31 +155,59 @@ Array.from(btnArray).forEach((element) => {
             break;
 
             case(`clear`):
-            printValue(id);
+            clearInput( );
             break;
 
             default:
             break;
-
-
         }
 })
 })
 
-/* let handleError = () => {
-    console.error(`Ops`);
-}
 
-document.addEventListener(`click`, handleError); */
+document.addEventListener('keydown', (event) => {
+    if (event.keyCode === 13) {
+            equal();
+        }    
+    else if (event.keyCode === 8) {
+            clearInput();
+        }
+    else {
+        for(let i = 0; i < btnArray.length; i++) {
+            let id = btnArray[i].getAttribute('data-id');
+            if(id === event.key) {
+            btnArray[i].click();}
+            }
+        };
+    }
+)
 
 
-document.addEventListener(`keydown`, (event) => {
-    console.log(event);
-    if(event.keyCode === 187) {
-        console.log(`enter clicked`)
+// Вариант ввода информации с клавиатуры - с помощью цикла switch:
+
+/* document.addEventListener('keydown', (event) => {
+
+    switch(event.keyCode) {
+        case 13:
+            equal();
+        break;
+
+        case 8:
+            clearInput();
+        break;
+
+        default:
+            for(let i = 0; i < btnArray.length; i++) {
+                let id = btnArray[i].getAttribute('data-id');
+                if(id === event.key) {
+                btnArray[i].click();}
+                }
+        break;
     };
-});
+}) */
 
 
 
-/* Как нажать С, чтобы один раз - О, второй - выключить? */
+/* Проблемы:
+
+И надо иметь возможность удалять лишний символы при ошибке поштучно, как в Word. */

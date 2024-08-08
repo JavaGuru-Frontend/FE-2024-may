@@ -135,13 +135,25 @@ let skills = [`HTML`, `CSS`, `JS`]
 
 /* for (i = 0; i < skills.length; i++) {
     cycle.innerHTML += `${skills[i]} `;
-}                                           /* Как заменить исходное значение ячейки? */
+}                                           
 
 /* skills.forEach((skills) => {
     cycle.innerHTML += `${skills[i]} `;
-})                                          /* Куда девается условие i < skills.length; i++? Почему выводятся только первые буквы содержания ячеек массива? */
+})                                         
 
 
 skills.forEach((element) => {
     cycle.innerHTML += `${element} `;
-})     
+}) */
+
+
+    let newMessage = `Hello!`;
+
+
+
+let name = `John`;
+let admin;
+
+admin = name;
+
+alert(admin)

@@ -1,0 +1,13 @@
+.todo {
+    max-width: 400px;
+    min-width: 200px;
+    padding: 7px;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo_done {
+    color: red;
+    text-decoration: line-through;
+}
