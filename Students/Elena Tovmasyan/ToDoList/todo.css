@@ -1,0 +1,20 @@
+body {
+    width: 70vw;
+    height: 100vh;
+    background-color: antiquewhite;
+    margin: 30px;
+}
+
+.todo {
+    width: 400px;
+    height: 30px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo_done {
+    color: red;
+    text-decoration: line-through;
+}
