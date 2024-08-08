@@ -16,25 +16,23 @@
     font-family: sans-serif;
 }
 
-.btn {
-    &_1{grid-area: btn_1;}
-    &_2{grid-area: btn_2;}
-    &_3{grid-area: btn_3;}
-    &_4{grid-area: btn_4;}
-    &_5{grid-area: btn_5;}
-    &_6{grid-area: btn_6;}
-    &_7{grid-area: btn_7;}
-    &_8{grid-area: btn_8;}
-    &_9{grid-area: btn_9;}
-    &_10{grid-area: btn_10;}
-    &_11{grid-area: btn_11;}
-    &_12{grid-area: btn_12;}
-    &_13{grid-area: btn_13;}
-    &_14{grid-area: btn_14;}
-    &_15{grid-area: btn_15;}
-    &_16{grid-area: btn_16;}
+.btn_1{grid-area: btn_1;}
+.btn_2{grid-area: btn_2;}
+.btn_3{grid-area: btn_3;}
+.btn_4{grid-area: btn_4;}
+.btn_5{grid-area: btn_5;}
+.btn_6{grid-area: btn_6;}
+.btn_7{grid-area: btn_7;}
+.btn_8{grid-area: btn_8;}
+.btn_9{grid-area: btn_9;}
+.btn_10{grid-area: btn_10;}
+.btn_11{grid-area: btn_11;}
+.btn_12{grid-area: btn_12;}
+.btn_13{grid-area: btn_13;}
+.btn_14{grid-area: btn_14;}
+.btn_15{grid-area: btn_15;}
+.btn_16{grid-area: btn_16;}
 
-}
 .white {
     grid-area: white;
     width: 650px;
@@ -43,23 +41,6 @@
     text-align: end;
     align-content: center;
     font-size: 40px;
-}
-
-.black {
-    grid-area: black;
-    width: 110px;
-    height: 500px;
-    background-color: rgb(16, 12, 46);
-    color: white;
-    border-radius: 7px;
-    text-align: center;
-    align-content: center;
-    font-size: 40px;
-    cursor: pointer;
-    decoration: none
-    
-    
-
 }
 
 .btn {
@@ -72,8 +53,37 @@
     color: white;
     font-size: 30px;
     cursor: pointer;
-
 } 
+
+.btn_black {
+    grid-area: black;
+    width: 110px;
+    height: 500px;
+    background-color: rgb(16, 12, 46);
+    color: white;
+    border-radius: 7px;
+    text-align: center;
+    align-content: center;
+    font-size: 40px;
+    cursor: pointer;
+    decoration: none;
+}
+
+.history {
+    width: 650px;
+    height: 50px;
+    background-color: white;
+    text-align: right;
+    font-size: 40px;
+    list-style-type: none;
+    margin: 0 auto;
+    color: black;
+    font-family: sans-serif;
+}
+
+
+
+
 
 
 
