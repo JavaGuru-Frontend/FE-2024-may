@@ -24,7 +24,7 @@ let equal = () => {
 let saveHistory = (text) => {
     let historyData = JSON.parse(localStorage.getItem('history')) || []
 
-    
+
     historyData.push(text);
     localStorage.setItem('history', JSON.stringify(historyData));
 }
