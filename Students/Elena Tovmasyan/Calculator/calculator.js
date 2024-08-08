@@ -101,11 +101,13 @@ let clearInput = () => {
     output.innerHTML = ` `;
 }
 
-let handleError = () => {
+/* let handleError = () => {
     console.error(`Ops`);
 }
+это если нужно отловить ошибку, как работает - не проходили */
 
-// Что это?
+
+
 
 let equal = () => {
     let result = eval(output.innerHTML);
@@ -115,6 +117,7 @@ let equal = () => {
     // printHistory();
 }
 
+// Код для записи в localStorage и вывода этих данных на страницу html:
 
 let saveHistory = (text) => {
     let historyData = JSON.parse(localStorage.getItem('history')) || [];
@@ -122,12 +125,12 @@ let saveHistory = (text) => {
     localStorage.setItem('history', JSON.stringify(historyData));
 }
 
-let printHistory = () => {
+/* let printHistory = () => {
     let printHistory = JSON.parse(localStorage.getItem('history'));
     printHistory.forEach((historyRecord) => {
     history.innerHTML += `<li>${historyRecord}</li>`
     })
-}
+} */
 
 Array.from(btnArray).forEach((element) => {
     element.addEventListener(`click`, () => {
@@ -162,70 +165,49 @@ Array.from(btnArray).forEach((element) => {
 })
 
 
-
 document.addEventListener('keydown', (event) => {
-    if (event.keyCode !== 13) {
+    if (event.keyCode === 13) {
+            equal();
+        }    
+    else if (event.keyCode === 8) {
+            clearInput();
+        }
+    else {
         for(let i = 0; i < btnArray.length; i++) {
             let id = btnArray[i].getAttribute('data-id');
             if(id === event.key) {
-               btnArray[i].click();}
-        }
+            btnArray[i].click();}
+            }
+        };
     }
-        else if (event.keyCode === 8) {
-            clearInput();
-    }
-        else {
+)
+
+
+// Вариант ввода информации с клавиатуры - с помощью цикла switch:
+
+/* document.addEventListener('keydown', (event) => {
+
+    switch(event.keyCode) {
+        case 13:
             equal();
-    }
-});   
+        break;
 
-   
-/* Array.from(btnArray).forEach((element) => {
-    element.addEventListener(`click`, () => {
-        let type = element.getAttribute (`data-type`);
-        let id = element.getAttribute (`data-id`);
-        
-        switch (type) {
-            case(`equal`):
-            equal(id);
-            break;
+        case 8:
+            clearInput();
+        break;
 
-            case(`number`):
-            printValue(id);
-            break;
-
-            case(`operator`):
-            printValue(id);
-            break;
-
-            case(`symbol`):
-            printValue(id);
-            break;
-
-            case(`clear`):
-            clearInput( );
-            break;
-
-            default:
-            break;
-        }
-})
-})
- */
+        default:
+            for(let i = 0; i < btnArray.length; i++) {
+                let id = btnArray[i].getAttribute('data-id');
+                if(id === event.key) {
+                btnArray[i].click();}
+                }
+        break;
+    };
+}) */
 
 
 
 /* Проблемы:
 
-Умножаю 4х5 нажимаю равно через Enter - получаю 205, вычитаю из -4 - 5 - получаю 15
-
-И не стирает с помощью Enter
-
-Он то стирает, то добавляет предыдущую цифру к числу.
-
-И надо иметь возможность удалять лишний символы при ошибке.
-
-2х2 Enter - получаем 42
-
-!!! Не сохраняются данные в local.storage
- */
+И надо иметь возможность удалять лишний символы при ошибке поштучно, как в Word. */
