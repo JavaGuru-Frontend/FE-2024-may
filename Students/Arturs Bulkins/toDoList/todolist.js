@@ -9,6 +9,15 @@ let addValue = () => {
 
 }
 
+let deleteItem = (event) => {
+    let elementClickedID = event.target.dataset.id;
+    let todoData = JSON.parse(localStorage.getItem('toDoList'));
+    todoData.splice(elementClickedID, 1);
+
+    localStorage.setItem('toDoList', JSON.stringify(todoData));
+    loadfromLocalStorage();
+}
+
 let toggleDone = (event) => {
     let clickedElement = event.target
     if (clickedElement.classList.contains('todo_done')) {
@@ -17,6 +26,23 @@ let toggleDone = (event) => {
     } else {
         clickedElement.classList.add('todo_done')
     }
+    
+}
+
+let edit = (event) => {
+    if( event.target.innerText === 'Edit'){
+        event.target.innerText = 'save';
+        document.getElementById(`input-${elementClickedID}`).classList.remove('disabled');
+    } else if (event.target.innerText = 'save') {
+        event.target.innerText === 'Edit';
+        document.getElementById(`input-${elementClickedID}`).classList.remove('disabled'); 
+    }
+
+    let newText = document.getElementById(`input-${elementClickedID}`).value;
+    let todoData = JSON.parse(localStorage.getItem('todoList')) || [];
+    todoData[elementClickedID].taskText = newText;
+    localStorage.setItem('todoList', JSON.stringify(todoData));
+    loadfromLocalStorage();
     
 }
 
@@ -37,15 +63,21 @@ let loadfromLocalStorage = () => {
     toDoData.forEach((toDo, i) => {
 
         outputElement.innerHTML += `
+        
         <li 
-            class="todo ${ toDo.done ? 'todo_done' : ''} todo_${i}" 
-            onclick="toggleDone(event)"
-        >
-            ${toDo.taskText}
-            <button 
-            onclick="remove(event)"
+                class="todo ${ toDo.done ? 'todo_done' : ''} todo_${i}" 
+                onclick="toggleDone(event)"
             >
-            Remove</button>
+                ${toDo.taskText}
+                <input type='text' class='disabled' id='${i}'>
+                <button 
+                onclick="remove(event)" data-id=${i}
+                >
+                Remove</button>
+                <button 
+                onclick="edit(event)" data-id=${i}
+                >
+                Edit</button>
         </li>`;
     });
 }
