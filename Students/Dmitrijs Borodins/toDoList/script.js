@@ -1,7 +1,7 @@
 
-let addBtnElement = document.getElementById(`add-task`);
-let taskElement = document.getElementById(`new-task`);
-let outputElement = document.getElementById(`task-list`);
+let addBtnElement = document.getElementById(`addBtn`);
+let taskElement = document.getElementById(`task`);
+let outputElement = document.getElementById(`output`);
 
 
 let addValue = () => {
@@ -9,6 +9,14 @@ let addValue = () => {
    saveToLocalStorage(taskElement.value);
    loadFromLocalStorage();
 }
+
+
+
+
+
+
+
+
 
 let toggleDone = (event) => {
 
@@ -25,7 +33,7 @@ let toggleDone = (event) => {
 let saveToLocalStorage = (historyRecord) => {
    const task = {
       'done': false,
-      'taskText': historyRecord  //Почему тут нельзя использовать скошенные кaвычки//
+      'taskText': historyRecord
    }
 
    let ToDoData = JSON.parse(localStorage.getItem(`toDoList`)) || [];
@@ -38,20 +46,22 @@ let saveToLocalStorage = (historyRecord) => {
 let loadFromLocalStorage = () => {
    outputElement.innerHTML = ``;
    let ToDoData = JSON.parse(localStorage.getItem(`toDoList`)) || [];
-   ToDoData.forEach(todo => {
+   ToDoData.forEach((todo, key) => {// todo любой элемент,который взяли из массива ToDoData//
       let = isTaskCheked = todo.done
 
       outputElement.innerHTML +=
-         `<li class"todo_done" ${isTaskCheked ? `todo_done` : ``} onclick="toggleDone(event)">
+         `
+         <li class"todo_done" ${isTaskCheked ? `todo_done` : ``} onclick="toggleDone(event)">
          ${todo.taskText}
          <button>Remove</button>
          </li>`;
 
    });
 
+   // todo.done ? 'todo_done' : '': Это тернарный оператор. Он проверяет условие todo.done. Если todo.done истинно (то есть равно true), то в class будет добавлен класс 'todo_done'. Если же todo.done ложно (равно false), то ничего не добавится, и значение class останется пустым ('').
 
 }
 
 addBtnElement.addEventListener(`click`, addValue);
-// loadFromLocalStorage();
+loadFromLocalStorage();
 

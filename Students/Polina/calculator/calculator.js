@@ -2,6 +2,8 @@ let btnArray = document.getElementsByClassName('btn');
 let white = document.getElementById('white');
 let symbol = document.getElementsByClassName('btn btn_15');
 let history = document.getElementById('history');
+let historyData = JSON.parse(localStorage.getItem('history'));
+
 
 let printValue = (printNumber, clear) => {
     white.innerHTML += `${printNumber}`;
@@ -21,15 +23,21 @@ let equal = () => {
     saveHistory(`${white.innerHTML} = ${result}`)
     clearInput();
     printValue(result);
-    printHistory()
+    printHistory(); 
 }
 
  let saveHistory = (text) => {
-    localStorage.setItem('history', text);
+    let historyData = JSON.parse(localStorage.getItem('history')) || []
+    historyData.push(text);
+    localStorage.setItem('history', JSON.stringify(historyData));
  }
 
- let printHistory = (text) => {
-    history.innerHTML = localStorage.getItem('history');
+ let printHistory = () => {
+    history.innerHTML = '';
+    historyData
+    historyData.forEach((historyRecord) => {
+        history.innerHTML += `<li>${historyRecord}<li>`
+    })
  }
 
 
@@ -85,6 +93,7 @@ document.addEventListener('keydown', (event) => {
 
 });
 
+printHistory();
 
 
 
