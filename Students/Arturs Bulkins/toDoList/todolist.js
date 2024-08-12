@@ -2,48 +2,48 @@ let addBtnElement = document.getElementById('addBtn');
 let taskElement = document.getElementById('task');
 let outputElement = document.getElementById('output');
 
-
 let addValue = () => {
-    saveToLocalStorage (taskElement.value);
-    loadfromLocalStorage ();
-
+    saveToLocalStorage(taskElement.value);
+    loadFromLocalStorage();
 }
+
 
 let deleteItem = (event) => {
     let elementClickedID = event.target.dataset.id;
-    let todoData = JSON.parse(localStorage.getItem('toDoList'));
-    todoData.splice(elementClickedID, 1);
+    let todoData = JSON.parse(localStorage.getItem('toDoList')) || [];
+
+    todoData.splice( elementClickedID, 1);
 
     localStorage.setItem('toDoList', JSON.stringify(todoData));
-    loadfromLocalStorage();
-}
+    loadFromLocalStorage();
+} 
 
-let toggleDone = (event) => {
-    let clickedElement = event.target
-    if (clickedElement.classList.contains('todo_done')) {
-        clickedElement.classList.remove('todo_done')
+let toggleDone = (event) => {   
+    let elementClickedID = event.target.dataset.id;
+    let todoData = JSON.parse(localStorage.getItem('toDoList')) || [];
 
-    } else {
-        clickedElement.classList.add('todo_done')
-    }
+    todoData[elementClickedID].done = !todoData[elementClickedID].done
     
+    localStorage.setItem('toDoList', JSON.stringify(todoData));
+    loadFromLocalStorage();
 }
 
 let edit = (event) => {
-    if( event.target.innerText === 'Edit'){
-        event.target.innerText = 'save';
-        document.getElementById(`input-${elementClickedID}`).classList.remove('disabled');
-    } else if (event.target.innerText = 'save') {
-        event.target.innerText === 'Edit';
-        document.getElementById(`input-${elementClickedID}`).classList.remove('disabled'); 
-    }
+    let elementClickedID = event.target.dataset.id;
 
-    let newText = document.getElementById(`input-${elementClickedID}`).value;
-    let todoData = JSON.parse(localStorage.getItem('todoList')) || [];
-    todoData[elementClickedID].taskText = newText;
-    localStorage.setItem('todoList', JSON.stringify(todoData));
-    loadfromLocalStorage();
-    
+    if( event.target.innerText === 'Edit' ) {
+        event.target.innerText = 'save';
+        document.getElementById(`input-${elementClickedID}`).classList.remove('disabled')
+    } else if (event.target.innerText === 'save') {
+        event.target.innerText = 'Edit';
+        document.getElementById(`input-${elementClickedID}`).classList.add('disabled')
+
+        let newtext = document.getElementById(`input-${elementClickedID}`).value;
+        let todoData = JSON.parse(localStorage.getItem('toDoList')) || [];
+        todoData[elementClickedID].taskText = newtext;
+        localStorage.setItem('toDoList', JSON.stringify(todoData));
+        loadFromLocalStorage();
+    }
 }
 
 let saveToLocalStorage = (historyRecord) => {
@@ -51,36 +51,50 @@ let saveToLocalStorage = (historyRecord) => {
         'done': false,
         'taskText': historyRecord
     }
-    
-    let toDoData = JSON.parse(localStorage.getItem('toDoList')) || [];
-    toDoData.push(task);
-    localStorage.setItem('toDoList', JSON.stringify(toDoData));
+
+
+    let todoData = JSON.parse(localStorage.getItem('toDoList')) || [];
+    todoData.push(task);
+    localStorage.setItem('toDoList', JSON.stringify(todoData));
+
 }
 
-let loadfromLocalStorage = () => {
+let loadFromLocalStorage = () => {
     outputElement.innerHTML = '';
-    let toDoData = JSON.parse(localStorage.getItem('toDoList')) || [];
-    toDoData.forEach((toDo, i) => {
-
-        outputElement.innerHTML += `
-        
-        <li 
-                class="todo ${ toDo.done ? 'todo_done' : ''} todo_${i}" 
-                onclick="toggleDone(event)"
-            >
-                ${toDo.taskText}
-                <input type='text' class='disabled' id='${i}'>
-                <button 
-                onclick="remove(event)" data-id=${i}
+    let todoData = JSON.parse(localStorage.getItem('toDoList')) || [];
+    todoData.forEach((todo, key) => {
+            console.log(key)
+            outputElement.innerHTML += `
+            <div class='todo'>
+                <span 
+                    class=" ${ todo.done ? 'todo_done' : '' }"
+                    onclick="toggleDone(event)"
+                    data-id="${key}"
                 >
-                Remove</button>
+                    ${todo.taskText}
+                </span>
+                <input type='text' class='disabled' id="input-${key}">
                 <button 
-                onclick="edit(event)" data-id=${i}
+                    onclick="deleteItem(event)"
+                    data-id=${key}
+                    class="removeBTN"
                 >
-                Edit</button>
-        </li>`;
-    });
+                    Remove
+                </button>
+                ${!todo.done 
+                    ? `<button 
+                    onclick="edit(event)"
+                    data-id=${key}
+                    >
+                    Edit
+                    </button>`
+                    : ''
+                }
+                
+            </div>
+            `;
+});
 }
 
-addBtnElement.addEventListener('click', addValue); 
-loadfromLocalStorage()
+addBtn.addEventListener('click', addValue);
+loadFromLocalStorage();
