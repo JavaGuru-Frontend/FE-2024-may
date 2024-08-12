@@ -1,0 +1,22 @@
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #f4f4f4;
+   margin: 0 auto;
+   height: 100vh;
+}
+
+.dog-image {
+   width: 500px;
+   height: 500px;
+   object-fit: cover;
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.dog-selector {
+   width: 100%;
+   text-align: center;
+
+}
