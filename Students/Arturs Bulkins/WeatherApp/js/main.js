@@ -11,11 +11,12 @@ let renderWeather = (data) => {
   renderInfo.innerHTML = `
 
           <div class="grid">
-              <h2 class="info info_city" id="cityoutput">${data.name}</h2>
-              <p class="info" id="description">${data.sys.country}</p>
-              <p2 class="info" id="temp">${((data.main.temp)-273).toFixed(1)} C</p2>
-              <p3 class="info info_wind" id="wind">Wind speed: ${data.wind.speed} km/h Direction: ${data.wind.deg} deg</p3>
-              <p4 class="info" id="clouds">${data.weather[0].main}</p4>
+              <h2 class="info info_city" id="cityoutput">${data.name}  ${data.sys.country}</h2>
+              <h2 class="info" id="temp">${((data.main.temp)-273).toFixed(1)} C</h2>
+              <p3 class="info info_wind" id="wind">Wind speed: ${data.wind.speed} km/h</p3>
+              <p3 class="info info_wind" id="wind">Direction: ${data.wind.deg} deg</p3>
+              <p3 class="info info_wind" id="wind">Humidity: ${data.main.humidity} %</p3>
+              <p4 class="info" id="clouds">${data.weather[0].description}</p4>
           </div>`
 
 
@@ -31,15 +32,13 @@ let renderWeather = (data) => {
 
 getDataBtn.addEventListener('click', () => {
 
-  city = getCity.value;
   apik = "3045dd712ffe6e702e3245525ac7fa38"
-    fetch('https://api.openweathermap.org/data/2.5/weather?q='+`${city}`+'&appid='+apik)
+    fetch('https://api.openweathermap.org/data/2.5/weather?q='+`${getCity.value}`+'&appid='+apik)
       .then(response => response.json())
       .then(data => renderWeather(data))
       .catch(error => alert(error))
       clearInput();
 })
-
 
 
 
