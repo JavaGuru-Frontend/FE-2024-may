@@ -1,3 +1,40 @@
+let getDataBtn = document.getElementById('add');
+let getCity = document.getElementById('cityinput');
+let renderInfo = document.getElementById('render');
+
+let renderWeather = (data) => {
+  renderInfo.innerHTML = `
+          <div class="grid">
+              <h2 class="info info_city" id="cityoutput">${data.name}</h2>
+              <p class="info" id="description">${data.sys.country}</p>
+              <p class="info" id="temp">${((data.main.temp)-273).toFixed(1)} Deg C</p>
+              <p class="info" id="wind">Wind speed: ${data.wind.speed}km/h        direction: ${data.wind.deg}deg</p>
+              <p class="info" id="clouds">${data.weather[0].main}</p>
+          </div>`
+
+
+
+
+  console.log(data);
+  console.log(data.name, data.sys.country);
+  console.log(((data.main.temp)-273).toFixed(1));
+  console.log(data.wind);
+  console.log(data.weather[0].main);
+}
+
+
+getDataBtn.addEventListener('click', () => {
+
+  city = getCity.value;
+  apik = "3045dd712ffe6e702e3245525ac7fa38"
+    fetch('https://api.openweathermap.org/data/2.5/weather?q='+`${city}`+'&appid='+apik)
+      .then(response => response.json())
+      .then(data => renderWeather(data))
+      .catch(error => alert(error))
+    
+  
+      
+})
 
 
 // fetch metod

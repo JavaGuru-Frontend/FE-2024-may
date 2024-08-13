@@ -1,0 +1,59 @@
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   /*  max-width: 500px; */
+    height: auto;
+    margin: 0 auto;
+    margin-top: 8vh;
+    
+   
+}
+
+.main {
+    background-color: rgb(220, 235, 236);
+    box-shadow: 0px 0px 10px 8px rgb(230, 239, 240);
+    border-radius: 20px;
+}
+
+.inputs {
+ margin: 10px;
+ border: solid 0px;
+}
+
+.inputs__city {
+    width: 300px;
+    height: 45px;
+    border-radius: 15px;
+}
+
+.inputs__btn{
+    width: 100px;
+    height: 45px;
+    border-radius: 15px;
+    background-color: rgba(60, 239, 218, 0.873);
+}
+
+.inputs__btn:hover{
+    
+    transition: 1s;
+    background-color: rgba(51, 252, 29, 0.709);
+}
+
+.grid {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    text-align: center;
+}
+
+.info {
+    width: 200px;
+    margin: 0 auto;
+    height: auto;
+}
+
+.info_city{
+    grid-area: 2/3/1/1;
+}
