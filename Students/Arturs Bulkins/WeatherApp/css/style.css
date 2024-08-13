@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+.body{
+    font-family: "Roboto" ,sans-serif; /*подключаймый шрифт с гугле сервиса в styles*/   
+    font-size: 30px; /* точка отсчета для всего текста(базавый разрмер шрифта)*/
+
+}
+
+p2{font-weight: 700; font-size: 1.5em;}
+p3{font-size: 0.5em;}
+p4{font-size: 0.5em;}
+p{font-size: 0.7em;}
+
 
 
 .container-fluid {
@@ -13,14 +27,16 @@
 }
 
 .main {
-    background-color: rgb(221, 244, 244);
+    background-color: rgb(10, 180, 180);
    /*  box-shadow: 0px 0px 5px 8px rgb(230, 239, 240); */
     border-radius: 20px;
 }
 
 .inputs {
- margin: 10px;
- border: solid 0px;
+    display: flex;
+    margin: 10px;
+    border: solid 0px;
+ 
 }
 
 .inputs__city {
@@ -28,13 +44,16 @@
     height: 45px;
     border-radius: 15px;
     text-align: center;
+    font-size: 0.9em;
 }
 
 .inputs__btn{
+    cursor: pointer;
     width: 100px;
     height: 45px;
     border-radius: 15px;
     background-color: rgba(60, 239, 218, 0.873);
+    font-size: 0.5em;
 }
 
 .inputs__btn:hover{
@@ -44,20 +63,34 @@
 }
 
 .grid {
+    color: rgb(252, 251, 251);
     margin-bottom: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info{
+    margin: 10px;
+}
+
+/*     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     text-align: center;
     align-items: center;
 }
 
 .info {
-    width: 200px;
+    max-width: 200px;
     margin: 0 auto;
     height: auto;
 }
 
 .info_city{
-    grid-area: 2/3/1/1;
+    grid-area: 2 / 5 / 1 / 1;
 }
+
+.info_wind{
+    grid-area: 4 / 5 / 3 / 1;
+} */
