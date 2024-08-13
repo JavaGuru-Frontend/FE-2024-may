@@ -15,7 +15,7 @@ body {
    width: 300px;
 }
 
-h1 {
+/* h1 {
    text-align: center;
 }
 
@@ -30,24 +30,20 @@ input {
 button {
    width: 100%;
    padding: 10px;
-   background: #28a745;
+   background: #037520;
    color: white;
    border: none;
    border-radius: 3px;
    cursor: pointer;
    text-transform: uppercase;
-}
+} 
 
-button:hover {
-   background: #218838;
-}
-
-ul {
+ ul {
    list-style-type: none;
    padding: 0;
-}
+} 
 
-li {
+ li {
    background: #f9f9f9;
    padding: 10px;
    margin-bottom: 10px;
@@ -56,10 +52,10 @@ li {
    display: flex;
    justify-content: space-between;
    align-items: center;
-}
+}   */
 
-li button {
-   width: 50%;
+.btn-red {
+   width: 100%;
    background: #dc3545;
    border: none;
    color: white;
@@ -68,12 +64,34 @@ li button {
    border-radius: 3px;
 }
 
-li button:hover {
-   background: #c82333;
+.btn-edit {
+   background: #3f0bce;
 }
-
 
 .todo_done {
    color: red;
    text-decoration: line-through;
+}
+
+
+.todo {
+   border-bottom: 1px solid black;
+   padding: 5px;
+
+   display: flex;
+   justify-content: space-between;
+   justify-content: flex-start;
+}
+
+.todo_done {
+   color: red;
+   text-decoration: line-through;
+}
+
+.disabled {
+   display: none;
+}
+
+.removeBTN {
+   margin-left: 150px;
 }
