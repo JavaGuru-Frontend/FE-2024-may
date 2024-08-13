@@ -6,9 +6,9 @@ let renderWeather = (data) => {
   renderInfo.innerHTML = `
           <div class="grid">
               <h2 class="info info_city" id="cityoutput">${data.name}</h2>
-              <p class="info" id="description">${data.sys.country}</p>
-              <p class="info" id="temp">${((data.main.temp)-273).toFixed(1)} Deg C</p>
-              <p class="info" id="wind">Wind speed: ${data.wind.speed}km/h        direction: ${data.wind.deg}deg</p>
+              <p class="info" id="description">Country: ${data.sys.country}</p>
+              <p class="info" id="temp">${((data.main.temp)-273).toFixed(1)} C</p>
+              <p class="info" id="wind">Wind speed: ${data.wind.speed} km/h   Direction: ${data.wind.deg} deg</p>
               <p class="info" id="clouds">${data.weather[0].main}</p>
           </div>`
 
