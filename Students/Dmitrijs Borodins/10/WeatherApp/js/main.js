@@ -17,7 +17,7 @@ let checkWeather = (data) => {
             <p class="basic-text" id="description">Clouds: ${weatherDescription}</p>
             <img class="skyinfo" src="https://openweathermap.org/img/w/${data.weather[0].icon}.png">
             <p class="basic-text" id="temp">Temperature:  ${celsiusTemperature.toFixed(0)}&#8451;</p>
-            <p class="basic-text" id="wind">Wind speed: ${windSpeed} км/ч</p>
+            <p class="basic-text" id="wind">Wind speed: ${windSpeed} km/h</p>
         </div>
     </section>`;
 }
