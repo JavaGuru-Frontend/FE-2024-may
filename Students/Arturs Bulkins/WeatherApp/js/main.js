@@ -1,12 +1,61 @@
 let getDataBtn = document.getElementById('add');
 let getCity = document.getElementById('cityinput');
 let renderInfo = document.getElementById('render');
+let renderImg = document.getElementById('renderImg');
+renderImg
 
 let clearInput = () => {
   getCity.value = ``;
 }
 
+
+/* let renderIcon = (data) => {
+  switch (data.weather[0].description) {
+    case 'clear sky':
+      renderInfo.innerHTML =` <img src="..\images\clearsky.png">`
+      break;
+    case 'broken clouds':
+        renderInfo.innerHTML =` <img src="..\images\brokenclouds.png">`
+        break;
+
+    case 'overcast clouds':
+        renderInfo.innerHTML =` <img src="..\images\overcastclouds.png">`
+        break;
+
+    case 'light rain':
+       renderInfo.innerHTML =` <img src="..\images\lightrain.png">`
+        break;
+
+    default:
+      break;
+  }} */
+
+
 let renderWeather = (data) => {
+
+
+
+  let renderIcon = () => {
+    switch (data.weather[0].description) {
+      case 'clear sky':
+        renderImg.innerHTML =` <img class="infosky" src="..\images\clearsky.png">`
+        break;
+      case 'broken clouds':
+        renderImg.innerHTML =` <img class="infosky" src="..\images\clearsky.png">`
+          break;
+  
+      case 'overcast clouds':
+        renderImg.innerHTML =` <img class="infosky" src="..\images\clearsky.png">`
+          break;
+  
+      case 'light rain':
+        renderImg.innerHTML =` <img class="infosky" src="..\images\clearsky.png">`
+          break;
+  
+      default:
+        break;
+    }}
+
 
   renderInfo.innerHTML = `
 
@@ -16,19 +65,18 @@ let renderWeather = (data) => {
               <p3 class="info info_wind" id="wind">Wind speed: ${data.wind.speed} km/h</p3>
               <p3 class="info info_wind" id="wind">Direction: ${data.wind.deg} deg</p3>
               <p3 class="info info_wind" id="wind">Humidity: ${data.main.humidity} %</p3>
-              <p4 class="info" id="clouds">${data.weather[0].description}</p4>
+             
           </div>`
 
-
+            
 
 
   console.log(data);
   console.log(data.name, data.sys.country);
   console.log(((data.main.temp)-273).toFixed(1));
   console.log(data.wind);
-  console.log(data.weather[0].main);
+  console.log(data.weather[0].description);
 }
-
 
 getDataBtn.addEventListener('click', () => {
 
@@ -41,8 +89,7 @@ getDataBtn.addEventListener('click', () => {
 })
 
 
-
-
+//<p4 class="info" id="clouds">${data.weather[0].description}</p4>
 
 
 
