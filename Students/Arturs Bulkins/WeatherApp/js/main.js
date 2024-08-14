@@ -2,7 +2,7 @@ let getDataBtn = document.getElementById('add');
 let getCity = document.getElementById('cityinput');
 let renderInfo = document.getElementById('render');
 let renderImg = document.getElementById('renderImg');
-renderImg
+
 
 let clearInput = () => {
   getCity.value = ``;
@@ -35,7 +35,7 @@ let renderWeather = (data) => {
 
 
 
-  let renderIcon = () => {
+/*   let renderIcon = () => {
     switch (data.weather[0].description) {
       case 'clear sky':
         renderImg.innerHTML =` <img class="infosky" src="..\images\clearsky.png">`
@@ -54,18 +54,18 @@ let renderWeather = (data) => {
   
       default:
         break;
-    }}
+    }} */
 
 
   renderInfo.innerHTML = `
 
           <div class="grid">
               <h2 class="info info_city" id="cityoutput">${data.name}  ${data.sys.country}</h2>
-              <h2 class="info" id="temp">${((data.main.temp)-273).toFixed(1)} C</h2>
+              <h2 class="info" id="temp">${((data.main.temp)-273).toFixed(1)} °C</h2>
+              <img class="infosky" src="https://openweathermap.org/img/w/${data.weather[0].icon}.png">
               <p3 class="info info_wind" id="wind">Wind speed: ${data.wind.speed} km/h</p3>
               <p3 class="info info_wind" id="wind">Direction: ${data.wind.deg} deg</p3>
               <p3 class="info info_wind" id="wind">Humidity: ${data.main.humidity} %</p3>
-             
           </div>`
 
             
@@ -88,6 +88,7 @@ getDataBtn.addEventListener('click', () => {
       clearInput();
 })
 
+/* https://openweathermap.org/img/w/${data.weather[0].icon}.png */
 
 //<p4 class="info" id="clouds">${data.weather[0].description}</p4>
 

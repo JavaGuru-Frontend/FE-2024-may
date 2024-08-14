@@ -77,17 +77,13 @@ p{font-size: 0.7em;}
 }
 
 .infosky{
-    width: 100px;
-    height: 100px;
-    background-image: url(..\images\background1.png);
+    width: 120px;
+    height: 120px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.infosky_imgclear{
-    background-image: url(..\images\background1.png);
-}
 /*     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     text-align: center;
