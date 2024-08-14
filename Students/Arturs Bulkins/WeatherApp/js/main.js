@@ -1,35 +1,12 @@
 let getDataBtn = document.getElementById('add');
 let getCity = document.getElementById('cityinput');
 let renderInfo = document.getElementById('render');
-let renderImg = document.getElementById('renderImg');
+
 
 
 let clearInput = () => {
   getCity.value = ``;
 }
-
-
-/* let renderIcon = (data) => {
-  switch (data.weather[0].description) {
-    case 'clear sky':
-      renderInfo.innerHTML =` <img src="..\images\clearsky.png">`
-      break;
-    case 'broken clouds':
-        renderInfo.innerHTML =` <img src="..\images\brokenclouds.png">`
-        break;
-
-    case 'overcast clouds':
-        renderInfo.innerHTML =` <img src="..\images\overcastclouds.png">`
-        break;
-
-    case 'light rain':
-       renderInfo.innerHTML =` <img src="..\images\lightrain.png">`
-        break;
-
-    default:
-      break;
-  }} */
-
 
 let renderWeather = (data) => {
 
