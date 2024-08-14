@@ -84,9 +84,7 @@ let getDogImg = () => {
       .catch(error => alert(error))
 }
 
-
-renderDogData(data);
-
 //добавить на select .addEventListener('change')
 // и вызвать функцию котороя сделает запрос на сервер 
 dogSelector.addEventListener('change', getDogImg);
+renderDogData(data);
