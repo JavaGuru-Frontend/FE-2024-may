@@ -56,15 +56,14 @@ let renderWeather = (data) => {
   console.log(data.weather[0].description);
 }
 
-getDataBtn.addEventListener('click', () => {
-
+let fetchData = () => {
   apik = "3045dd712ffe6e702e3245525ac7fa38"
     fetch('https://api.openweathermap.org/data/2.5/weather?q='+`${getCity.value}`+'&appid='+apik)
       .then(response => response.json())
       .then(data => renderWeather(data))
       .catch(error => alert(error))
       clearInput();
-})
+}
 
 
 let saveHistory = (text) => {
@@ -81,6 +80,12 @@ let printHistory = () => {
   })
 }
 
+getDataBtn.addEventListener('click', fetchData);
+
+getCity.addEventListener('keydown', (event) => {
+  if (event.keyCode === 13) {
+    fetchData();}
+  })
 
 /* https://openweathermap.org/img/w/${data.weather[0].icon}.png */
 

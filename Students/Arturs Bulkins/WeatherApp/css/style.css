@@ -92,7 +92,7 @@ p{font-size: 0.7em;}
     flex-wrap: wrap;
     max-width: 1400px;
     margin: 10px auto ;
-    font-size: 80%;
+    font-size: 100%;
 }
 /*     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
