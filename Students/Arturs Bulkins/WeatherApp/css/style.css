@@ -65,7 +65,21 @@ p{font-size: 0.7em;}
     background-color: rgba(51, 252, 29, 0.709);
 }
 
-.grid {
+.inputs__btn_clear{
+    border-radius: 100%;
+    width: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+.inputs__btn_clear:hover{
+    
+    transition: 1s;
+    background-color: rgba(253, 171, 171, 0.709);
+}
+
+.wrapper {
     color: rgb(252, 251, 251);
     margin-bottom: 20px;
     display: flex;
@@ -86,6 +100,14 @@ p{font-size: 0.7em;}
     background-position: center;
 }
 
+.history{
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: 10px auto ;
+    font-size: 100%;
+}
 /*     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     text-align: center;
