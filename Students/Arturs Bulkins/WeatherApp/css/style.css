@@ -86,6 +86,14 @@ p{font-size: 0.7em;}
     background-position: center;
 }
 
+.history{
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: 10px auto ;
+    font-size: 80%;
+}
 /*     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     text-align: center;

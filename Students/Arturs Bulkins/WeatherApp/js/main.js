@@ -1,6 +1,7 @@
 let getDataBtn = document.getElementById('add');
 let getCity = document.getElementById('cityinput');
 let renderInfo = document.getElementById('render');
+let history = document.getElementById('history');
 
 
 
@@ -44,8 +45,8 @@ let renderWeather = (data) => {
               <p3 class="info info_wind" id="wind">Direction: ${data.wind.deg} deg</p3>
               <p3 class="info info_wind" id="wind">Humidity: ${data.main.humidity} %</p3>
           </div>`
-
-            
+          saveHistory (`${ renderInfo.innerHTML}`);
+          printHistory();
 
 
   console.log(data);
@@ -64,6 +65,22 @@ getDataBtn.addEventListener('click', () => {
       .catch(error => alert(error))
       clearInput();
 })
+
+
+let saveHistory = (text) => {
+  let historyData = JSON.parse(localStorage.getItem(history)) || [];
+  historyData.push(text);
+  localStorage.setItem(history, JSON.stringify(historyData)); //  перевести в текс 
+}
+
+let printHistory = () => {
+  history.innerHTML = '';
+  let printHistory = JSON.parse(localStorage.getItem(history)) || [];
+  printHistory.forEach((historyRecord) => {
+      history.innerHTML += `<div class="main info history">${historyRecord}</div>`
+  })
+}
+
 
 /* https://openweathermap.org/img/w/${data.weather[0].icon}.png */
 
