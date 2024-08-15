@@ -1,4 +1,5 @@
 let getDataBtn = document.getElementById('add');
+let dataDeleteBtn = document.getElementById('clear');
 let getCity = document.getElementById('cityinput');
 let renderInfo = document.getElementById('render');
 let history = document.getElementById('history');
@@ -9,9 +10,8 @@ let clearInput = () => {
   getCity.value = ``;
 }
 
+
 let renderWeather = (data) => {
-
-
 
 /*   let renderIcon = () => {
     switch (data.weather[0].description) {
@@ -37,13 +37,14 @@ let renderWeather = (data) => {
 
   renderInfo.innerHTML = `
 
-          <div class="grid">
+          <div class="wrapper">
               <h2 class="info info_city" id="cityoutput">${data.name}  ${data.sys.country}</h2>
               <h2 class="info" id="temp">${((data.main.temp)-273).toFixed(1)} °C</h2>
               <img class="infosky" src="https://openweathermap.org/img/w/${data.weather[0].icon}.png">
               <p3 class="info info_wind" id="wind">Wind speed: ${data.wind.speed} km/h</p3>
               <p3 class="info info_wind" id="wind">Direction: ${data.wind.deg} deg</p3>
               <p3 class="info info_wind" id="wind">Humidity: ${data.main.humidity} %</p3>
+              
           </div>`
           saveHistory (`${ renderInfo.innerHTML}`);
           printHistory();
@@ -69,18 +70,28 @@ let fetchData = () => {
 let saveHistory = (text) => {
   let historyData = JSON.parse(localStorage.getItem(history)) || [];
   historyData.push(text);
-  localStorage.setItem(history, JSON.stringify(historyData)); //  перевести в текс 
+  localStorage.setItem(history, JSON.stringify(historyData));
+  
 }
 
 let printHistory = () => {
   history.innerHTML = '';
   let printHistory = JSON.parse(localStorage.getItem(history)) || [];
   printHistory.forEach((historyRecord) => {
-      history.innerHTML += `<div class="main info history">${historyRecord}</div>`
+      history.innerHTML += `<li class="main info history">${historyRecord}</li>`
   })
 }
 
+let clearHistory = () => {
+  let printHistory = JSON.parse(localStorage.getItem(history)) || [];
+  printHistory.splice(0,100);
+  history.innerHTML = '';
+  localStorage.setItem(history, JSON.stringify(printHistory));
+}
+
 getDataBtn.addEventListener('click', fetchData);
+dataDeleteBtn.addEventListener('click', clearHistory);
+
 
 getCity.addEventListener('keydown', (event) => {
   if (event.keyCode === 13) {
