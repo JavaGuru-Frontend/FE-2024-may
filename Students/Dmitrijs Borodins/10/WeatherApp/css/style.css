@@ -1,0 +1,63 @@
+/* @import url(reset.css); */
+
+* {
+   padding: 0;
+   margin: 0;
+   border: 0;
+
+}
+
+
+.container-fluid {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #f4f4f4;
+   margin: 0 auto;
+   height: 100vh;
+   background-image: linear-gradient(to bottom, #b5c8e3, #76aec2, #439390, #387553, #415316);
+}
+
+.inputs {
+   display: flex;
+   /* border: solid 2px; */
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 10px -8px 36px 43px rgba(0, 200, 250, 1);
+
+}
+
+.inputs__text,
+.inputs__btn {
+   margin-right: 20px;
+   padding: 15px;
+   border-radius: 15px;
+   text-align: center;
+   font-size: 30px;
+   font-weight: 700;
+}
+
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 20px;
+
+}
+
+.inputs__btn {
+   font-size: 20px;
+}
+
+.basic-text {
+   font-size: 50px;
+}
+
+
+.skyinfo {
+   width: 150px;
+   height: 150px;
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
+}

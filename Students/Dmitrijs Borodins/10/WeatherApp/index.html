@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,28 +8,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <link type="text/css" href="./css/style.css" rel="stylesheet" />
 </head>
+
 <body>
     <div class="container-fluid">
-        <section class="main"> 
-            <section class="inputs">
-                <input type="text"      placeholder="Enter any city..." id="cityinput">
-                <input type="submit"    value="Submit"                  id="add">
-                <button placeholder="submit" id="add"></button>
+        <section class="main">
+            <section class="inputs"">
+                <input class=" inputs__text" type="text" placeholder="Enter any city..." id="cityinput">
+                <input class="inputs__btn" type="submit" value="Submit" id="add">
             </section>
 
-            <section class="display">
+            <section id="display">
                 <div class="wrapper">
-                    <h2 id="cityoutput"></h2>
-                    <p id="description"></p>
-                    <p id="temp"></p>
-                    <p id="wind"></p>
+                    <h2 class="basic-text" id="cityoutput"></h2>
+                    <p class="basic-text" id="description"></p>
+                    <p class="basic-text" id="temp"></p>
+                    <p class="basic-text" id="wind"></p>
                 </div>
             </section>
         </section>
     </div>
     <script src="./js/main.js"></script>
 </body>
+
 </html>
-
-
-
