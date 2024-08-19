@@ -98,6 +98,7 @@ getCity.addEventListener('keydown', (event) => {
     fetchData();}
   })
 
+  
 /* https://openweathermap.org/img/w/${data.weather[0].icon}.png */
 
 //<p4 class="info" id="clouds">${data.weather[0].description}</p4>
