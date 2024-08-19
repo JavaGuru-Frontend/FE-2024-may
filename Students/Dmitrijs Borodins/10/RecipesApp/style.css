@@ -1,0 +1,28 @@
+.recipes {
+   width: 30%;
+   background-color: aqua;
+
+}
+
+.products {
+   display: flex;
+   flex-wrap: wrap;
+
+
+   width: 80%;
+   /* background-color: lightcoral; */
+
+}
+
+.product {
+   padding: 15px;
+}
+
+.product_text {
+   font-size: 25px;
+   font-weight: 700;
+}
+
+.container {
+   display: flex;
+}
