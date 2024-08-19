@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+}
+
+.products {
+    background-color: aqua;
+}
+.categories {
+    width: 20%;
+    background-color: antiquewhite;
+
+}
+
+.category {
+    padding: 10px;
+}

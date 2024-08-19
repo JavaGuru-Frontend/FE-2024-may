@@ -25,7 +25,7 @@ document.getElementById('add').addEventListener('click', function() {
         })
         .catch(error => {
             console.error('Error:', error);
-            document.getElementById('cityoutput').textContent = 'Failed to retrieve weather data.';//Если произошла ошибка во время выполнения запроса ,например, проблемы с сетью.
+            document.getElementById('cityoutput').textContent = 'Error.';//Если произошла ошибка во время выполнения запроса ,например, проблемы с сетью.
             document.getElementById('description').textContent = '';
             document.getElementById('temp').textContent = '';
             document.getElementById('wind').textContent = '';
