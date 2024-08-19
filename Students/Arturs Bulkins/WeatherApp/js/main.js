@@ -1,7 +1,7 @@
 let getDataBtn = document.getElementById('add');
 let dataDeleteBtn = document.getElementById('clear');
 let getCity = document.getElementById('cityinput');
-let renderInfo = document.getElementById('render');
+let renderInfo = document.getElementById('wrapper');
 let history = document.getElementById('history');
 
 
@@ -14,7 +14,7 @@ let clearInput = () => {
 let renderWeather = (data) => {
 
 /*   let renderIcon = () => {
-    switch (data.weather[0].description) {
+    switch (json.data.weather[0].description) {
       case 'clear sky':
         renderImg.innerHTML =` <img class="infosky" src="..\images\clearsky.png">`
         break;
@@ -37,7 +37,7 @@ let renderWeather = (data) => {
 
   renderInfo.innerHTML = `
 
-          <div class="wrapper">
+          <div class="wrapper" id="wrapper">
               <h2 class="info info_city" id="cityoutput">${data.name}  ${data.sys.country}</h2>
               <h2 class="info" id="temp">${((data.main.temp)-273).toFixed(1)} °C</h2>
               <img class="infosky" src="https://openweathermap.org/img/w/${data.weather[0].icon}.png">
@@ -71,6 +71,7 @@ let saveHistory = (text) => {
   let historyData = JSON.parse(localStorage.getItem(history)) || [];
   historyData.push(text);
   localStorage.setItem(history, JSON.stringify(historyData));
+  changeFlexDirection(historyData);
   
 }
 
@@ -78,7 +79,12 @@ let printHistory = () => {
   history.innerHTML = '';
   let printHistory = JSON.parse(localStorage.getItem(history)) || [];
   printHistory.forEach((historyRecord) => {
-      history.innerHTML += `<li class="main info history">${historyRecord}</li>`
+    changeFlexDirection('flexDirection');
+      history.innerHTML += `
+          <div class="wrapper" id="wrapper">
+            <div class="inputs main">${historyRecord}</div>     
+          </div>
+          `
   })
 }
 
@@ -89,6 +95,29 @@ let clearHistory = () => {
   localStorage.setItem(history, JSON.stringify(printHistory));
 }
 
+let changeFlexDirection = () => {
+  let container = document.getElementById('wrapper');
+  let currentDirection = container.style.flexDirection;
+  let newDirection = currentDirection === 'column' ? 'row' : 'column';
+  container.style.flexDirection = newDirection;
+  localStorage.setItem('flexDirection', newDirection);
+  
+}
+
+
+let applyFlexDirection = () => {
+
+  let savedDirection = localStorage.getItem('flexDirection');
+  let container = document.getElementById('wrapper');
+  if (savedDirection) {
+    container.style.flexDirection = savedDirection;
+  } else {
+    container.style.flexDirection = 'row';
+  }
+
+
+}
+
 getDataBtn.addEventListener('click', fetchData);
 dataDeleteBtn.addEventListener('click', clearHistory);
 
@@ -97,8 +126,8 @@ getCity.addEventListener('keydown', (event) => {
   if (event.keyCode === 13) {
     fetchData();}
   })
-
-  
+ 
+  applyFlexDirection();
 /* https://openweathermap.org/img/w/${data.weather[0].icon}.png */
 
 //<p4 class="info" id="clouds">${data.weather[0].description}</p4>
