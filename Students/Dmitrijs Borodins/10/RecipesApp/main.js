@@ -17,8 +17,7 @@ let renderRecipes = (data) => {
     data.recipes.forEach(element => {
         recipesElement.innerHTML += `<div class="category-recipes">
                                         <h2>${element.name}</h2>
-                                        
-                                      </div>`;
+                                     </div>`;
     });
 
 }
@@ -36,6 +35,7 @@ let renderProduct = (data) => {
         productElement.innerHTML += `<div class="product">
                                        <img class="product_img" width=200px height=200px src="${element.image}">
                                        <p class="product_text">${element.name}</p>
+                                       <p class="product_text">${element.rating}&#9733</p>
                                       </div>`;
     });
 
@@ -51,6 +51,8 @@ let getRecipes = () => {
 searchElement.addEventListener(`input`, getRecipes);
 
 loadRecipes();
+getRecipes();
+
 
 
 
