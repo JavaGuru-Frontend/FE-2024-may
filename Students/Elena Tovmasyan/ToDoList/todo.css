@@ -47,6 +47,7 @@ button:hover {
 }
  
 ol {
+    width: 100%;
     padding: 0;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -61,20 +62,13 @@ li {
     justify-content: flex-start;
     align-items: center;
     font-size: 22px;
+    border-bottom: 1px solid black;
 }
-
 
 li::before {
-    content: counter(item) '. '; /* Добавляем к числам скобку */
-    counter-increment: item; /* Задаём имя счетчика */
+    content: counter(item) '. ';  /* Добавляем к числам точку - но не добавляется пробел */
+    counter-increment: item;  /* Задаём имя счетчика */
    }
-
-
-li h2 {
-    width: 80%;
-    font-size: 22px; 
-}
-
 
 li button {    
     width: 20%;
@@ -85,14 +79,22 @@ li button {
     cursor: pointer;
     border-radius: 3px;
     font-size: 22px;
+    margin-left: 60px;
 }
 
 li button:hover {
     background: #ff7986;
 }
  
- 
 .todo_done {
     color: red;
     text-decoration: line-through;
+}
+
+.disabled {
+    display: none;
+}
+
+.edit {
+    margin-left: 100px;
 }
