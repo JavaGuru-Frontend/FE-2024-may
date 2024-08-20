@@ -1,12 +1,6 @@
 // document.addEventListener('DOMContentLoaded');
 let btnArray = document.getElementsByClassName(`btn`);
 let history = document.getElementById(`history`);
-
-
-
-
-
-
 let outputElement = document.getElementById(`output`);//Получить данные из Output//
 let PrintValue = (printNumber) => {
    outputElement.innerHTML += `${printNumber}`
@@ -113,7 +107,7 @@ document.addEventListener(`keydown`, (event) => {
          break;
    }
 });
-//  ZEKA/// Если одинаковые Case Можно писать в одну строку через `,`?     
+
 clearOutput = () => {
    output.innerHTML = output.innerHTML.slice(0, -1);
 };

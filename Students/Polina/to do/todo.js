@@ -6,9 +6,17 @@ let addValue = () => {
     saveToLocalStorage(taskElement.value);
     loadFromLocalStorage();
 }
+let clearItem = (event) => {
+    let clickedElement = event.target;
+    let todoData = JSON.parse(localStorage.getItem('toDoList')) || [] ;
+    todoData.splice(clickedElement, 1);
+}
+
 let toggleDone = (event) => {
     
     let clickedElement = event.target;
+    let todoData = JSON.parse(localStorage.getItem('toDoList')) || [] ;
+
     if ( clickedElement.classList.contains('todo_done')) {
         clickedElement.classList.remove('todo_done')
     } else {
@@ -17,13 +25,10 @@ let toggleDone = (event) => {
 }
 
 let saveToLocalStorage = (historyRecord) => {
-
     const task = {
         'done': false,
         'taskText': historyRecord
     }
-
-
     let todoData = JSON.parse(localStorage.getItem('toDoList')) || [] ;
     todoData.push(task);
     localStorage.setItem('toDoList', JSON.stringify(todoData))
@@ -39,7 +44,9 @@ let loadFromLocalStorage = () => {
             onclick="toggleDone(event)"
             >
                 ${todo.taskText}
-                <button>Remove</button>
+                <button onclick="clearItem(event)">
+                Remove
+                </button>
             </li>`;
 });
 }

@@ -22,12 +22,12 @@ let toggleDone = (event) => {
 let saveToLocalStorage = (historyRecord) => {
     const task = {
         'done': false,
-        'taskText': historyRecord                                         /* В 'done' и 'taskText' не работают скошенные кавычки. */
-    };
-    let todoData = JSON.parse(localStorage.getItem(`ToDoList`)) || [];
-    todoData.push(task);
-    localStorage.setItem(`ToDoList`, JSON.stringify(todoData));
-};                                                                        // localStorage.setItem(`ToDoList`, historyRecord)
+        'taskText': historyRecord                                      /* Почему 'done' и 'taskText' не работают скошенные кавычки? */
+        };
+    let toDoData = JSON.parse(localStorage.getItem(`ToDoList`)) || [];
+    toDoData.push(task);
+    localStorage.setItem(`ToDoList`, JSON.stringify(toDoData));
+};
 
 
 let loadFromLocalStorage = () => {
