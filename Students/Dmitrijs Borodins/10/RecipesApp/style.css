@@ -1,28 +1,49 @@
 .recipes {
-   width: 30%;
-   background-color: aqua;
+   display: flex;
+   flex-direction: column;
+   width: 15%;
+   background-color: rgb(230, 235, 235);
 
 }
 
 .products {
    display: flex;
    flex-wrap: wrap;
-
-
    width: 80%;
-   /* background-color: lightcoral; */
 
 }
 
 .product {
    padding: 15px;
+   max-height: 300px;
+
 }
 
 .product_text {
-   font-size: 25px;
+   display: flex;
+   font-size: 1.5em;
    font-weight: 700;
+   flex-wrap: wrap;
+   justify-content: center;
 }
+
+.product_img {
+   border-radius: 50px;
+   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+
 
 .container {
    display: flex;
+   justify-content: center;
+   margin: 0 auto;
+   padding-inline: 15px;
+}
+
+.input {
+   display: flex;
+   margin: 0 auto;
+   padding: 20px;
+   border-radius: 20px;
 }
