@@ -27,7 +27,7 @@ let fetchWeatherData = () => {
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputVal.value}&appid=${apiKey}`)
     .then(response => response.json())
     .then(data => checkWeather(data))
-    .catch(error => alert(error));
+    .catch(err => alert('You entered Wrong city name'));
   inputVal.value = '';
 }
 

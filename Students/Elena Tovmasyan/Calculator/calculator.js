@@ -165,11 +165,11 @@ Array.from(btnArray).forEach((element) => {
 })
 
 
-document.addEventListener('keydown', (event) => {
+/* document.addEventListener('keydown', (event) => {
     if (event.keyCode === 13) {
             equal();
         }    
-    else if (event.keyCode === 8) {
+    else if (event.keyCode === 8 || 46) {
             clearInput();
         }
     else {
@@ -180,10 +180,10 @@ document.addEventListener('keydown', (event) => {
             }
         };
     }
-)
+) /*  - не работают цифры и равно */
 
 
-// Вариант ввода информации с клавиатуры - с помощью цикла switch:
+// Вариант ввода информации с клавиатуры - с помощью цикла switch (не работает "равно"):
 
 /* document.addEventListener('keydown', (event) => {
 
@@ -206,8 +206,43 @@ document.addEventListener('keydown', (event) => {
     };
 }) */
 
+/* Вариант ввода со switch, иначе записан (не работает "равно"): */
+
+    let CheckNumbers = () => {
+        for (let i = 0; i < btnArray.length; i++) {
+           let id = btnArray[i].getAttribute(`data-id`)
+           if (id === event.key) {
+              btnArray[i].click();
+           }
+        }
+    };
+
+document.addEventListener('keydown', (event) => {
+    let key = event.keyCode;
+    switch (key) {
+        case(13):
+        equal();
+        break;
+    
+        case(8):
+        clearInput();
+        break;
+    
+        case(46):
+        clearInput();
+        break;
+    
+        default:
+        CheckNumbers();
+        break;
+    }
+})
 
 
-/* Проблемы:
+/* Как удалять лишние символы при ошибке поштучно, как в Word: */
 
-И надо иметь возможность удалять лишний символы при ошибке поштучно, как в Word. */
+clearInput = () => {
+    output.innerHTML = output.innerHTML.slice(0, -1);
+ };
+ 
+addEventListener(`click`, () => { })
