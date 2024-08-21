@@ -3,7 +3,7 @@ let dataDeleteBtn = document.getElementById('clear');
 let getCity = document.getElementById('cityinput');
 let renderInfo = document.getElementById('wrapper');
 let history = document.getElementById('history');
-
+let saveButton = document.getElementById('save');
 
 
 let clearInput = () => {
@@ -11,10 +11,10 @@ let clearInput = () => {
 }
 
 
-let renderWeather = (data) => {
+ let renderWeather = (data) => {
 
-/*   let renderIcon = () => {
-    switch (json.data.weather[0].description) {
+  /* let renderIcon = () => {
+    switch (data.weather[0].description) {
       case 'clear sky':
         renderImg.innerHTML =` <img class="infosky" src="..\images\clearsky.png">`
         break;
@@ -32,30 +32,43 @@ let renderWeather = (data) => {
   
       default:
         break;
-    }} */
-
+    }}  */
+        let d = new Date();
+        let h = d.getHours();
+        let m = d.getMinutes();
+        let s = d.getSeconds();
+        let y = d.getFullYear();
+        let month = d.getMonth();
+        let date = d.getDate();
+    
 
   renderInfo.innerHTML = `
 
           <div class="wrapper" id="wrapper">
+              <p class="info info__date" id="wind">Searching date and time :<br> ${h} : ${m} : ${s}  / ${date}.${month+1}.${y} </p>
               <h2 class="info info_city" id="cityoutput">${data.name}  ${data.sys.country}</h2>
               <h2 class="info" id="temp">${((data.main.temp)-273).toFixed(1)} °C</h2>
               <img class="infosky" src="https://openweathermap.org/img/w/${data.weather[0].icon}.png">
-              <p3 class="info info_wind" id="wind">Wind speed: ${data.wind.speed} km/h</p3>
-              <p3 class="info info_wind" id="wind">Direction: ${data.wind.deg} deg</p3>
-              <p3 class="info info_wind" id="wind">Humidity: ${data.main.humidity} %</p3>
+              <p class="info info_wind" id="wind">Wind speed: ${data.wind.speed} km/h</p>
+              <p class="info info_wind" id="wind">Direction: ${data.wind.deg} deg</p>
+              <p class="info info_wind" id="wind">Humidity: ${data.main.humidity} %</p>
+              <input class="inputs inputs__btn" type="submit"    value="SAVE"                  id="save"> 
+              
               
           </div>`
-          saveHistory (`${ renderInfo.innerHTML}`);
-          printHistory();
+           /* saveHistory (`${ renderInfo.innerHTML}`); 
+           printHistory(); */ 
 
-
+    
   console.log(data);
   console.log(data.name, data.sys.country);
   console.log(((data.main.temp)-273).toFixed(1));
   console.log(data.wind);
   console.log(data.weather[0].description);
+  console.log(data.dt);
 }
+
+saveButton.addEventListener('click',saveHistory (`${ renderInfo.innerHTML}`));
 
 let fetchData = () => {
   apik = "3045dd712ffe6e702e3245525ac7fa38"
@@ -65,6 +78,9 @@ let fetchData = () => {
       .catch(error => alert(error))
       clearInput();
 }
+
+
+
 
 
 let saveHistory = (text) => {
@@ -114,13 +130,11 @@ let applyFlexDirection = () => {
   } else {
     container.style.flexDirection = 'row';
   }
-
-
 }
 
 getDataBtn.addEventListener('click', fetchData);
 dataDeleteBtn.addEventListener('click', clearHistory);
-
+/* saveButton.addEventListener('click', saveHistory (`${ renderInfo.innerHTML}`),printHistory); */
 
 getCity.addEventListener('keydown', (event) => {
   if (event.keyCode === 13) {
@@ -128,6 +142,59 @@ getCity.addEventListener('keydown', (event) => {
   })
  
   applyFlexDirection();
+
+let searchingTime = () => {
+  let d = new Date();
+  console.log(d);
+  let h = d.getHours();
+  console.log(h);
+  let m = d.getMinutes();
+  console.log(m);
+  let s = d.getSeconds();
+  console.log(s);
+  let showTime = ""
+  console.log('Searching time:',h,':',m,':',s);
+  let y = d.getFullYear();
+  console.log(y);
+  let month = d.getMonth();
+  console.log(month);
+  let date = d.getDate();
+console.log(date);
+let day = d.getDay();
+console.log(day);
+}
+searchingTime();
+
+/*   let timestamp = Math.floor(dateObject.getTime()/1000);// получение временной метки */
+
+/*   let renderIcon = () => {
+    switch (json.data.weather[0].description) {
+      case 'clear sky':
+        renderImg.innerHTML =` <img class="infosky" src="..\images\clearsky.png">`
+        break;
+      case 'broken clouds':
+        renderImg.innerHTML =` <img class="infosky" src="..\images\clearsky.png">`
+          break;
+  
+      case 'overcast clouds':
+        renderImg.innerHTML =` <img class="infosky" src="..\images\clearsky.png">`
+          break;
+  
+      case 'light rain':
+        renderImg.innerHTML =` <img class="infosky" src="..\images\clearsky.png">`
+          break;
+  
+      default:
+        break;
+    }} */
+
+
+
+
+
+
+
+
 /* https://openweathermap.org/img/w/${data.weather[0].icon}.png */
 
 //<p4 class="info" id="clouds">${data.weather[0].description}</p4>

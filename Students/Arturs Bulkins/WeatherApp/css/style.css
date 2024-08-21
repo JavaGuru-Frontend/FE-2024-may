@@ -7,9 +7,6 @@
 
 }
 
-p2{font-weight: 700; font-size: 1.5em;}
-p3{font-size: 0.5em;}
-p4{font-size: 0.5em;}
 p{font-size: 0.7em;}
 
 
@@ -18,7 +15,7 @@ p{font-size: 0.7em;}
     display: flex;
     flex-direction: column;
     align-items: center;
-   /*  max-width: 500px; */
+    max-width: 500px;
     height: auto;
     margin: 0 auto;
     margin-top: 8vh;
@@ -57,7 +54,7 @@ p{font-size: 0.7em;}
     height: 45px;
     border-radius: 15px;
    font-size: 0.5em;
-    color: rgb(102, 118, 119);
+     
 }
 
 .inputs__btn:hover{
@@ -95,6 +92,7 @@ p{font-size: 0.7em;}
     text-align: center;
     align-items: center;
     flex-direction: column;
+    max-width: 500px;
 }
 
 .wrapperhistory{
@@ -105,6 +103,9 @@ p{font-size: 0.7em;}
     margin: 10px;
 }
 
+.info__date{
+    font-style: oblique;
+}
 .infosky{
     width: 120px;
     height: 120px;
@@ -116,8 +117,9 @@ p{font-size: 0.7em;}
 .history{
     padding-top: 30px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    max-width: 1400px;
+    max-width: 1500px;
     margin: 10px auto ;
     font-size: 100%;
 }
