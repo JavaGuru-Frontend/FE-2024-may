@@ -98,6 +98,8 @@ p{font-size: 0.7em;}
 .wrapperhistory{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    color: aliceblue;
 }
 .info{
     margin: 10px;
@@ -116,6 +118,7 @@ p{font-size: 0.7em;}
 
 .history{
     padding-top: 30px;
+    justify-content: center;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;

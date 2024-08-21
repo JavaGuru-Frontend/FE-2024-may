@@ -57,7 +57,15 @@ let clearInput = () => {
               
           </div>`
 
-    saveHistory (`${ renderInfo.innerHTML}`); 
+    saveHistory (`<div class="wrapperhistory" id="wrapper">
+              <p class="info info__date" id="wind">Searching date and time :<br> ${h} : ${m} : ${s}  / ${date}.${month+1}.${y} </p>
+              <h2 class="info info_city" id="cityoutput">${data.name}  ${data.sys.country}</h2>
+              <h2 class="info" id="temp">${((data.main.temp)-273).toFixed(1)} °C</h2>
+              <img class="infosky" src="https://openweathermap.org/img/w/${data.weather[0].icon}.png">
+              <p class="info info_wind" id="wind">Wind speed: ${data.wind.speed} km/h</p>
+              <p class="info info_wind" id="wind">Direction: ${data.wind.deg} deg</p>
+              <p class="info info_wind" id="wind">Humidity: ${data.main.humidity} %</p> 
+          </div>`); 
     printHistory(); 
 
     
@@ -96,7 +104,7 @@ let printHistory = () => {
   let printHistory = JSON.parse(localStorage.getItem(history)) || [];
   printHistory.forEach((historyRecord) => {
       history.innerHTML += `
-          <div class="wrapper" id="wrapper">
+          <div class="wrapperhistory" id="wrapper">
             <div class="inputs main">${historyRecord}</div>     
           </div>
           `
