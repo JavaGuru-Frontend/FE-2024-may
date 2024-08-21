@@ -13,7 +13,7 @@ let clearInput = () => {
 
  let renderWeather = (data) => {
 
-  /* let renderIcon = () => {
+ /*  let renderIcon = () => {
     switch (data.weather[0].description) {
       case 'clear sky':
         renderImg.innerHTML =` <img class="infosky" src="..\images\clearsky.png">`
@@ -56,8 +56,9 @@ let clearInput = () => {
               
               
           </div>`
-           /* saveHistory (`${ renderInfo.innerHTML}`); 
-           printHistory(); */ 
+
+    saveHistory (`${ renderInfo.innerHTML}`); 
+    printHistory(); 
 
     
   console.log(data);
@@ -68,7 +69,6 @@ let clearInput = () => {
   console.log(data.dt);
 }
 
-saveButton.addEventListener('click',saveHistory (`${ renderInfo.innerHTML}`));
 
 let fetchData = () => {
   apik = "3045dd712ffe6e702e3245525ac7fa38"
@@ -95,7 +95,6 @@ let printHistory = () => {
   history.innerHTML = '';
   let printHistory = JSON.parse(localStorage.getItem(history)) || [];
   printHistory.forEach((historyRecord) => {
-    changeFlexDirection('flexDirection');
       history.innerHTML += `
           <div class="wrapper" id="wrapper">
             <div class="inputs main">${historyRecord}</div>     
@@ -134,7 +133,7 @@ let applyFlexDirection = () => {
 
 getDataBtn.addEventListener('click', fetchData);
 dataDeleteBtn.addEventListener('click', clearHistory);
-/* saveButton.addEventListener('click', saveHistory (`${ renderInfo.innerHTML}`),printHistory); */
+saveButton.addEventListener('click', saveHistory(`${ renderInfo.innerHTML}`));// НЕ РАБОТАЕТ
 
 getCity.addEventListener('keydown', (event) => {
   if (event.keyCode === 13) {
