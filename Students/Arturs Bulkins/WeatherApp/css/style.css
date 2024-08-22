@@ -7,9 +7,6 @@
 
 }
 
-p2{font-weight: 700; font-size: 1.5em;}
-p3{font-size: 0.5em;}
-p4{font-size: 0.5em;}
 p{font-size: 0.7em;}
 
 
@@ -18,7 +15,7 @@ p{font-size: 0.7em;}
     display: flex;
     flex-direction: column;
     align-items: center;
-   /*  max-width: 500px; */
+    max-width: 500px;
     height: auto;
     margin: 0 auto;
     margin-top: 8vh;
@@ -27,11 +24,15 @@ p{font-size: 0.7em;}
 }
 
 .main {
-    background-color: rgba(123, 3, 193, 0.329);
-    box-shadow: 0px 0px 10px 10px rgba(251, 252, 238, 0.596);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(28, 78, 216, 0.712);
+    box-shadow: 0px 0px 10px 10px rgba(251, 252, 238, 0.603);
     border-radius: 20px;
-    backdrop-filter: blur(50px);
-    background: opacity(10%);
+    
+    
+    
 }
 
 .inputs {
@@ -56,8 +57,10 @@ p{font-size: 0.7em;}
     width: 100px;
     height: 45px;
     border-radius: 15px;
-   font-size: 0.5em;
-    color: rgb(102, 118, 119);
+    font-size: 0.5em;
+    font-weight: 700;
+    color: rgba(24, 126, 166, 0.801);
+     
 }
 
 .inputs__btn:hover{
@@ -65,7 +68,7 @@ p{font-size: 0.7em;}
     box-shadow: none;
     position: relative;
     top: 5px;
-    background-color: rgba(51, 252, 29, 0.709);
+    background-color: rgba(162, 254, 152, 0.75);
 }
 
 .inputs__btn_delete{
@@ -95,16 +98,22 @@ p{font-size: 0.7em;}
     text-align: center;
     align-items: center;
     flex-direction: column;
+    max-width: 500px;
 }
 
 .wrapperhistory{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    color: aliceblue;
 }
 .info{
     margin: 10px;
 }
 
+.info__date{
+    font-style: oblique;
+}
 .infosky{
     width: 120px;
     height: 120px;
@@ -115,9 +124,11 @@ p{font-size: 0.7em;}
 
 .history{
     padding-top: 30px;
+    justify-content: center;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    max-width: 1400px;
+    max-width: 1500px;
     margin: 10px auto ;
     font-size: 100%;
 }

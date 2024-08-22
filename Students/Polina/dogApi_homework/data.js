@@ -104,7 +104,3 @@ let data = [
       'name': 'eskimo'
     }
 ]
-
-data.forEach(
-    
-)
