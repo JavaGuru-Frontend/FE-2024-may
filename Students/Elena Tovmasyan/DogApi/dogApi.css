@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 1000px;
+    width: 100vw;
+}
+
+/* .InputBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.inputDog, .getDogImg {
+    width: 40%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid #b2b2b2;
+    font-size: 20px;
+    display: inline;
+}
+
+.getDogImg {
+    background-color: bisque;
+}
+
+.imgOutput {
+    margin: 0 auto;
+}

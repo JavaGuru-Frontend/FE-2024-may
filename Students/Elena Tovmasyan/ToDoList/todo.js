@@ -16,10 +16,6 @@ let deleteItem = (event) => {
     loadFromLocalStorage();
 }
 
-let editItem = (event) => {
-
-}
-
 let toggleDone = (event) => {
 
     /* let clickedElement = event.target;                      //это свойство объекта события в JavaScript, которое указывает на элемент, на котором событие произошло
@@ -30,21 +26,37 @@ let toggleDone = (event) => {
         clickedElement.classList.add(`todo_done!`)
     } */
 
-    let elementClickedID = event.target.dataset.id;
+let elementClickedID = event.target.dataset.id;
     let todoData = JSON.parse(localStorage.getItem(`ToDoList`)) || [];
-    if (todoData(elementClickedID).done) {
-        todoData(elementClickedID).done = false
+    if (todoData[elementClickedID].done) {                                  /* квадратные скобки, т.к. мы обращаемся к массиву */
+        todoData[elementClickedID].done = false
     } else {
-        todoData(elementClickedID).done = true
+        todoData[elementClickedID].done = true
     }
 
 /*     аналогично if else:
-    todoData(elemenClickedID).done = !todoData(elemenClickedID).done */
+    todoData[elemenClickedID].done = !todoData[elemenClickedID].done */
     
     localStorage.setItem(`ToDoList`, JSON.stringify(todoData));
     loadFromLocalStorage();
 };
 
+
+let editItem = (event) => {
+    let elementClickedID = event.target.dataset.id;
+    if (event.target.innerText === 'Edit') {
+        event.target.innerText = 'Save';
+        document.getElementById(`input-${elementClickedID}`).classList.remove("disabled")
+    } else if (event.target.innerText === 'Save') {
+        event.target.innerText = 'Edit';
+        document.getElementById(`input-${elementClickedID}`).classList.add(`disabled`)
+        let newText = document.getElementById(`input-${elementClickedID}`).value;
+        let todoData = JSON.parse(localStorage.getItem('toDoList')) || [];
+        todoData[elementClickedID].taskText = newText;
+        localStorage.setItem('toDoList', JSON.stringify(todoData));
+        loadFromLocalStorage();
+    }
+}
 
 let saveToLocalStorage = (historyRecord) => {
     const task = {
@@ -60,23 +72,32 @@ let saveToLocalStorage = (historyRecord) => {
 let loadFromLocalStorage = () => {
     outputElement.innerHTML = ``;
     let todoData = JSON.parse(localStorage.getItem(`ToDoList`)) || [];
-    todoData.forEach((todo,key) => {
+    todoData.forEach((todo, key) => {
+        console.log(key)
   /*   let isTaskChecked = todo.done;    */                                     
         outputElement.innerHTML += 
-        `<li class="todo_done
-        ${/* isTaskChecked */todo.done ? `todo_done` : `` }"
-        onclick="toggleDone(event)"
-        data-id="${key}"
-        >
-        ${todo.taskText}
+        `<li class=""
+        data-id="${key}">
 
-        <input type="text" class="disabled">
+        <span class="${/* isTaskChecked */todo.done ? `todo_done` : `` }"
+        onclick="toggleDone(event)"
+        data-id="${key}">
+        ${todo.taskText}
+        </span>
+
+        <input type="text" class="disabled" id="input_${key}">
+
         </input>
 
-        <button class="edit" onclick="editItem(event)"
-        data-id="${key}">
-        Edit
-        </button>
+        ${!todo.done 
+            ? `<button 
+            onclick="editItem(event)"
+            data-id=${key}
+            >
+            Edit
+            </button>`
+            : ''
+        }
 
         <button onclick="deleteItem(event)"
         data-id="${key}">

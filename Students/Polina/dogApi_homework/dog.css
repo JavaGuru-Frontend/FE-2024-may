@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    background-color: #d39e73;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+}
+
+h1 {
+    
+    text-align: center;
+}
+.dog-selector {
+    height: 50px;
+    width: 500px;
+    background-color: #faf5ca;
+    border-radius: 10px;
+    border: none;
+}
+
+.dogSelector {
+    color: #80532d;
+    text-align: center;
+}
+
+.dogimage {
+    width: 500px;
+    height: 500px;
+    padding-top: 20px;
+    border-radius: 10px;
+    /* border: #faf5ca 4px solid; */
+}
+
+
