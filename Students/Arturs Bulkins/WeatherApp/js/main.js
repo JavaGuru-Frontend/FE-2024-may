@@ -19,7 +19,7 @@ let clearInput = () => {
     switch (data.weather[0].description) {
 
       case 'clear sky':
-        return ` <img class="infosky" src="https://cdn-icons-png.flaticon.com/128/439/439842.png">`;
+        return ` <img class="infosky" src="https://cdn-icons-png.flaticon.com/128/869/869869.png">`;
         break;
 
       case 'broken clouds', 'few clouds':
@@ -28,7 +28,7 @@ let clearInput = () => {
   
       case 'overcast clouds':
       case 'scattered clouds':
-        return ` <img class="infosky" src="https://cdn-icons-png.flaticon.com/128/3920/3920770.png">`;
+        return ` <img class="infosky" src="https://cdn-icons-png.flaticon.com/128/13804/13804450.png">`;
         break;
 
       case 'light rain':
@@ -63,18 +63,22 @@ let clearInput = () => {
   renderInfo.innerHTML = `
 
           <div class="wrapper" id="wrapper">
-              <p class="info info__date" id="wind">Searching date and time :<br> ${formattedH} : ${formattedM} : ${formattedS}  / ${formattedDate}.${formattedMonth}.${y} </p>
+              <p class="info info__date" id="wind">${formattedH} : ${formattedM} : ${formattedS}  / ${formattedDate}.${formattedMonth}.${y} </p>
               <h2 class="info info_city" id="cityoutput">${data.name}  ${data.sys.country}</h2>
               <h2 class="info" id="temp">${((data.main.temp)-273).toFixed(1)} °C</h2>
               ${renderIcon()}
               <div class="windicon">
-              <img class="windicon__icon" src="https://cdn-icons-png.flaticon.com/128/9231/9231936.png">
-              <p class="info info_wind" id="wind"> ${data.wind.speed} km/h</p>
+                <img class="windicon__icon" src="https://cdn-icons-png.flaticon.com/128/2676/2676047.png">
+                <p class="info info_wind" id="wind"> ${data.wind.speed} km/h</p>
               </div>
-              <p class="info info_wind" id="wind">Direction: ${data.wind.deg} deg</p>
-              <p class="info info_wind" id="wind">Humidity: ${data.main.humidity} %</p>
-              
-      
+              <div class="windicon">
+                <img class="windicon__icon" src="https://cdn-icons-png.flaticon.com/128/3466/3466636.png">
+                <p class="info info_wind" id="wind">${data.wind.deg} deg</p>
+              </div>
+              <div class="windicon">
+                <img class="windicon__icon" src="https://cdn-icons-png.flaticon.com/128/8923/8923690.png">
+                <p class="info info_wind" id="wind">${data.main.humidity} %</p>
+              </div>
           </div>`
          
     saveHistory (`<div class="wrapperhistory" id="wrapper">
