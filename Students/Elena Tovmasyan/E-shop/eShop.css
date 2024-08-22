@@ -1,0 +1,22 @@
+.container {
+    height: 100vh;
+    margin: 0 auto;
+    background-color: rgb(255, 248, 239);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.categories{
+    width: 20%;
+    background-color: rgb(179, 185, 185);
+}
+
+.category {
+    padding: 10px;
+}
+
+.product {
+    width: 80%;
+    background-color: lightskyblue;
+}
