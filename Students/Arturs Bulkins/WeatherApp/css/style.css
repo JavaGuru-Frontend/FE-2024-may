@@ -7,9 +7,6 @@
 
 }
 
-p2{font-weight: 700; font-size: 1.5em;}
-p3{font-size: 0.5em;}
-p4{font-size: 0.5em;}
 p{font-size: 0.7em;}
 
 
@@ -18,7 +15,7 @@ p{font-size: 0.7em;}
     display: flex;
     flex-direction: column;
     align-items: center;
-   /*  max-width: 500px; */
+    max-width: 500px;
     height: auto;
     margin: 0 auto;
     margin-top: 8vh;
@@ -27,9 +24,15 @@ p{font-size: 0.7em;}
 }
 
 .main {
-    background-color: rgb(38, 179, 179);
-    box-shadow: 0px 0px 10px 10px rgba(251, 252, 238, 0.596);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(28, 78, 216, 0.712);
+    box-shadow: 0px 0px 10px 10px rgba(251, 252, 238, 0.603);
     border-radius: 20px;
+    
+    
+    
 }
 
 .inputs {
@@ -54,30 +57,39 @@ p{font-size: 0.7em;}
     width: 100px;
     height: 45px;
     border-radius: 15px;
-    background-color: rgba(60, 239, 218, 0.873);
     font-size: 0.5em;
-    color: rgb(102, 118, 119);
+    font-weight: 700;
+    color: rgba(24, 126, 166, 0.801);
+     
 }
 
 .inputs__btn:hover{
-    
     transition: 1s;
-    background-color: rgba(51, 252, 29, 0.709);
+    box-shadow: none;
+    position: relative;
+    top: 5px;
+    background-color: rgba(162, 254, 152, 0.75);
 }
 
-.inputs__btn_clear{
-    border-radius: 100%;
-    width: 46px;
+.inputs__btn_delete{
+    width: 40px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 30px;
 }
-.inputs__btn_clear:hover{
-    
+
+.inputs__btn_delete:hover{
     transition: 1s;
-    background-color: rgba(253, 171, 171, 0.709);
+    background-color: rgba(245, 17, 17, 0);
 }
+/* .inputs__btn_delete:active{
+    
+    width: 60px;
+    height: 60px;
+    transition: 0.1ms; 
+} */
 
 .wrapper {
     color: rgb(252, 251, 251);
@@ -86,12 +98,22 @@ p{font-size: 0.7em;}
     text-align: center;
     align-items: center;
     flex-direction: column;
+    max-width: 500px;
 }
 
+.wrapperhistory{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: aliceblue;
+}
 .info{
     margin: 10px;
 }
 
+.info__date{
+    font-style: oblique;
+}
 .infosky{
     width: 120px;
     height: 120px;
@@ -102,9 +124,11 @@ p{font-size: 0.7em;}
 
 .history{
     padding-top: 30px;
+    justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    max-width: 1400px;
+    flex-direction: row;
+    max-width: 1500px;
     margin: 10px auto ;
     font-size: 100%;
 }
