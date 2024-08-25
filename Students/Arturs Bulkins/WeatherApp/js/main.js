@@ -19,10 +19,11 @@ let clearInput = () => {
     switch (data.weather[0].description) {
 
       case 'clear sky':
-        return ` <img class="infosky" src="https://cdn-icons-png.flaticon.com/128/869/869869.png">`;
+        return ` <img class="infosky" src="\images\\sun.png">`;
         break;
 
-      case 'broken clouds', 'few clouds':
+      case 'broken clouds':
+      case 'few clouds':
         return ` <img class="infosky" src="https://cdn-icons-png.flaticon.com/128/1888/1888282.png">`;
         break;
   
@@ -44,29 +45,18 @@ let clearInput = () => {
     }
       
   }  
-
-        let d = new Date();
-        let h = d.getHours();
-        let formattedH = h < 10 ? '0' + h : h;
-        let m = d.getMinutes();
-        let formattedM = m < 10 ? '0' + m : m;
-        let s = d.getSeconds();
-        let formattedS = s < 10 ? '0' + s : s;
-        let y = d.getFullYear();
-        let month = (d.getMonth())+1;
-        let formattedMonth = month < 10 ? '0' + month : month;
-        let date = d.getDate();
-        let formattedDate = date < 10 ? '0' + date : date;
+  let a = new Date().toLocaleString();
+  
     
 
 
   renderInfo.innerHTML = `
 
           <div class="wrapper" id="wrapper">
-              <p class="info info__date" id="wind">${formattedH} : ${formattedM} : ${formattedS}  / ${formattedDate}.${formattedMonth}.${y} </p>
+              <p class="info info__date" id="wind">${a} </p>
               <h2 class="info info_city" id="cityoutput">${data.name}  ${data.sys.country}</h2>
-              <h2 class="info" id="temp">${((data.main.temp)-273).toFixed(1)} °C</h2>
               ${renderIcon()}
+              <h2 class="info" id="temp">${((data.main.temp)-273).toFixed(1)} °C</h2>
               <div class="windicon">
                 <img class="windicon__icon" src="https://cdn-icons-png.flaticon.com/128/2676/2676047.png">
                 <p class="info info_wind" id="wind"> ${data.wind.speed} km/h</p>
@@ -82,7 +72,7 @@ let clearInput = () => {
           </div>`
          
     saveHistory (`<div class="wrapperhistory" id="wrapper">
-              <p class="info info__date" id="wind">Searching date and time :<br> ${formattedH} : ${formattedM} : ${formattedS}  / ${formattedDate}.${formattedMonth}.${y} </p>
+              <p class="info info__date" id="wind">${a} </p>
               <h2 class="info info_city" id="cityoutput">${data.name}  ${data.sys.country}</h2>
               <h2 class="info" id="temp">${((data.main.temp)-273).toFixed(1)} °C</h2>
               <img class="infosky__icon" src="https://openweathermap.org/img/w/${data.weather[0].icon}.png">
@@ -111,10 +101,6 @@ let fetchData = () => {
       .catch(error => alert(error))
       clearInput();
 }
-
-
-
-
 
 let saveHistory = (text) => {
   let historyData = JSON.parse(localStorage.getItem(history)) || [];
