@@ -1,0 +1,25 @@
+.cardBlock{
+    display: flex;
+    width: 100%;
+    max-width: 1440px;
+    height: 550px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.cardBlock__item{
+    width: 270px;
+    height: 436px;
+    margin: 0px 20px;
+
+}
+
+.cardBlock__item_img{
+    width: 270px;
+    height: 270px;
+}
+
+.cardBlock__item_link{
+    display: flex;
+    margin-top: 90px;
+}

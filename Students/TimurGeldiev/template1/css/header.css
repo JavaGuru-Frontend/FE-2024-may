@@ -1,0 +1,21 @@
+.header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 0px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.header__img{
+
+}
+
+.header__link{
+    padding: 0px 20px;
+
+}
+
+.header__btn{
+
+}

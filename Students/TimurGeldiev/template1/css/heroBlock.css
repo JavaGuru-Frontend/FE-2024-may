@@ -1,0 +1,31 @@
+.heroBlock{
+    display: flex;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.heroBlock_reverse{
+    flex-direction: row-reverse;
+}
+
+.heroBlock__element{
+    width: 50%;
+}
+
+.heroBlock__element_left{
+    
+
+}
+
+.heroBlock__element_right{
+
+}
+
+.heroBlock__img{
+    width: 720px;
+    height: 700px;
+}
+
+.heroBlock__btn{
+    
+}

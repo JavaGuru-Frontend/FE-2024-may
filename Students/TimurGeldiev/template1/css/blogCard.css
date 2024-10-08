@@ -1,0 +1,36 @@
+.blogCard{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    
+
+}
+
+.blogCardFeature{
+    display: flex;
+    height: 370px;
+}
+
+.blogCardFeature__left{
+
+}
+
+.blogCardFeature__right{
+    margin: 50px 100px;
+
+}
+
+.blogCardFeature__right_link{
+
+}
+
+.blogCard__item_container{
+    display: flex;
+}
+
+.blogCard__item{
+    display: block;
+    margin: 10px;
+}
