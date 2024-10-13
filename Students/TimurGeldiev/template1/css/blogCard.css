@@ -1,10 +1,7 @@
 .blogCard{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-    
+    width: 100%;   
 
 }
 
@@ -18,8 +15,10 @@
 }
 
 .blogCardFeature__right{
+    display: flex;
+    flex-direction: column;
     margin: 50px 100px;
-
+    gap: 40px;
 }
 
 .blogCardFeature__right_link{
@@ -33,4 +32,8 @@
 .blogCard__item{
     display: block;
     margin: 10px;
+}
+
+.blogCardFeature__img{
+
 }

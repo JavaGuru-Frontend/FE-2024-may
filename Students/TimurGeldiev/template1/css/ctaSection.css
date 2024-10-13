@@ -1,9 +1,7 @@
 .ctaSection{
     display: flex;
     width: 100%;
-    max-width: 1440px;
     height: 240px;
-    margin: 0 auto;
     justify-content: space-around;
     align-items: center;
     background-color:#F7941E;
