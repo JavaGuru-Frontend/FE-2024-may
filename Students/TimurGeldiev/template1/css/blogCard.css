@@ -7,10 +7,19 @@
 
 .blogCardFeature{
     display: flex;
+    margin: 0 135px;
+    width: 1170px;
     height: 370px;
 }
 
 .blogCardFeature__left{
+    width: 35%;
+    height: 100%;
+    background-image: url(../images/blockImg.png);
+    background-color: gray;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
 }
 
@@ -31,7 +40,7 @@
 
 .blogCard__item{
     display: block;
-    margin: 10px;
+    margin: 30px 10px;
 }
 
 .blogCardFeature__img{
