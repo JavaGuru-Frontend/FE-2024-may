@@ -4,7 +4,7 @@
     height: 240px;
     justify-content: space-around;
     align-items: center;
-    background-color:#F7941E;
+    background-color:var(--ctablock-color);
     ;
 
 }
