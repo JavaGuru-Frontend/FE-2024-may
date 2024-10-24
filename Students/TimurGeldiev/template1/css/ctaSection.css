@@ -5,16 +5,10 @@
     justify-content: space-around;
     align-items: center;
     background-color:var(--ctablock-color);
-    ;
+
 
 }
 
-.ctaSection__btn{
-    width: 200px;
-    height: 48px;
-    margin: 0px 10px;
-
-}
 
 .ctaSection__left{
 

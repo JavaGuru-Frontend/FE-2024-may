@@ -1,0 +1,36 @@
+.socialNetworks {
+    display: block;
+    background-image: url(../images/spritesheet.png);
+    background-repeat: no-repeat;
+    
+}
+
+.socialNetworks-FBVector {
+    width: 40px;
+    height: 40px;
+    background-position: -5px -5px;
+}
+
+.socialNetworks-InstVector {
+    width: 40px;
+    height: 40px;
+    background-position: -55px -5px;
+}
+
+.socialNetworks-XVector {
+    width: 40px;
+    height: 40px;
+    background-position: -105px -5px;
+}
+
+.socialNetworks-YoutubeVector {
+    width: 40px;
+    height: 40px;
+    background-position: -155px -5px;
+}
+
+.socialNetworks-pinterestVector {
+    width: 40px;
+    height: 40px;
+    background-position: -205px -5px;
+}

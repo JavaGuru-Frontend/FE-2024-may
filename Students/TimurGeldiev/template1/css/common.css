@@ -10,3 +10,8 @@ main{
     max-width: 1440px;
     margin: 0 auto;
 }
+
+a{
+    color: var(--main-black);
+    text-decoration: none;
+}

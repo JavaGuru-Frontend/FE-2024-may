@@ -25,6 +25,7 @@
 
 .heroBlock__element_right{
     width: 50%;
+    height: 100%;
     background-image: url(../images/img1.png);
     background-color: gray;
     background-size: cover;
@@ -43,10 +44,6 @@
     background-repeat: no-repeat;
 }
 
-.heroBlock__btn{
-    
-}
-
 .heroBlock__element_left h1{
     width: 50%;
     font-size: 56px;
@@ -56,4 +53,14 @@
     width: 50%;
     margin: 15px 0;
     font-size: 1.2em;
+}
+
+@media only screen and (max-width: 800px) {
+    .heroBlock{
+        flex-direction: column;
+    }
+    .heroBlock__element{
+        width: 100%;
+    }
+    
 }
