@@ -3,20 +3,52 @@
 	width: 100%;
 	max-width: 1440px;
 	margin: 0 auto;
+	height: 700px;
 }
 .heroBlock_reverse{
 	flex-direction: row-reverse;
+	height: 600px;
 }
 
 .heroBlock__element{
 	width: 50%;
-	height: 300px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
 }
 
 .heroBlock__element_left{
-	background-color: aqua;
+	background-color: var(--main-title-bg);
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	align-items: flex-start;
+	padding-left: 10%;
 }
 
 .heroBlock__element_right{
-	background-color: blueviolet;
+	background-image: url(../img/Bg1\ .png);
+
+  }
+
+ .heroBlock_reverse .heroBlock__element_right{
+	background-image: url(../img/Bg2.png);
+
+  }
+  .Hero_title{
+	display:flex;
+	padding-bottom: 37px;
+	max-width: 65%;
+	line-height: 66px;
+	text-align: left;
+  }
+
+.Hero_subtitle{
+	display:flex;
+	padding-bottom: 52px;
+	max-width: 65%;
+	text-align: left;
+	line-height: 28px;
 }

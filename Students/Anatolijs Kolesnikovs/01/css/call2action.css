@@ -1,0 +1,21 @@
+.call2action {
+	display: flex;
+	margin: 0 auto;
+	background-color: var(--main-orange-bg);
+	height: 240px;
+	max-width: 1440px;
+}
+.c2a_left {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding-left: 15%;
+}
+.c2a_right {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding-left: 15%;
+}

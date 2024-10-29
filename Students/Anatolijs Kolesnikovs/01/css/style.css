@@ -1,5 +1,10 @@
 @import url(reset.css);
+@import url(fonts.css);
 @import url(common.css);
+@import url(variables.css);
+@import url(btn.css);
 @import url(header.css);
 @import url(heroBlock.css);
 @import url(title.css);
+@import url(gifts.css);
+@import url(call2action.css);

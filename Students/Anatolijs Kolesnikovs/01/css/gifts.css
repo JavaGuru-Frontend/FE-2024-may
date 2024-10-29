@@ -1,0 +1,29 @@
+.gifts{
+	display: flex;
+	padding-bottom: 120px;
+	justify-content: space-around;
+	align-items: center;
+	background-color: var(--main-block-bg);
+	max-width: 1440px;
+	margin: 0 auto;
+	padding-right: 135px;
+	padding-left: 136px;
+}
+
+.gift{
+	background-color: #FAFAFA; 
+	width: 25%;
+	margin: 10px;
+}
+
+.gift img {
+	 width: 100%;
+}
+
+.gift__text {
+	display: flex;
+	flex-direction: column;
+   justify-content: space-around;
+   height: 120px;
+   padding: 10px;
+}
