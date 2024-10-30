@@ -14,8 +14,16 @@
 
 .header__link{
 padding: 0px 20px;
+font-size: 0.9em;
+color: var(--main-text-color);
+text-decoration: none;
+}
+
+.header__link:hover{
+color: var(--main-orange-bg);
 
 }
+
 
 .header__btn{
 

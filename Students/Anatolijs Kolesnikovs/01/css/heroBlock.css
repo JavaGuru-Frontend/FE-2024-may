@@ -27,6 +27,32 @@
 	align-items: flex-start;
 	padding-left: 10%;
 }
+.heroBlock__element_left h1{
+	display: flex;
+	padding-bottom: 37px;
+	max-width: 65%;
+	line-height: 66px;
+	text-align: left;
+}
+.heroBlock__element_left p{
+	display: flex;
+	padding-bottom: 52px;
+	max-width: 65%;
+	text-align: left;
+	line-height: 28px;
+}
+.heroBlock__element_left h2{
+	display: flex;
+	padding-bottom: 23px;
+	max-width: 65%;
+	line-height: 66px;
+	text-align: left;
+}
+
+
+
+
+
 
 .heroBlock__element_right{
 	background-image: url(../img/Bg1.png);
