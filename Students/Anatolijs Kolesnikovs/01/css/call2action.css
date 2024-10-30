@@ -5,6 +5,25 @@
 	height: 240px;
 	max-width: 1440px;
 }
+
+.call2action__text{
+	display: flex;
+	margin: 0 auto;
+	flex-direction: column;	
+	justify-content: center;
+	font-size: 1em;
+}
+.call2action__text h2:first-child{
+font-weight: 700;
+padding-bottom: 10px;
+}
+.call2action__btn {
+	display: flex;
+	margin: 0 auto;
+	align-items: center;
+	justify-content: space-between;
+}
+
 .c2a_left {
 	display: flex;
 	flex-direction: column;
