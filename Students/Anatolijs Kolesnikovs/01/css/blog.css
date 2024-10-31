@@ -31,25 +31,29 @@
 
 .blog__hero_text {
     background-color: var(--main-dark-hover);
+	display: flex;
     width: 70%;
+    flex-direction: column;
+    justify-content: space-between;
+	padding: 60px 40px;
 }
 .blog__hero_text p{
 	color: var(--main-block-bg);
 	font-size: 0.7em;
-	margin-top: 63px;
-	margin-left: 78px;
+	/* margin-top: 63px; */
+	/* margin-left: 78px; */
 	}
 .blog__hero_text h1{
 	color: var(--main-block-bg);
-	margin-left: 78px;
-	margin-top: 27px;
+	/* margin-left: 78px; */
+	/* margin-top: 27px; */
 	font-size: 2.4em;
 	line-height: 57.6px;
 	font-weight: 400;
-	margin-bottom: 60px;
+	/* margin-bottom: 60px; */
 	}
 	.blog__hero_text a{
-	margin-left: 78px;
+	/* margin-left: 78px; */
 	color: var(--main-block-bg);
 	text-decoration: none;
 	font-size: 0.9em;
