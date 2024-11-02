@@ -46,13 +46,14 @@
 
 .heroBlock__element_left h1{
     width: 50%;
-    font-size: 56px;
+    
 }
 
 .heroBlock__element_left p{
     width: 50%;
     margin: 15px 0;
-    font-size: 1.2em;
+    font-size: 1rem;
+    font-weight: 300;
 }
 
 @media only screen and (max-width: 800px) {

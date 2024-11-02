@@ -8,11 +8,15 @@
 
 
 }
-
-
 .ctaSection__left{
-
+    
 }
+
+
+.ctaSection__left p{
+    font-size: 1.8rem;
+    }
+
 
 .ctaSection__right{
 
