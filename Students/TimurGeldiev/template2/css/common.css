@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    border: solid 1px red !important;
+    /* border: solid 1px red !important; */
 }
 body{
     font-family: "Ubuntu", sans-serif;
