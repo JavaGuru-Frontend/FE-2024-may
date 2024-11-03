@@ -1,0 +1,16 @@
+.btn{
+    padding: 20px;
+    background-color: var(--rectangle-border);
+    color: var(--text-white);
+    border: none;
+    border-radius: 30px;
+    width: 400px;
+    height: 70px;
+    text-transform: uppercase;
+    transition: 1s;
+}
+
+.btn:hover{
+    transition: 1s;
+    box-shadow: 0px 0px 30px var(--rectangle-border);
+}

@@ -1,0 +1,25 @@
+.btn {
+    padding: 20px;
+    text-transform: uppercase;
+    border: 1px solid var(--main-orange);
+    background-color: transparent;
+    font-size: 1em;
+    border-radius: 5px;
+    color: var(--main-orange);
+}
+
+.btn_full_orange{
+    background-color: var(--main-orange);
+    color: var(--main-bg);
+}
+
+.btn_full_black{
+    background-color: var(--main-black);
+    color: var(--main-bg);
+}
+
+.btn_black_transparent{
+    color: var(--main-black);
+    border: 1px solid var(--main-black);
+
+}

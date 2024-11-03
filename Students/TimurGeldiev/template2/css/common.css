@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    /* border: solid 1px red !important; */
+}
+body{
+    font-family: "Ubuntu", sans-serif;
+    text-transform: uppercase;
+    color: var(--text-white);
+}
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: var(--main-bg-color);
+}
+
+img{
+    max-width: 270px;
+    max-height: 270px;
+}
+
+h1{
+    font-size: 35px;
+    font-weight: 400;
+}
+
+h2{
+    font-size: 20px;
+}
+
+p{
+    font-size: 16px;
+}
+a{
+    color: var(--text-white);
+    text-decoration: none;
+}

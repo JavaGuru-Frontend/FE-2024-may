@@ -4,21 +4,19 @@
     height: 240px;
     justify-content: space-around;
     align-items: center;
-    background-color:#F7941E;
-    ;
+    background-color:var(--ctablock-color);
+
 
 }
-
-.ctaSection__btn{
-    width: 200px;
-    height: 48px;
-    margin: 0px 10px;
-
-}
-
 .ctaSection__left{
-
+    
 }
+
+
+.ctaSection__left p{
+    font-size: 1.8rem;
+    }
+
 
 .ctaSection__right{
 
