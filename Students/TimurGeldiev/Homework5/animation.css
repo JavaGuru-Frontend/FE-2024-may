@@ -1,0 +1,45 @@
+.animation{
+    width: 1000px;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.animation__loader{
+    
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    animation-name: loader;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.animation__loader_1{
+    animation-delay: 0s;
+    
+}
+
+.animation__loader_2{
+    animation-delay: 0.2s;
+
+}
+
+.animation__loader_3{
+    animation-delay: 0.4s;   
+
+}
+
+@keyframes loader{
+    0%{
+        background-color: #aaa8a8;
+    }
+    100%{
+        background-color: #474747;
+        transform: scale(1.1);
+    }
+}
