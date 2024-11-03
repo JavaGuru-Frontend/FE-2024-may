@@ -2,7 +2,7 @@
     display: block;
     position: relative;
     text-align: center;
-    width: 1160px;
+    max-width: 1160px;
     height: 324px;
     background-color: transparent;
     border: 5px solid var(--rectangle-border);
@@ -13,25 +13,26 @@
 
 .img__left{
     position: relative;
-    top: 55px;
-    left: -310px;
+    top: 20%;
+    left: -27%;
+    
 }
 .img__right{
     position: relative;
-    top: 70px;
-    right: -310px;
+    top: 20%;
+    right: -27%;
 }
 .rectangle h2{
     position: relative;
-    top: 70px;
+    top: 15%;
     
 }
 .rectangle h1{
     position: relative;
-    top: 89px;
+    top: 20%;
 }
 .rectangle a{
     position: absolute;
-    top: 280px;
-    left: 380px;
+    top: 90%;
+    left: 33%;
 }
