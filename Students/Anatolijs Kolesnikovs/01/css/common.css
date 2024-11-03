@@ -26,10 +26,22 @@ h3 {
 	font-size: .8em;
 }
 
+h4 {
+	font-size: 0.7em;
+}
+
 p {
 	font-size: 1em;
 }
 
 p1 {
 	font-size: 0.9em;
+}
+a {
+	text-decoration: none;
+	color: var(--main-text-color);
+}
+a:hover {
+	text-decoration: none;
+	color: var(--main-orange-bg);
 }

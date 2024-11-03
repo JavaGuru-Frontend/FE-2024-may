@@ -11,9 +11,16 @@
 }
 
 .gift{
-	background-color: #FAFAFA; 
+	background-color: var(--main-bg); 
 	width: 25%;
 	margin: 10px;
+	min-height: 436px;
+}
+.gift__active {
+background-color: var(--main-block-bg); 
+box-shadow : 10px 10px 15px rgba(0,0,0,.05) ;
+
+
 }
 
 .gift img {
@@ -23,7 +30,7 @@
 .gift__text {
 	display: flex;
 	flex-direction: column;
-   justify-content: space-around;
-   height: 120px;
-   padding: 10px;
+	justify-content: space-between;
+	height: 166px;
+	padding: 7% 8% 10% 9%;
 }
