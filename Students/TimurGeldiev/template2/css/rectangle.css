@@ -14,12 +14,12 @@
 .img__left{
     position: relative;
     top: 55px;
-    left: -105px;
+    left: -310px;
 }
 .img__right{
     position: relative;
     top: 70px;
-    right: -105px;
+    right: -310px;
 }
 .rectangle h2{
     position: relative;
@@ -31,6 +31,7 @@
     top: 89px;
 }
 .rectangle a{
-    position: relative;
-    top: ;
+    position: absolute;
+    top: 280px;
+    left: 380px;
 }
