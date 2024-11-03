@@ -73,3 +73,12 @@
 	text-align: left;
 	line-height: 28px;
 }
+
+@media only screen and (max-width: 800px) {
+	 .heroBlock {
+		flex-direction: column;
+	}
+	.heroBlock__element {
+		width: 100%;
+	}
+}
