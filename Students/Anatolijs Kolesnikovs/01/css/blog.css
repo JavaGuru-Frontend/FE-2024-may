@@ -1,7 +1,7 @@
 .blog{
 	display: flex;
 	flex-direction: column;
-	padding-bottom: 120px;
+	padding-bottom: 80px;
 	justify-content: space-around;
 	align-items: center;
 	background-color: var(--main-block-bg);
@@ -45,7 +45,6 @@
 	color: var(--main-block-bg);
 	font-size: 2.4em;
 	line-height: 57.6px;
-
 	}
 	.blog__hero_text a{
 	color: var(--main-block-bg);
