@@ -4,8 +4,13 @@
 	align-items: center;
 	background-color: #FAFAFA;
 	padding: 40px 0px;
-	;
+	max-width: 1440px;
+	margin: 0 auto;
 
+}
+
+.header nav {
+	display: flex;
 }
 
 .header__img{
@@ -19,10 +24,14 @@ color: var(--main-text-color);
 text-decoration: none;
 }
 
-.header__link:hover{
-color: var(--main-orange-bg);
+@media only screen and (max-width: 800px){
+	.header,
+	header nav{
+		flex-direction: column;
+	}
 
 }
+	
 
 
 .header__btn{

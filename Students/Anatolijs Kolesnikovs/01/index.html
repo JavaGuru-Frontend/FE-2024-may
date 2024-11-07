@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Gift Finder</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -15,7 +15,9 @@
 		}
 	</style>
 	<header class="header">
-		<img src="img/logo.png" class="header__img">
+		<img src="img/logo.png" class="header__img"
+				srcset="img/logox2.png 2x"
+				alt="adaptive-image" />
 		<nav>
 			<a href="#" class="header__link">Home</a>
 			<a href="#" class="header__link">About us</a>
@@ -53,36 +55,36 @@
 			<p1>“Try our web app to find the best gifts for all occasions”</p1>
 		</div>
 
-		<section class="gifts">
-			<div class="gift">
+		<div class="gifts">
+			<div class="gift gift__active">
 				<img src="../01/img/gift1.png">
 				<div class="gift__text">
 					<p>Birthday</p>
-					<a href="#">See More ></a>
+					<h4><a href="#">See More ></a></h4>
 				</div>
 			</div>
 			<div class="gift">
 				<img src="../01/img/gift2.png">
 				<div class="gift__text">
 					<p>Birthday</p>
-					<a href="#">See More ></a>
+					<h4><a href="#">See More ></a></h4>
 				</div>
 			</div>
 			<div class="gift">
 				<img src="../01/img/gift3.png">
 				<div class="gift__text">
 					<p>Birthday</p>
-					<a href="#">See More ></a>
+					<h4><a href="#">See More ></a></h4>
 				</div>
 			</div>
 			<div class="gift">
 				<img src="../01/img/gift4.png">
 				<div class="gift__text">
 					<p>Birthday</p>
-					<a href="#">See More ></a>
+					<h4><a href="#">See More ></a></h4>
 				</div>
 			</div>
-		</section>
+		</div>
 
 		<div class="call2action">
 			<div class="call2action__text">
@@ -100,7 +102,8 @@
 			<br>
 			<p1>“Try our blog to find the best tips and tricks to select your gift”</p1>
 		</div>
-		<section class="blog">
+		
+		<!-- <section class="blog">
 			<div class="blog__hero">
 				<div class="blog__hero_img">
 				</div>
@@ -113,18 +116,73 @@
 			</div>
 			<br>
 	    <div class="blog__cards">
-				<div class="blog__card_left">
-		 		<h1>Database to find the gifts for your <br> girlfriend</h1>				
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore...</p>
-				<a href="#">Read More</a>
+				<div class="blog__card blog__card_left">
+		 			<h1>Database to find the gifts for your <br> girlfriend</h1>				
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore...</p>
+					<h4><a href="#">Read More</a></h4>
 				</div>
-				<div class="blog__card_right">
-				<h1>How Artificial Intelligence read your mind to find the best gift</h1>				
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore...</p>
-				<a href="#">Read More</a>
+				<div class="blog__card blog__card_right">
+					<h1>How Artificial Intelligence read your mind to find the best gift</h1>				
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore...</p>
+					<h4><a href="#">Read More</a></h4>
+		      </div>
+		</div> -->
+
+		</section>
+		<section class="gridblog">
+			
+				<div class="gridblog__img"></div>
+				<div class="gridblog__hero">
+					<p>Mr. John Doe</p>
+					<h1>The best way to wish your wife</h1>
+					<a href="#">Read More</a>
+				</div>				
+			
+				<div class="gridblog__hero_left">
+		 			<h1>Database to find the gifts for your <br> girlfriend</h1>				
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore...</p>
+					<h4><a href="#">Read More</a></h4>
+				</div>
+				<div class="gridblog__hero_right">
+					<h1>How Artificial Intelligence read your mind to find the best gift</h1>				
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore...</p>
+					<h4><a href="#">Read More</a></h4>
 		      </div>
 		</div>
+		</section>
 
+
+
+
+
+
+
+
+	<footer class="footer">
+		<nav class="footer__navigation">
+			<a href="#" class="footer__link">Home</a>
+			<a href="#" class="footer__link">About us</a>
+			<img src="img/footer_logo.png" class="footer__img">
+			<a href="#" class="footer__link">Services</a>
+			<a href="#" class="footer__link">Blog</a>
+		</nav>
+		<div class="footer__line">
+		</div>
+		<div class="footer__social">
+			<i class="icon-fb"></i>
+			<i class="icon-in"></i>
+			<i class="icon-pn"></i>
+			<i class="icon-tw"></i>
+			<i class="icon-yt"></i>
+		</div>
+			<h4 class="footer__copyright">
+				© 2010 — 2020
+				<a href="#" class="h4">Privacy</a>
+				<span> - </span>
+				<a href="#" class="h4">Terms</a>
+			</h4>
+
+	</footer>
 		
 
 

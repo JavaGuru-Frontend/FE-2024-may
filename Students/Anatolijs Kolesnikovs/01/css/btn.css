@@ -8,12 +8,26 @@
 	text-align: center;
 	color: var(--main-orange-bg);
 }
+.btn:hover{
+	color: var(--main-block-bg);
+	background-color: var(--main-orange-bg)
+
+}
+
+
 .btn__active{
 	background-color: var(--main-orange-bg);
 	color: var(--main-block-bg);
 	width: 200px;
 	height: 60px;
 }
+.btn__active:hover{
+	background-color: var(--main-title-bg);
+	color: var(--main-orange-bg);
+}
+
+
+
 .btn_dark{
 	padding: 20px;
 	text-transform: uppercase;
@@ -22,23 +36,18 @@
 	background-color: transparent;
 	text-align: center;
 	color: var(--main-dark-hover);
-
 	width: 200px;
-
-
-
 }
+
 .btn_dark_active {
 	background-color: var(--main-dark-hover);
 	color: var(--main-block-bg);
 	text-align: center;
 	width: 200px;
-	margin-right: 16px;
-
-	
-
-	
+	margin-right: 16px
 }
+
+
 .header__btn {
 width: 140px;
 font-size: inherit;
