@@ -35,7 +35,6 @@
 	background-repeat: no-repeat;
 	background-position: center;
 }
-
 .gridblog__hero p{
 	color: var(--main-block-bg);
 	font-size: 0.7em;
@@ -66,10 +65,13 @@
 .gridblog__hero_left h1{
 	font-size: 1.2em;
 	font-weight: 900;
+	line-height: 33.75px;
 	}
 .gridblog__hero_left p{
 	font-size: 0.9em;
 	margin-top: -5%;
+	line-height: 25.31px;
+
 	} 
 .gridblog__hero_right{
 	grid-area: right;
@@ -83,9 +85,23 @@
 .gridblog__hero_right h1{
 	font-size: 1.2em;
 	font-weight: 900;
+	line-height: 33.75px;
 	}
 .gridblog__hero_right p{
 	font-size: 0.9em;
 	margin-top: -5%;
+	line-height: 25.31px;
 	}
 
+	@media only screen and (max-width: 800px) {
+		.gridblog{
+			display: grid;
+			grid-template-rows: repeat(1, 1fr);
+			grid-template-areas:
+			"hero"
+			"hero"
+			"left" 
+			"right";
+
+		}
+  }
