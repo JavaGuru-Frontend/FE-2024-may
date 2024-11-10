@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    border: solid 1px red !important;
+    /* border: solid 1px red !important; */
 }
 body{
     font-family: "Ubuntu", sans-serif;
@@ -25,6 +25,10 @@ h1{
 
 h2{
     font-size: 20px;
+}
+h3{
+    font-size: 14px;
+    font-weight: 700;
 }
 
 p{
