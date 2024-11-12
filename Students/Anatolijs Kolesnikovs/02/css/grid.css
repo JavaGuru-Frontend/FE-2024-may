@@ -3,8 +3,7 @@
 	position: relative;
 	grid-template-columns: repeat(3, 1fr);
 	margin: 0 auto;
-	margin-top: 158px;
-	width: 1160px;
+	margin: 10% 10% 10% 10%;
 	border-radius: 30px;
 	grid-template-areas:
 	"text text text"
@@ -35,6 +34,8 @@
 
 .gridtext h2{
 	padding-top: 19px;
+	align-items: center;
+	text-align: center;
 }
 
 .img1{
@@ -58,7 +59,7 @@
 		background-color: #A387C4;
 		font-size: 0.9em;
 		text-align: center;
-		min-width: 400px;
+		min-width: 100%;
 		min-height: 70px;
 	}
 	.btn:hover {
@@ -89,12 +90,27 @@
 	min-height: 268px;
 	min-width: 268px;
 }
+
 .more{
 	text-decoration: none;
 	color: #FFFFFF;
 	display: flex;
 	margin: 0 auto;
 	margin-top: 30px;
-	width: 1160px;
 	justify-content: center;
+}
+
+
+@media only screen and (max-width: 800px) {
+	.img2{
+		display: none;
+	}
+	.img1{
+		display: none;
+	}
+	.btn{
+		font-size: 0.8em;
+		
+	}
+
 }
