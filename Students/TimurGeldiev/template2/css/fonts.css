@@ -9,5 +9,13 @@
 }
 
 .font_bigger{
-    font-size: 4rem;
+    font-size: 3rem;
+}
+
+.font_colored{
+    color: var(--main-bg-color);
+
+}
+.font_shadow{
+    text-shadow: 0 4px 4px gray;
 }

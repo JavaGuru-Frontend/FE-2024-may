@@ -1,0 +1,5 @@
+.if_section{
+    max-width: 1440px;
+    height: 700px;
+    background-color: var(--text-white);
+}

@@ -1,0 +1,13 @@
+.small_rectangle_container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.small_rectangle{
+    width: 380px;
+    height: 140px;
+    border: 3px solid var(--main-bg-color);
+    border-radius: 25px;
+    margin: 0 26px;
+}
