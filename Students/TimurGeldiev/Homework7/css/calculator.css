@@ -1,0 +1,30 @@
+.calculator {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  width: 500px;
+  height: 700px;
+  margin: 5% auto;
+  border: 1px solid black;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas:
+      "input input input input"
+      "plus minus multiply divide"
+      "7 8 9 equals"
+      "4 5 6 equals"
+      "1 2 3 equals"
+      "C 0 . equals";
+}
+.input{
+  grid-area: input;
+  text-align: right;
+  font-size: 80px;
+  padding: 15px;
+}
+.btn:nth-child(2){grid-area: plus;}
+.btn:nth-child(3){grid-area: minus;}
+.btn:nth-child(4){grid-area: multiply;}
+.btn:nth-child(5){grid-area: divide;}
+.btn:nth-child(9){grid-area: equals;}
+
