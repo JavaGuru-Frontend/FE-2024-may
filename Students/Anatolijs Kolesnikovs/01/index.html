@@ -6,6 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Gift Finder</title>
 	<link rel="stylesheet" href="css/style.css">
+	<!-- <script src="js/data.js"></script>
+	<script src="js/function.js"></script> -->
 </head>
 
 <body>
@@ -14,17 +16,11 @@
 			border: solid red 1px !important;
 		}
 	</style>
-	<header class="header">
-		<img src="img/logo.png" class="header__img"
-				srcset="img/logox2.png 2x"
-				alt="adaptive-image" />
-		<nav>
-			<a href="#" class="header__link">Home</a>
-			<a href="#" class="header__link">About us</a>
-			<a href="#" class="header__link">Services</a>
-			<a href="#" class="header__link">Blog</a>
+	<header id="header" class="header">
+		<img id="headerLogo" class="header__img" />    
+		<nav id="nav">
 		</nav>
-		<button class="header__btn btn">GIFT FINDER</button>
+		<button id="button" class="header__btn btn"></button>
 	</header>
 	<main>
 		<div class="heroBlock">
@@ -124,22 +120,17 @@
 			</div>
 	</div>
 	</section>
-	<footer class="footer">
-		<nav class="footer__navigation">
-			<a href="#" class="footer__link">Home</a>
-			<a href="#" class="footer__link">About us</a>
+	<footer id="footer" class="footer">
+		<nav id="footer__nav" class="footer__navigation">
 			<img src="img/footer_logo.png" class="footer__img">
+			<!-- <a href="#" class="footer__link">Home</a>
+			<a href="#" class="footer__link">About us</a>
 			<a href="#" class="footer__link">Services</a>
-			<a href="#" class="footer__link">Blog</a>
+			<a href="#" class="footer__link">Blog</a> -->
 		</nav>
 		<div class="footer__line">
 		</div>
-		<div class="footer__social">
-			<i class="icon-fb"></i>
-			<i class="icon-in"></i>
-			<i class="icon-pn"></i>
-			<i class="icon-tw"></i>
-			<i class="icon-yt"></i>
+		<div id="footer__icons" class="footer__social">
 		</div>
 			<h4 class="footer__copyright">
 				© 2010 — 2020
@@ -152,7 +143,8 @@
 		</section>
 	</main>
 
-
+	<script src="js/data.js"></script>
+	<script src="js/function.js"></script>
 </body>
 
 </html>
