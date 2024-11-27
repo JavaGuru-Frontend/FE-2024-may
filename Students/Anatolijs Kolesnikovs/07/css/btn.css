@@ -1,0 +1,13 @@
+.btn {
+display: flex;
+flex-wrap: nowrap;
+justify-content: center;
+align-items: center;
+background-color: #595753;
+border-radius: 100%;
+color: white;
+font-size: xxx-large;
+}
+.btn__special{
+	background-color: #f19a37;
+}
