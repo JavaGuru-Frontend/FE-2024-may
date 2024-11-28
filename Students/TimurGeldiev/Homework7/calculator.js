@@ -6,7 +6,7 @@ let isResultShown = false;
 Array.from(allBtn).forEach((button) => {
   button.addEventListener("click", () => {
     let buttonValue = button.innerHTML;
-    let operators = ["+", "-", "*", "/"];
+    let operators = ["+", "-", "*", "/", "."];
     let lastChar = inElement.value[inElement.value.length - 1];
 
     if (buttonValue != "=" && inElement.value.length < 10) {
@@ -64,7 +64,12 @@ Array.from(allBtn).forEach((button) => {
           return;
         } else {
           try {
-            inElement.value = eval(inElement.value);
+            let result = eval(inElement.value);
+            if (Number.isInteger(result)){  //Проверка на целое число, если float то проиходит округление до 8 символа чтобы не выйти за границу поля
+              inElement.value = result;
+            }else{
+              inElement.value = result.toFixed(8);
+            }
             isResultShown = true;
           } catch (error) {
             console.error("Eval function error", error);
