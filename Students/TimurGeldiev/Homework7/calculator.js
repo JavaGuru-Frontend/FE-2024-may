@@ -2,16 +2,17 @@ let inElement = document.getElementById("input");
 let allBtn = document.getElementsByClassName("btn");
 
 let isResultShown = false;
-
+inElement.value = "0";
 Array.from(allBtn).forEach((button) => {
   button.addEventListener("click", () => {
     let buttonValue = button.innerHTML;
     let operators = ["+", "-", "*", "/", "."];
     let lastChar = inElement.value[inElement.value.length - 1];
+    
 
     if (buttonValue != "=" && inElement.value.length < 10) {
       if (isResultShown) {   //Очистка поля ввода при вводе нового числа если функция eval уже была использована
-        inElement.value = "";
+        inElement.value = "0";
         isResultShown = false;
       }
       switch (buttonValue) { //switch для преобразования операторов для функции eval
@@ -45,8 +46,13 @@ Array.from(allBtn).forEach((button) => {
         inElement.value += buttonValue;
         return;
       }
+      if(inElement.value == "0" && !operators.includes(buttonValue)){ //Перезапись дефолтного 0 на новое значение
+        inElement.value = buttonValue;
+      }else{
+        inElement.value += buttonValue;
+      }
 
-      inElement.value += buttonValue;
+      
     }
     switch (buttonValue) {
       case "=":
@@ -54,12 +60,12 @@ Array.from(allBtn).forEach((button) => {
             operators.includes(lastChar) || //если оператор последний в строке
             operators.includes(inElement.value[0]) ) { //если оператор единственный в строке
                 alert("Incorrect value");
-                inElement.value = "";
+                inElement.value = "0";
                 isResultShown = false;
           return;
         } else if (inElement.value.includes("/0")) {  //Проверка деления на 0
           alert("Can't divide by 0");
-          inElement.value = "";
+          inElement.value = "0";
           isResultShown = false;
           return;
         } else {
@@ -77,7 +83,7 @@ Array.from(allBtn).forEach((button) => {
         }
         break;
       case "C": //Очистка поля 
-        inElement.value = "";
+        inElement.value = "0";
         isResultShown = false;
         break;
       default:
@@ -92,6 +98,6 @@ inElement.addEventListener("input", (event) => {
 
   if (!allowedChars.test(inputValue)) {
     alert("Wrong input");
-    inElement.value = "";
+    inElement.value = "0";
   }
 });
