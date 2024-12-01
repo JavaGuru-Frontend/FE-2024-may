@@ -3,12 +3,14 @@
 	display: grid;
 	justify-content: center;
 	align-content: center;
-	width: 500px;
-	height: 700px;
-	margin: 5% auto;
-	border: 1px solid #555450;
+	width: 475px;
+	height: 730px;
+	margin: 15% auto;
+	padding: 1%;
+	border: 2px solid #555450;
 	background-color: #302f2a;
 	border-radius: 12px;
+	box-shadow: 17px 16px 53px #302f2a;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(6, 1fr);
 	grid-template-areas:
@@ -19,4 +21,16 @@
 		 "1 2 3 equals"
 		 "C 0 . equals";
  }
-}  
+ .output{
+	grid-area: input;
+	text-align: right;
+	font-size: 80px;
+	padding: 15px;
+	height: 200px;
+	color: #fff;
+ }
+.btn:nth-child(2){grid-area: plus;}
+.btn:nth-child(3){grid-area: minus;}
+.btn:nth-child(4){grid-area: multiply;}
+.btn:nth-child(5){grid-area: divide;}
+.btn:nth-child(9){grid-area: equals;}

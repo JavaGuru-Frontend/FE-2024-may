@@ -3,11 +3,18 @@ display: flex;
 flex-wrap: nowrap;
 justify-content: center;
 align-items: center;
+margin: 8px;
 background-color: #595753;
 border-radius: 100%;
 color: white;
 font-size: xxx-large;
+transition: 0.25s all ease-in-out;
+-moz-transition: 0.25s all ease-in-out;
+-webkit-transition: 0.25s all ease-in-out;
 }
 .btn__special{
 	background-color: #f19a37;
+}
+.btn__special_equal{
+	border-radius: 10px;
 }
