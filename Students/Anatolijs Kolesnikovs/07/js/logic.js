@@ -29,20 +29,22 @@ Array.from(btnArray).forEach((element) => {
 
 
 			})
-document.addEventListener('keydown', (event) => {
- if (event.keyCode !== 13) {
-	
-	for (let i = 0; i < btnArray.length; i++) {
-		let id = btnArray[i].getAttribute('data-id');
-	  if (id === event.key) {
-		  btnArray[i].click();
-	  }
-	}
- } else {
-	equal();
-  }
- 
-});
+			document.addEventListener('keydown', (event) => {
+				if (event.keyCode !== 13) {
+					 for (let i = 0; i < btnArray.length; i++) {
+						  let id = btnArray[i].getAttribute('data-id');
+						  if (id === event.key) {
+								btnArray[i].click();
+						  }
+					 }
+				} else {
+					 equal();
+				}    
+		  });
+
+
+
+
 
 
 });
