@@ -1,18 +1,48 @@
 
+Array.from(btnArray).forEach((element) => {
+			element.addEventListener('click', () => {
+				let type = element.getAttribute('data-type');
+				let id = element.getAttribute('data-id');
 
-let outElement = document.getElementById('output');
+
+				switch (type) {
+					case 'equal':
+						equal();
+						break;
+
+					case 'operator':
+						printValue(id);
+						break;
+
+					case 'number':
+						printValue(id);
+						break;
+					
+					case 'clear':
+						clearInput();
+						break;	
+
+					default:
+						break;
+				}
 
 
-let printValue = (printNumber) => {
-	outElement.innerHTML +=`${printNumber}`;
-}
 
-let equal = () => {
-	outElement.innerHTML = eval(outElement.innerHTML);
+			})
+document.addEventListener('keydown', (event) => {
+ if (event.keyCode !== 13) {
+	
+	for (let i = 0; i < btnArray.length; i++) {
+		let id = btnArray[i].getAttribute('data-id');
+	  if (id === event.key) {
+		  btnArray[i].click();
+	  }
+	}
+ } else {
+	equal();
+  }
+ 
+});
 
-}
 
-let clearList = () => {
-	outElement.innerHTML = ('');
-}
-
+});
