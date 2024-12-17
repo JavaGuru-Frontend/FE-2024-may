@@ -1,5 +1,6 @@
 let inElement = document.getElementById("input");
 let allBtn = document.getElementsByClassName("btn");
+let history = document.getElementById('history');
 
 let isResultShown = false;
 
@@ -16,6 +17,24 @@ let printValue = (value, replace = false) => {
 let clearInput = () => {
     inElement.value = defaultValue;
 }
+let saveHistory = (text) => {
+    let historyData = JSON.parse(localStorage.getItem('history')) || []
+
+
+    historyData.push(text);
+    localStorage.setItem('history', JSON.stringify(historyData));
+}
+let printHistory = () => {
+    let printHistory = JSON.parse(localStorage.getItem('history'));
+    history.innerHTML = '';
+    printHistory.forEach((historyRecord) => {
+        history.innerHTML += `<li>${historyRecord}</li>`
+    })
+}
+let clearHistory = () => {
+    localStorage.removeItem('history');
+    history.innerHTML = '';
+}
 let equal = () => {
     try {
         let result = eval(inElement.value);
@@ -26,8 +45,10 @@ let equal = () => {
             if (result % 1 !== 0) {
                 result = result.toFixed(8);
             }
+            saveHistory(`${inElement.value} = ${result}`)
             clearInput();
             printValue(result, true);
+            printHistory();
         }
         isResultShown = true;
 
@@ -76,7 +97,7 @@ Array.from(allBtn).forEach((button) => {
                 if (!operators.includes(buttonValue)) { //Если следующий ввод это оператор, то поле не очищается
                     clearInput();
                 }
-                    isResultShown = false;
+                isResultShown = false;
 
 
             }
@@ -112,9 +133,9 @@ Array.from(allBtn).forEach((button) => {
 
             case 'number':
                 if (inElement.value === defaultValue && buttonValue !== ".") {
-                    inElement.value = buttonValue;
+                    printValue(buttonValue, true);
                 } else if (inElement.value.length < 10) {
-                    printValue(buttonValue);
+                    printValue(buttonValue, false);
                 }
                 break;
             case 'clear':
@@ -128,7 +149,9 @@ Array.from(allBtn).forEach((button) => {
                     clearInput();
                 }
                 break;
-
+            case 'clearHistory':
+                clearHistory();
+                break;
             default:
                 alert("Something went wrong!");
                 break;

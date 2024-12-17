@@ -1,34 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8"/>
     <title>Calculator</title>
-    <link rel="stylesheet" href="css/calculatorStyle.css" />
-  </head>
+    <link rel="stylesheet" href="css/calculatorStyle.css"/>
+</head>
 
-  <body>
-    <main>
+<body>
+<main>
+    <div class="container">
         <div class="calculator">
             <input id="input" class="input" maxlength="10">
             <div class="btn" data-type="operator" data-id="+">&plus;</div>
             <div class="btn" data-type="operator" data-id="-">&minus;</div>
             <div class="btn" data-type="operator" data-id="*">&times;</div>
             <div class="btn" data-type="operator" data-id="/">&divide;</div>
-            <div class="btn" data-type="number"   data-id="7">7</div>
-            <div class="btn" data-type="number"   data-id="8">8</div>
-            <div class="btn" data-type="number"   data-id="9">9</div>
+            <div class="btn" data-type="number" data-id="7">7</div>
+            <div class="btn" data-type="number" data-id="8">8</div>
+            <div class="btn" data-type="number" data-id="9">9</div>
             <div class="btn btn__black" data-type="equal" data-id="=">=</div>
-            <div class="btn" data-type="number"   data-id="4">4</div>
-            <div class="btn" data-type="number"   data-id="5">5</div>
-            <div class="btn" data-type="number"   data-id="6">6</div>
-            <div class="btn" data-type="number"   data-id="1">1</div>
-            <div class="btn" data-type="number"   data-id="2">2</div>
-            <div class="btn" data-type="number"   data-id="3">3</div>
-            <div class="btn" data-type="clear"    data-id="C">C</div>
-            <div class="btn" data-type="number"   data-id="0">0</div>
-            <div class="btn" data-type="symbol"   data-id=".">.</div>
+            <div class="btn" data-type="number" data-id="4">4</div>
+            <div class="btn" data-type="number" data-id="5">5</div>
+            <div class="btn" data-type="number" data-id="6">6</div>
+            <div class="btn" data-type="number" data-id="1">1</div>
+            <div class="btn" data-type="number" data-id="2">2</div>
+            <div class="btn" data-type="number" data-id="3">3</div>
+            <div class="btn" data-type="clear" data-id="C">C</div>
+            <div class="btn" data-type="number" data-id="0">0</div>
+            <div class="btn" data-type="symbol" data-id=".">.</div>
         </div>
-    </main>
-    <script src="calculator.js"></script>
-  </body>
+        <div class="historyContainer">
+            <div id="history" class="history"></div>
+            <div class="btn clearHistory" data-type="clearHistory" data-id="clearHistory">Clear history</div>
+        </div>
+
+    </div>
+
+</main>
+<script src="calculator.js"></script>
+</body>
 </html>

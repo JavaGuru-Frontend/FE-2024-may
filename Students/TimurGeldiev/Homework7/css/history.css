@@ -1,0 +1,26 @@
+.historyContainer{
+    position: relative;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+.history{
+    display: flex;
+    flex-direction: column;
+    margin-top: 126px;
+    padding: 5px 5px;
+    width: 150px;
+    height: 573px;
+    border-top: 1px solid black;
+    overflow: auto;
+
+}
+.clearHistory{
+    display: flex;
+    width: 100px;
+    height: 50px;
+    font-size: medium;
+    position: absolute;
+    right: 15px;
+    top: 25px;
+}
