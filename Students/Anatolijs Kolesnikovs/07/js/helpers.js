@@ -8,13 +8,14 @@ let clearInput = () => {
 
 let handleError = () => {
 	console.error('pizdec')
-
 }
+
+
+
+
 
 let equal = () => {
 	let result = eval(output.innerHTML);
 	clearInput();
 	printValue(result);
 }
-
-
