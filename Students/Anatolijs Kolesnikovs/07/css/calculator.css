@@ -34,3 +34,11 @@
 .btn:nth-child(4){grid-area: multiply;}
 .btn:nth-child(5){grid-area: divide;}
 .btn:nth-child(9){grid-area: equals;}
+
+.historyContainer{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+}
