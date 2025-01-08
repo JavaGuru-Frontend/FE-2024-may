@@ -22,7 +22,6 @@ let renderProducts = (data) => {
 let loadCategories = () => {
     fetch(`https://dummyjson.com/products/category-list`)
     .then(res => res.json())
-    .then(data => renderCategories(data))
     .catch(error => console.log(error))
 };
 
