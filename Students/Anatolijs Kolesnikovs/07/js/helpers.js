@@ -7,23 +7,37 @@ let clearInput = () => {
 }
 
 let handleError = () => {
-	console.error('pizdec')
+	console.log('pizdec')
 }
 
 let saveHistory = (text) => {
 	localStorage.setItem('item', text);
 }
 
-let printHistory = () =>{
+let printHistory = () => {
 	history.innerHTML = localStorage.getItem('item')
 }
 
+let checkDivivzero = (result) => {
+	if (result === 'Infinity') {
+		return true;
+	} else {
+		return false;
+	}
+
+}
 
 
-let equal = () => {
+function equal() {
 	let result = eval(output.innerHTML);
-	saveHistory(`${output.innerHTML}=${result}`);
-	clearInput();
-	printValue(result);
-	printHistory()
+	if (checkDivivzero(result) === false) {
+		saveHistory(`${output.innerHTML}=${result}`);
+		clearInput();
+		printValue(result);
+		printHistory();
+	} else {
+		clearInput();
+		output.innerHTML = "error"
+	}
+
 }
