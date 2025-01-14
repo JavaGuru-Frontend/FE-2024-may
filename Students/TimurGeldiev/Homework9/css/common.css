@@ -2,3 +2,29 @@
     box-sizing: border-box;
     /*border: solid 1px red !important;*/
 }
+
+.todo_done{
+    color: red;
+    text-decoration: line-through;
+}
+
+.taskList{
+    width: 373px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+}
+
+.todo{
+    display: flex;
+    max-width: 260px;
+    overflow: auto;
+}
+
+.itemContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
