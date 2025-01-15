@@ -36,6 +36,10 @@ let removeTask = (index) => {
 let editTask = (index) => {
     let tasks = JSON.parse(localStorage.getItem("taskList") || []);
     let currentTask = tasks[index];
+    if(currentTask.done){
+        alert("You can't edit completed task");
+        return;
+    }
     let newText = prompt("Edit task:", currentTask.taskText);
     if(newText !== null && newText.trim() !== ""){
         currentTask.taskText = newText.trim();
