@@ -68,18 +68,42 @@ let printTasks = () => {
     taskList.innerHTML = '';
     printTask.forEach((taskRecord, index) => {
         let isTaskChecked = taskRecord.done;
-        taskList.innerHTML += `<div class="itemContainer">
-                                <div class="todo ${isTaskChecked ? 'todo_done': ''} task_${index}"
-                                data-index="${index}" 
-                                onclick="toggleDone(event)"> ${index + 1}. ${taskRecord.taskText}
-                                </div>
-                                <div class="buttonsContainer">
-                                <button class="remove-btn" id="remove_${index}" onclick="removeTask(${index})">Remove</button>
-                                <button class="edit-btn" onclick="editTask(${index})">Edit</button>
-                                </div>
-                                </div>`
 
-    })
+        const itemContainer = new CustomElement('div', 'itemContainer').createNewElement();
+
+        const todoClass = `todo ${isTaskChecked ? 'todo_done' : ''} task_${index}`;
+        const todo = new CustomElement('div', todoClass, `${index + 1}. ${taskRecord.taskText}`).createNewElement();
+        todo.dataset.index = index;
+        todo.addEventListener('click', (event) => toggleDone(event));
+
+        const buttonsContainer = new CustomElement('div', 'buttonsContainer').createNewElement();
+
+        const removeButton = new CustomElement('button', 'remove-btn', 'Remove').createNewElement();
+        removeButton.id = `remove_${index}`;
+        removeButton.addEventListener('click', () => removeTask(index));
+
+        const editButton = new CustomElement('button', 'edit-btn', 'Edit').createNewElement();
+        editButton.addEventListener('click', () => editTask(index));
+
+        buttonsContainer.appendChild(removeButton);
+        buttonsContainer.appendChild(editButton);
+        itemContainer.appendChild(todo);
+        itemContainer.appendChild(buttonsContainer);
+
+        taskList.appendChild(itemContainer);
+
+        // taskList.innerHTML += `<div class="itemContainer">
+        //                         <div class="todo ${isTaskChecked ? 'todo_done': ''} task_${index}"
+        //                         data-index="${index}"
+        //                         onclick="toggleDone(event)"> ${index + 1}. ${taskRecord.taskText}
+        //                         </div>
+        //                         <div class="buttonsContainer">
+        //                         <button class="remove-btn" id="remove_${index}" onclick="removeTask(${index})">Remove</button>
+        //                         <button class="edit-btn" onclick="editTask(${index})">Edit</button>
+        //                         </div>
+        //                         </div>`
+
+    });
 }
 let clearHistory = () => {
     localStorage.removeItem('taskList');
