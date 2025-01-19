@@ -1,0 +1,14 @@
+.todo{
+	width: 400px;
+	padding: 7px;
+	border-bottom: 1px solid black;
+	display: flex;
+	justify-content: space-between;
+}
+
+
+
+.todo_done {
+	color: red;
+	text-decoration: line-through;
+}

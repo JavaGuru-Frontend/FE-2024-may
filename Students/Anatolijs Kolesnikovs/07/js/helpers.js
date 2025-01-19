@@ -20,65 +20,33 @@ let saveHistory = (text) => {
 
 let printHistory = () => {
     let printHistory = JSON.parse(localStorage.getItem('history'));
-    debugger;
     printHistory.forEach((historyRecord) => {
         history.innerHTML += `<li>${historyRecord}</li>`
     })
 }
 
-// let checkDivivzero = (parameter) => {
-// 	if (parameter === 'Infinity') {
-// 		return true;
-// 	} else {
-// 		return false;
-// 	}
-
-// }
-
-
-
-function equal() {
-	let result = eval(output.innerHTML);
-	if (isNaN(result)){
-		clearInput();
-		printValue(output.innerHTML="error");
-	  } else {
-		console.log(result)
-		saveHistory(`${output.innerHTML}=${result}`);
-		clearInput();
-		printValue(result);
-		printHistory();
+let checkDivivzero = (parameter) => {
+	if (parameter == 'Infinity') {
+		return true;
+	} else {
+		return false;
 	}
 
+}
 
-
-
-
-
-	// if (checkDivivzero(result)) {
-	// 	clearInput();
-	// 	printValue(output.innerHTML="error");
-
-	// function equal() {
-	// 	let result = eval(output.innerHTML);
-	// 	if (result === 'Infinity') {
-	// 			saveHistory(`${output.innerHTML}=${result}`);
-	// 			clearInput();
-	// 			printValue(result);
-	// 			printHistory();
-	// 	} else {
-	// 			clearInput();
-	// 			result = "error";
-	// 			printValue(result);
-	// 	}
+	function equal() {
+		let result = eval(output.innerHTML);
+		if (checkDivivzero(result)) {
+			clearInput();
+			result = "error";
+			printValue(result);
+		} else {
+			saveHistory(`${output.innerHTML}=${result}`);
+			clearInput();
+			printValue(result);
+			printHistory();
+		}
 		
-	// 	}
-
-
-
-
-
-
-
-}	
+		}
+	
 printHistory();

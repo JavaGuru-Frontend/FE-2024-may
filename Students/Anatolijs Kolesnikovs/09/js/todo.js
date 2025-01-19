@@ -8,20 +8,50 @@ saveToLocalStorage(taskElement.value);
 loadFromLocalStorage();
 }
 
+let toggleDone = (event) => {
+	let clickedElement = event.target
+	if (clickedElement.classList.contains('todo_done')) {
+		clickedElement.classList.remove('todo_done')
+	} else {
+		clickedElement.classList.add('todo_done')
+	}
+	 debugger;
+}
+
 let saveToLocalStorage = (historyRecord) => {
+	
+	const task = {
+		'done': false,
+		'taskText': historyRecord,
+	}
+
+
     let dataBase  = JSON.parse(localStorage.getItem('toDoList')) || [] ;
-    dataBase.push(historyRecord);
+    dataBase.push(task);
     localStorage.setItem('toDoList', JSON.stringify(dataBase))
 }
 
 let loadFromLocalStorage = () => {
+	outputElement.innerHTML = '';
     let dataBase  = JSON.parse(localStorage.getItem('toDoList')) || [] ;
-    dataBase.forEach(todo => {
-        outputElement.innerHTML += `<li>${todo}</li>`;
+    dataBase.forEach((todo, i) => {
+        outputElement.innerHTML += `
+		  <li 
+		  		class="todo ${ todo.done ? 'todo_done' : ''} todo_${i}"
+				onclick="toggleDone(event)"
+				data-index=${i}
+			>
+		  		${todo.taskText}
+				<button
+					class=''
+					onclick="remove(event)"
+				>
+					Remove
+				</button>
+			</li>`;
     });
 
 }
 
-addBtnElement.addEventListener('click', addValue)
-
+addBtnElement.addEventListener('click', addValue);
 loadFromLocalStorage();
