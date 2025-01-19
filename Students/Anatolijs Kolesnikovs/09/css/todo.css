@@ -4,6 +4,7 @@
 	border-bottom: 1px solid black;
 	display: flex;
 	justify-content: space-between;
+	justify-content: flex-start;
 }
 
 
@@ -11,4 +12,11 @@
 .todo_done {
 	color: red;
 	text-decoration: line-through;
+}
+
+.disabled {
+   display: none;
+}
+.editBtn {
+	margin-left: 150px;
 }

@@ -4,18 +4,34 @@ let outputElement = document.getElementById('output');
 
 
 let addValue = () => {
-saveToLocalStorage(taskElement.value);
-loadFromLocalStorage();
+	saveToLocalStorage(taskElement.value);
+	loadFromLocalStorage();
+}
+
+let removeItem = (event) => {
+	let elementClickedID = event.target.dataset.id;
+	let dataBase  = JSON.parse(localStorage.getItem('toDoList')) || [] ;
+
+	dataBase.splice(elementClickedID, 1);
+
+	localStorage.setItem('toDoList', JSON.stringify(dataBase));
+	loadFromLocalStorage();
 }
 
 let toggleDone = (event) => {
-	let clickedElement = event.target
-	if (clickedElement.classList.contains('todo_done')) {
-		clickedElement.classList.remove('todo_done')
-	} else {
-		clickedElement.classList.add('todo_done')
-	}
-	 debugger;
+	let elementClickedID = event.target.dataset.id;
+	let dataBase  = JSON.parse(localStorage.getItem('toDoList')) || [] ;
+
+	dataBase[elementClickedID].done = !dataBase[elementClickedID].done
+
+
+	localStorage.setItem('toDoList', JSON.stringify(dataBase));
+	loadFromLocalStorage();
+}
+
+let edit = (event) => {
+	event.target.innerText = 'save';
+
 }
 
 let saveToLocalStorage = (historyRecord) => {
@@ -29,26 +45,40 @@ let saveToLocalStorage = (historyRecord) => {
     let dataBase  = JSON.parse(localStorage.getItem('toDoList')) || [] ;
     dataBase.push(task);
     localStorage.setItem('toDoList', JSON.stringify(dataBase))
+
 }
 
 let loadFromLocalStorage = () => {
 	outputElement.innerHTML = '';
     let dataBase  = JSON.parse(localStorage.getItem('toDoList')) || [] ;
-    dataBase.forEach((todo, i) => {
+    dataBase.forEach((todo, key) => {
         outputElement.innerHTML += `
-		  <li 
-		  		class="todo ${ todo.done ? 'todo_done' : ''} todo_${i}"
-				onclick="toggleDone(event)"
-				data-index=${i}
-			>
-		  		${todo.taskText}
-				<button
-					class=''
-					onclick="remove(event)"
-				>
-					Remove
-				</button>
-			</li>`;
+		  <div class="todo'> 
+				<span 
+						class=" ${ todo.done ? 'todo_done' : '' }"
+						onclick="toggleDone(event)"
+						data-id="${key}"
+					>
+						${todo.taskText}
+					   <input type='text' class='disabled'>
+					
+				   </span>
+					<button
+							onclick="edit(event)"
+							data-id="${key}"
+							class='editBtn'
+					>
+							Edit
+					</button>
+					<button
+							class=''
+							onclick="removeItem(event)"
+							data-id="${key}"
+					>
+							Remove
+					</button>
+			</div
+			`;
     });
 
 }
