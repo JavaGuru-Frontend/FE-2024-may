@@ -1,0 +1,20 @@
+.container{
+	display: flex;
+}
+.products{
+	background-color: blueviolet;
+	width: 80%;
+}
+.categories{
+	width: 200px;
+	background-color: green;
+}
+
+.category{
+	padding: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
