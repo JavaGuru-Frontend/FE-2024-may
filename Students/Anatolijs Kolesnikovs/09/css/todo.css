@@ -6,17 +6,15 @@
 	justify-content: space-between;
 	justify-content: flex-start;
 }
-
-
-
+.disabled {
+	display: none;
+ }
 .todo_done {
 	color: red;
 	text-decoration: line-through;
 }
 
-.disabled {
-   display: none;
-}
+
 .editBtn {
 	margin-left: 150px;
 }

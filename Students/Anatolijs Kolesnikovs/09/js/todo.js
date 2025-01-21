@@ -30,7 +30,24 @@ let toggleDone = (event) => {
 }
 
 let edit = (event) => {
-	event.target.innerText = 'save';
+	let elementClickedID = event.target.dataset.id;
+	if( event.target.innerText === 'Edit' ) {
+		event.target.innerText = 'save';
+		document.getElementById(`input-${elementClickedID}`).classList.remove('disabled')
+	} else if (event.target.innerText === 'save')  {
+		event.target.innerText = 'Edit';
+	    document.getElementById(`input-${elementClickedID}`).classList.add('disabled')
+
+		let newtext = document.getElementById(`input-${elementClickedID}`).value;
+		let dataBase  = JSON.parse(localStorage.getItem('toDoList')) || [] ;
+		dataBase[elementClickedID].taskText = newtext
+		localStorage.setItem('toDoList', JSON.stringify(dataBase));
+		loadFromLocalStorage();
+
+	}
+
+
+
 
 }
 
@@ -53,31 +70,33 @@ let loadFromLocalStorage = () => {
     let dataBase  = JSON.parse(localStorage.getItem('toDoList')) || [] ;
     dataBase.forEach((todo, key) => {
         outputElement.innerHTML += `
-		  <div class="todo'> 
+		  <div class="todo"> 
 				<span 
-						class=" ${ todo.done ? 'todo_done' : '' }"
-						onclick="toggleDone(event)"
-						data-id="${key}"
-					>
-						${todo.taskText}
-					   <input type='text' class='disabled'>
+					   class="${ todo.done ? 'todo_done' : '' }"
+					   onclick="toggleDone(event)"
+					   data-id="${key}"
+				>
+					   ${todo.taskText}
+					   
 					
-				   </span>
-					<button
-							onclick="edit(event)"
-							data-id="${key}"
-							class='editBtn'
-					>
+				</span>
+				<input type='text' class='disabled' id="input-${key}">
+				<button
+					    onclick="edit(event)"
+					    data-id="${key}"
+					    class='editBtn'
+				>
 							Edit
-					</button>
-					<button
+					
+				</button>
+				<button
 							class=''
 							onclick="removeItem(event)"
 							data-id="${key}"
-					>
+				>
 							Remove
-					</button>
-			</div
+				</button>
+		 </div
 			`;
     });
 
