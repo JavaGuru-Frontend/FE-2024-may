@@ -69,20 +69,20 @@ let printTasks = () => {
     printTask.forEach((taskRecord, index) => {
         let isTaskChecked = taskRecord.done;
 
-        const itemContainer = new CustomElement('div', 'itemContainer').createNewElement();
+        const itemContainer = new CustomElement('div', 'itemContainer').createElement();
 
         const todoClass = `todo ${isTaskChecked ? 'todo_done' : ''} task_${index}`;
-        const todo = new CustomElement('div', todoClass, `${index + 1}. ${taskRecord.taskText}`).createNewElement();
+        const todo = new CustomElement('div', todoClass, `${index + 1}. ${taskRecord.taskText}`).createElement();
         todo.dataset.index = index;
         todo.addEventListener('click', (event) => toggleDone(event));
 
-        const buttonsContainer = new CustomElement('div', 'buttonsContainer').createNewElement();
+        const buttonsContainer = new CustomElement('div', 'buttonsContainer').createElement();
 
-        const removeButton = new CustomElement('button', 'remove-btn', 'Remove').createNewElement();
+        const removeButton = new CustomElement('button', 'remove-btn', 'Remove').createElement();
         removeButton.id = `remove_${index}`;
         removeButton.addEventListener('click', () => removeTask(index));
 
-        const editButton = new CustomElement('button', 'edit-btn', 'Edit').createNewElement();
+        const editButton = new CustomElement('button', 'edit-btn', 'Edit').createElement();
         editButton.addEventListener('click', () => editTask(index));
 
         buttonsContainer.appendChild(removeButton);
