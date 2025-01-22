@@ -1,4 +1,4 @@
-class CustomElement{
+export class CustomElement{
     constructor(tag, className, text) {
         this.tag = tag;
         this.className = className;

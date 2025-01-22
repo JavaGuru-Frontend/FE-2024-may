@@ -1,3 +1,41 @@
+class BaseElement {
+    constructor(tag, classname) {
+        this.tag = tag
+        this.classname = classname;
+        this.element = null;
+        this.createElement();
+    } 
+
+    createElement() {
+        this.element = document.createElement(this.tag);
+        this.element.classList.add(...this.classname);
+    }
+}
+
+class Paragraph extends BaseElement {
+    constructor(classname, text, ) {
+        super('p', classname);
+        this.text = text;
+
+        this.init();
+    }
+    init() {
+        this.element.innerText = this.text;
+    }
+}
+// const 0 = '<div>'
+// const a = '<div>'
+const mainText = new Paragraph('class', 'helloWorld');
+
+a.appendChild(mainText);
+a.appendChild(butto);
+
+
+// 0.appendChild(a);
+
+
+
+
 
 class Todo {
         constructor(tag, classname){
