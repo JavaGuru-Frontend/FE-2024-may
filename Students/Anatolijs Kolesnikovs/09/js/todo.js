@@ -69,6 +69,17 @@ let loadFromLocalStorage = () => {
 	outputElement.innerHTML = '';
     let dataBase  = JSON.parse(localStorage.getItem('toDoList')) || [] ;
     dataBase.forEach((todo, key) => {
+
+		// const newTodo = new Todo('div','todo');
+		// const newSpan = new Span('span',`'${ todo.done ? 'todo_done' : '' }'`, `'${key}'`, `'${todo.taskText}'`);
+		// const newInput = new Input('input','text','disabled',`'input-${key}'`);
+		// const newEditBtn = new Button('button','editBtn','edit(event)',`'input-${key}'`);
+		// const newDelBtn = new Button('button','','removeItem(event)',`'input-${key}'`);
+
+
+
+// */ html version */
+
         outputElement.innerHTML += `
 		  <div class="todo"> 
 				<span 
@@ -82,9 +93,11 @@ let loadFromLocalStorage = () => {
 				</span>
 				<input type='text' class='disabled' id="input-${key}">
 				<button
-					    onclick="edit(event)"
-					    data-id="${key}"
-					    class='editBtn'
+
+				class='editBtn'	    
+				onclick="edit(event)"
+				data-id="${key}"
+					    
 				>
 							Edit
 					
@@ -103,4 +116,7 @@ let loadFromLocalStorage = () => {
 }
 
 addBtnElement.addEventListener('click', addValue);
+
+
+
 loadFromLocalStorage();
