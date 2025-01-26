@@ -1,12 +1,6 @@
 let addBtnElement = document.getElementById('addBtn');
 let taskElement = document.getElementById('task');
-// let outputElement = document.getElementById('output');
-let todoContainer = () => {
-	 outputElement.innerHTML += `
-		  <div class="todo" id="todo">`
-}
-
-
+let outputElement = document.getElementById('output');
 
 
 let addValue = () => {
@@ -71,24 +65,46 @@ let saveToLocalStorage = (historyRecord) => {
 
 }
 
-const container = new BaseElement('div','todo');
 
-const paragraph = new Paragraph('testclas', 'text');
 
 
 let loadFromLocalStorage = () => {
 	outputElement.innerHTML = '';
     let dataBase  = JSON.parse(localStorage.getItem('toDoList')) || [] ;
     dataBase.forEach((todo, key) => {
-			todoContainer();
-			let todoParent = document.getElementById('todo');
-			todoParent.appendChild(paragraph.element);	
-			
-			// const span = new Span(`${ todo.done ? 'todo_done' : '' }`,'toggleDone(event)',`${key}`, `${todo.taskText}`);
-			// outputElement.append(span.element);
-			// .appendChild(paragraph.element);
-		
 
+
+        outputElement.innerHTML += `
+		  <div class="todo"> 
+				<span 
+					   class="${ todo.done ? 'todo_done' : '' }"
+					   onclick="toggleDone(event)"
+					   data-id="${key}"
+				>
+					   ${todo.taskText}
+					   
+					
+				</span>
+				<input type='text' class='disabled' id="input-${key}">
+				<button
+
+				class='editBtn'	    
+				onclick="edit(event)"
+				data-id="${key}"
+					    
+				>
+							Edit
+					
+				</button>
+				<button
+							class=''
+							onclick="removeItem(event)"
+							data-id="${key}"
+				>
+							Remove
+				</button>
+		 </div
+			`;
     });
 
 }
