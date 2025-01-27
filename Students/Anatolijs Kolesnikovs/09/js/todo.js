@@ -1,10 +1,7 @@
 let addBtnElement = document.getElementById('addBtn');
 let taskElement = document.getElementById('task');
-// let outputElement = document.getElementById('output');
-let todoContainer = () => {
-	 outputElement.innerHTML += `
-		  <div class="todo" id="todo">`
-}
+let outputElement = document.getElementById('output');
+
 
 
 
@@ -71,22 +68,28 @@ let saveToLocalStorage = (historyRecord) => {
 
 }
 
-const container = new BaseElement('div','todo');
+let todoClass= () => {
+	`'${ todo.done ? 'todo_done' : '' }'`
+}
 
-const paragraph = new Paragraph('testclas', 'text');
+
 
 
 let loadFromLocalStorage = () => {
 	outputElement.innerHTML = '';
     let dataBase  = JSON.parse(localStorage.getItem('toDoList')) || [] ;
     dataBase.forEach((todo, key) => {
-			todoContainer();
+		    const container = new BaseElement('div','todo','todo');
+			outputElement.append(container.element);
 			let todoParent = document.getElementById('todo');
-			todoParent.appendChild(paragraph.element);	
-			
-			// const span = new Span(`${ todo.done ? 'todo_done' : '' }`,'toggleDone(event)',`${key}`, `${todo.taskText}`);
-			// outputElement.append(span.element);
-			// .appendChild(paragraph.element);
+			const span = new Span(`"${ todo.done ? 'todo_done' : '' }"` ,'toggleDone(event)',`${key}`, `${todo.taskText}`);
+			todoParent.appendChild(span.element);
+			const todoInput = new input('disabled', `${key}`, 'text');
+			todoParent.appendChild(todoInput.element);
+			const editButton = new button('editBtn','edit(event)',`${key}`, 'edit');
+			todoParent.appendChild(editButton.element);
+			const removeButton = new button('removeBtn','removeItem(event)',`${key}`, 'Remove');
+			todoParent.appendChild(removeButton.element);
 		
 
     });

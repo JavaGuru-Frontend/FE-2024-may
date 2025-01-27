@@ -1,10 +1,10 @@
-let outputElement = document.getElementById('output');
 
 
 class BaseElement {
-    constructor(tag, className) {
+    constructor(tag, className, id) {
         this.tag = tag
         this.className = className;
+        this.id = id;
         this.element = null;
         this.createElement();
     } 
@@ -12,6 +12,9 @@ class BaseElement {
     createElement() {
         this.element = document.createElement(this.tag);
         this.element.classList.add(this.className);
+        this.element.id = (this.id);
+
+        
     }
 }
 
@@ -29,9 +32,8 @@ class Paragraph extends BaseElement {
 
 class Span extends BaseElement {
 	constructor(className, onclick, id, text){
-		super('span', className);
+		super('span', className, id);
 		this.onclick = onclick;
-		this.id = id;
 		this.text = text;
 
 		this.init(); 
@@ -40,6 +42,37 @@ class Span extends BaseElement {
 		this.element.innerText = this.text;
 	}
 }
+
+
+class input extends BaseElement {
+	constructor(className, id, type){
+		super('input', className, id);
+		this.type = type;
+
+		this.init(); 
+	}
+	init() {
+
+		this.element.type = this.type;
+	}
+}
+
+class button extends BaseElement {
+	constructor(className,onclick, id, text) {
+		super('button', className, id);
+		this.onclick = onclick;
+        this.text = text;
+
+		this.init(); 
+	}
+	init() {
+
+		this.element.onclick = this.onclick;
+        this.element.innerText = this.text;
+
+	}
+}
+
 
 
 
