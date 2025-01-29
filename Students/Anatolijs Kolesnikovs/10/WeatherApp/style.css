@@ -3,7 +3,6 @@
 	box-sizing: border-box;
 
 }
-
 :root {
     --main-color: #00d8bf;
     --main-background-color: #1e202b;
@@ -73,16 +72,13 @@
     margin-right: auto;
     margin-left: auto;
   }
-  /* header input */
   header .location-search {
     position: relative;
     margin-bottom: 70px;
   }
-  /* header weather */
   header .weather-body {
     border-radius: 10px;
   }
-
   .weather {
     min-height: 350px;
   }
