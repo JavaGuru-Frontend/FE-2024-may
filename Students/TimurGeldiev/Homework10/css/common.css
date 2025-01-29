@@ -46,6 +46,9 @@ select {
     font-size: 16px;
     margin: 5px;
 }
+#toCurrency{
+    margin-left: 25px;
+}
 
 #date {
     font-size: 14px;
