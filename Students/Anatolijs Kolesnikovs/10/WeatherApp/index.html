@@ -1,35 +1,40 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather app</title>
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
-    <link type="text/css" href="./css/style.css" rel="stylesheet" />
+    <title>WeatherApi</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container-fluid">
-        <section class="main"> 
-            <section class="inputs">
-                <input type="text"      placeholder="Enter any city..." id="cityinput">
-                <input type="submit"    value="Submit"                  id="add">
-                <button placeholder="submit" id="add"></button>
-            </section>
-
-            <section class="display">
-                <div class="wrapper">
-                    <h2 id="cityoutput"></h2>
-                    <p id="description"></p>
-                    <p id="temp"></p>
-                    <p id="wind"></p>
+          <header>
+            <div class="container">
+              <form action="" class="location-search">
+                <input
+                  type="text"
+                  name=""
+                  id="search"
+                  placeholder="Find your location ..."
+                />
+                <input type="button" value="Find" />
+                <p
+                  id="errorMessage"
+                  class="text-warning p-3 d-none position-absolute"
+                >
+                  Please enter a real location ..
+                </p>
+              </form>
+              <div class="weather-body">
+                <div class="row">
+                  <div class="col-md-4 p-0">
+                    <div id="todayWeather">
+                    </div>
+                  </div>
                 </div>
-            </section>
-        </section>
-    </div>
-    <script src="./js/main.js"></script>
+              </div>
+            </div>
+          </header>
+
+          <script src="app.js"></script>    
 </body>
 </html>
-
-
-
