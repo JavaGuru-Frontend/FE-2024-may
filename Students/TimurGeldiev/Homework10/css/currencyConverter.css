@@ -1,1 +1,5 @@
+@import url(reset.css);
+@import url(common.css);
 @import url(result.css);
+@import url(button.css);
+@import url(history.css);

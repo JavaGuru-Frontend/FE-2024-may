@@ -4,20 +4,28 @@
     <meta charset="UTF-8">
     <title>Currency Converter</title>
     <link rel="stylesheet" href="css/currencyConverter.css">
-    <style> * {border: solid 1px red !important;}</style>
+    <!--    <style> * {border: solid 1px red !important;}</style>-->
 </head>
 <body>
 <div class="converterContainer">
     <h1>Currency Converter</h1>
-    <input id="amountInput" type="number" min="0" placeholder="Enter amount to convert"><br>
-    <button class="btn" id="convertButton">Convert</button>
-    <button class="btn" id="clearHistoryButton">Clear history</button><br>
-    <label for="fromCurrency">From</label>
-    <select id="fromCurrency"></select>
-    <label for="toCurrency">To</label>
-    <select id="toCurrency"></select><br>
-    <p for="result" id="date"></p>
-    <div class="result" id="result"></div>
+    <div class="inputGroup">
+        <input id="amountInput" type="number" min="0" placeholder="Enter amount to convert">
+    </div>
+    <div class="buttonGroup">
+        <button class="btn" id="convertButton">Convert</button>
+        <button class="btn" id="clearHistoryButton">Clear history</button>
+    </div>
+    <div class="currencyGroup">
+        <label for="fromCurrency">From</label>
+        <select id="fromCurrency"></select>
+        <label for="toCurrency">To</label>
+        <select id="toCurrency"></select>
+    </div>
+    <div class="resultGroup">
+        <p id="date"></p>
+        <div class="result" id="result"></div>
+    </div>
     <div class="history" id="history"></div>
 </div>
 

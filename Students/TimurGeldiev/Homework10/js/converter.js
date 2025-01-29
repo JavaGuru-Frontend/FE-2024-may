@@ -21,12 +21,10 @@ let loadCurrencies = () => {
 let populateCurrenciesDropdown = (data) => {
     data.forEach(currency => {
         let optionFrom = new CustomElement('option', 'currencyElem').createElement();
-        optionFrom.value = currency;
         optionFrom.textContent = currency;
         fromCurrency.appendChild(optionFrom);
 
         let optionTo = new CustomElement('option', 'currencyElem').createElement();
-        optionTo.value = currency;
         optionTo.textContent = currency;
         toCurrency.appendChild(optionTo);
     })
