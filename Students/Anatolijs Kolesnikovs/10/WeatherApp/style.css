@@ -69,9 +69,7 @@
     padding: 70px 0;
   }
   .container {
-    width: 50%;
-    padding-right: var(--bs-gutter-x, .75rem);
-    padding-left: var(--bs-gutter-x, .75rem);
+    width: 70%;
     margin-right: auto;
     margin-left: auto;
   }
