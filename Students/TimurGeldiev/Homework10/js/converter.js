@@ -7,7 +7,7 @@ let todayDate = document.getElementById('date');
 let history = document.getElementById('history');
 let clearHistoryBtn = document.getElementById('clearHistoryButton');
 
-const API_KEY = 'de2b7c862d4ba97538b8a295cb7bdebd';
+const API_KEY = 'dcd4e95f77b4d30507c4b1e067e187f9';
 
 let currentDate = new Date().toISOString().split('T')[0];
 todayDate.innerHTML = `On the ${currentDate} currency rate is:`;
