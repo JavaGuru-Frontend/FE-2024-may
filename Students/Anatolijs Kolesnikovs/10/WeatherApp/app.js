@@ -17,12 +17,11 @@ input.addEventListener("input", function (e) {
 let todayWeather;
 
 async function getTodayWeatherData(country) {
-  let todayWeatherData = await fetch(
-    `https://api.weatherapi.com/v1/current.json?key=f363c6f19c364fe5955182616230308&q=${country}`
-  );
-  if (todayWeatherData.status >= 200 && todayWeatherData.status <= 299) {
-    todayWeatherData = await todayWeatherData.json();
-    todayWeather = todayWeatherData;
+  let todayWeatherData = await 
+  fetch(`https://api.weatherapi.com/v1/current.json?key=f363c6f19c364fe5955182616230308&q=${country}`);
+ 			 if (todayWeatherData.status >= 200 && todayWeatherData.status <= 299) {
+   		 todayWeatherData = await todayWeatherData.json();
+    		todayWeather = todayWeatherData;
 
     errorMessage.classList.replace("d-block", "d-none");
 
