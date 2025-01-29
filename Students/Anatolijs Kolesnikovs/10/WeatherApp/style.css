@@ -86,17 +86,8 @@
     background-color: var(--secondary-background-color);
     border-radius: 12px;
   }
-  header .weather-body .today-weather .today-information,
-  .other-day-information {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.1);
-  }
-  header .weather-body .today-weather .today-information p {
-    margin: 0;
-  }
+
+
   .weather-details {
     padding: 30px 20px;
     min-height: 350px;
@@ -106,8 +97,7 @@
     font-weight: 400;
   }
   .today-degree {
-    display: flex
-;
+    display: flex;
     justify-content: flex-start;
     align-items: center;
     margin: 5%;
@@ -122,9 +112,7 @@
     font-size: 4rem;
     color: #eaaa07;
   }
-  .other-day-weather {
-    background-color: #262936;
-  }
+
   .today-weather-information > p {
     color: var(--main-color);
     margin: 25px 0;
@@ -132,24 +120,6 @@
     font-size: xx-large;
     display: flex;
     justify-content: center;
-  }
-  .other-day-weather .weather-details .other-day-degree i {
-    font-size: 1.5rem;
-    margin: 20px 0;
-    color: #eaaa07;
-  }
-  .other-day-weather .weather-details .other-day-degree h2 {
-    font-size: 2rem;
-    color: var(--white-color);
-    margin: 10px;
-  }
-  .other-day-weather-information {
-    color: var(--main-color);
-  }
-  .day-after-tomorrow {
-    background-color: var(--secondary-background-color);
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
   }
 .d-none {
     display:none;
