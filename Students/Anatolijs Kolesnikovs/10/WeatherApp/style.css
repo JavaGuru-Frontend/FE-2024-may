@@ -84,13 +84,13 @@
   header .weather-body {
     border-radius: 10px;
   }
+
   .weather {
     min-height: 350px;
   }
   header .weather-body .today-weather {
     background-color: var(--secondary-background-color);
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-radius: 12px;
   }
   header .weather-body .today-weather .today-information,
   .other-day-information {
@@ -110,7 +110,14 @@
   .weather-details > p {
     font-size: 18px;
     font-weight: 400;
-    margin: 0;
+  }
+  .today-degree {
+    display: flex
+;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5%;
+    flex-direction: column-reverse;
   }
   .today-degree h2 {
     margin: 0;
@@ -126,7 +133,11 @@
   }
   .today-weather-information > p {
     color: var(--main-color);
-    margin: 20px 0;
+    margin: 25px 0;
+    font-weight: bold;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
   }
   .other-day-weather .weather-details .other-day-degree i {
     font-size: 1.5rem;
@@ -155,4 +166,13 @@
 .text-warning {
     color: #ea5a07;
     font-weight: bold;
+}
+
+.d-flex {
+    display: flex ;
+        justify-content: space-between;
+}
+
+.icon {
+    max-height: 45px;
 }

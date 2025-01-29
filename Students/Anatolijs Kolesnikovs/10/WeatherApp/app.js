@@ -2,7 +2,6 @@ let todayWeatherBody = document.getElementById("todayWeather");
 let input = document.getElementById("search");
 let errorMessage = document.getElementById("errorMessage");
 
-// searching for country
 
 input.addEventListener("input", function (e) {
   if (e.target.value == "") {
@@ -14,7 +13,6 @@ input.addEventListener("input", function (e) {
   }
 });
 
-// today weather //
 
 let todayWeather;
 
@@ -28,13 +26,13 @@ async function getTodayWeatherData(country) {
 
     errorMessage.classList.replace("d-block", "d-none");
 
-    displayTodayWeather();
+    showWeather();
   } else {
-    errorMessage.classList.replace("d-none", "d-block");
+    errorMessage.classList.replace("d-none", "d-block");    
   }
 }
 
-function displayTodayWeather() {
+function showWeather() {
   let { location, current } = todayWeather;
   const date = new Date(location.localtime);
   const month = date.toLocaleString("default", { month: "long" });
@@ -51,7 +49,7 @@ function displayTodayWeather() {
     <p>${location.name},</p>
     <p>${location.country}</p>
     <div
-      class="today-degree d-flex justify-content-between align-items-center my-3"
+      class="today-degree"
     >
       <h2>${Math.round(current.temp_c)}<sup>o</sup>C</h2>
       <img class="img-fluid" src="https://${current.condition.icon}" alt="">
@@ -59,18 +57,18 @@ function displayTodayWeather() {
     <div class="today-weather-information">
       <p>${current.condition.text}</p>
       <div
-        class="d-flex justify-content-between align-items-center w-75"
+        class="d-flex"
       >
         <p class="m-0">
-          <i class="fa-solid fa-umbrella me-1 fs-5"></i>
+          <img class="icon" src="./img/umbrella-solid.svg" border="0" alt="icon">
           <span>${current.humidity}%</span>
         </p>
         <p class="m-0">
-          <i class="fa-solid fa-wind me-1 fs-5"></i
-          ><span>${current.wind_kph} km / h</span>
+          <img class="icon" src="./img/wind-solid.svg" border="0" alt="icon">
+          <span>${current.wind_kph} km / h</span>
         </p>
         <p class="m-0">
-          <i class="fa-regular fa-compass me-1 fs-5"></i>
+          <img class="icon" src="./img/compass-solid.svg" border="0" alt="icon">
           <span>${current.wind_dir}</span>
         </p>
       </div>
@@ -82,15 +80,5 @@ function displayTodayWeather() {
   todayWeatherBody.innerHTML = box;
 }
 
-// get the current user location
 
-let userZone;
 
-async function getZone() {
-  let zoneData = await fetch("https://ipinfo.io/?token=13a30ff1de8c72");
-  zoneData = await zoneData.json();
-  userZone = zoneData.city;
-  getTodayWeatherData(userZone);
-}
-
-getZone();
