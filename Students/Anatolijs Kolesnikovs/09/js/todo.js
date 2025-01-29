@@ -88,7 +88,9 @@ let loadFromLocalStorage = () => {
 			todoParent.appendChild(todoInput.element);
 			const editButton = new button('editBtn','edit(event)',`${key}`, 'edit');
 			todoParent.appendChild(editButton.element);
-			const removeButton = new button('removeBtn','removeItem(event)',`${key}`, 'Remove');
+			// const removeButton = new button('removeBtn','removeItem(event)',`${key}`, 'Remove');
+			// () => removeItem(event)
+			const removeButton = new button('removeBtn',() => removeItem(event),`${key}`, 'Remove');
 			todoParent.appendChild(removeButton.element);
 		
 

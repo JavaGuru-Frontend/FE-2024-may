@@ -67,8 +67,11 @@ class button extends BaseElement {
 	}
 	init() {
 
-		this.element.onclick = this.onclick;
+		// this.element.onclick = this.onclick;
         this.element.innerText = this.text;
+		this.element.onclick = (event) => {
+            this.onclick(event); 
+        };
 
 	}
 }
