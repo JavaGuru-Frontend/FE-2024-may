@@ -79,17 +79,17 @@ let loadFromLocalStorage = () => {
 	outputElement.innerHTML = '';
 	let dataBase = JSON.parse(localStorage.getItem('toDoList')) || [];
 	dataBase.forEach((todo, key) => {
-		outputElement.innerHTML += `
-		  <div class="todo"> `
-
+		const container = new BaseElement('div', 'todo', 'todo');
+		outputElement.append(container.element);
+		let todoParent = document.getElementById('todo');
 		const span = new Span(`"${todo.done ? 'todo_done' : ''}"`, () => toggleDone(event), `${key}`, `${todo.taskText}`);
-		outputElement.append(span.element);
+		todoParent.appendChild(span.element);
 		const todoInput = new input('disabled', `input-${key}`, 'text');
-		outputElement.append(todoInput.element);
+		todoParent.appendChild(todoInput.element);
 		const editButton = new button('editBtn', () => edit(event), `${key}`, 'edit');
-		outputElement.append(editButton.element);
+		todoParent.appendChild(editButton.element);
 		const removeButton = new button('removeBtn', () => removeItem(event), `${key}`, 'Remove');
-		outputElement.append(removeButton.element);
+		todoParent.appendChild(removeButton.element);
 
 
 	});
